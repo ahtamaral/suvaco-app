@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "node Suvaco/server.js",
+    "start": "node server.js",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "heroku-postbuild": "npm install --only=dev && vite build"
   },
   "dependencies": {
     "express": "^4.21.1",
