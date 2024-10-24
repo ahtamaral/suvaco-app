@@ -9,7 +9,7 @@
     "start": "node server.js",
     "lint": "eslint .",
     "preview": "vite preview",
-    "heroku-postbuild": "npm install --only=dev && vite build"
+    "heroku-postbuild": "npm install vite --save-dev && vite build"
   },
   "dependencies": {
     "express": "^4.21.1",
@@ -27,6 +27,6 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.12",
     "globals": "^15.9.0",
-    "vite": "^5.4.8"
+    "vite": "^5.4.10"
   }
 }
