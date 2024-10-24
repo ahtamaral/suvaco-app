@@ -8,8 +8,7 @@
     "build": "vite build",
     "start": "node server.js",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "heroku-postbuild": "npm install vite --save-dev && vite build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "express": "^4.21.1",
