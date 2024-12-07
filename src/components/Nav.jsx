@@ -7,7 +7,7 @@ function Nav(){
             <nav>
                 <ul>
                     <li><a href='#'>Home</a></li>
-                    <li><a href='#'>Sobre o Suvaco</a></li>
+                    <li><a href='/sobre'>Sobre o Suvaco</a></li>
                     <li><a href='#'>Acervo</a></li>
                     <li><a href='#'>Linha do Tempo</a></li>
                     <li><a href='#'>Divinas Axilas</a></li>

@@ -1,4 +1,5 @@
 export function rightRender(title, subtitle, right) {
+    /*Se isRight == True, cria uma classe css right na qual o título fica na direita*/
     const isRight = right === "True";
     return (
         <div className="section-title-subtitle">
@@ -21,6 +22,8 @@ export function renderTitleSubtitle(title, subtitle) {
 }
 
 export function imgRender(img, id) {
+    /*Se a imagem existir, itera sobre o json e coloca as imagens na página numa css classe imgs-section-[ID] 
+    com subclasse chamada img-container*/
     if (img.imgExists !== "True") return null;
 
     return (
