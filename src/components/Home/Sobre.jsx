@@ -10,11 +10,13 @@ function Sobre(props){
             <div className="section-container">
                 {rightRender(props.title,props.subtitle,props.right)}
                 <div className="paragraph">
-                    <p>{props.text}</p>
+                    {props.text && props.text.map((paragraph, index) => (
+                            <p key={index}>{paragraph}</p>
+                        ))}
                 </div>
                 
                 <div className="footer-section">
-                    <a href="#" id="link-txt">{props.link}</a>
+                    <a href="/sobre" id="link-txt">{props.link}</a>
                     <div className="line"></div>
                 </div>
             </div>

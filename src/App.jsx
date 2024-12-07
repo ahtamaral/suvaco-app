@@ -25,9 +25,10 @@ function App() {
 
           <Routes>
 
+            {/* Página principal */}
             <Route path="/" element={
               <>
-              
+              {/* Criação de cada section post baseado no arquivo json*/}
               <Sobre {...sectionsPosts.sections[1]}/>
               <Acervo {...sectionsPosts.sections[2]}/>
               <LinhaDoTempo {...sectionsPosts.sections[3]}/>
@@ -38,6 +39,7 @@ function App() {
             }
             />
 
+            {/* Outras páginas*/}
             <Route path="/sobre" element={<PageSobre  {... sectionsPosts.sections[1]}/>} /> 
             
 
