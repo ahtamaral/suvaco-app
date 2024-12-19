@@ -1,6 +1,7 @@
 import React from "react";
 
 import { rightRender, imgRender } from "../functions";
+import { Link } from "react-router-dom";
 
 function LinhaDoTempo(props){
      
@@ -15,7 +16,7 @@ function LinhaDoTempo(props){
                 {imgRender(props.img, props.id)}
                 
                 <div className="footer-section">
-                    <a href="#" id="link-txt">{props.link}</a>
+                    <Link to="/timeline" id="link-txt">{props.link}</Link>
                     <div className="line"></div>
                 </div>
             </div>

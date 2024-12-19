@@ -39,3 +39,4 @@ export function imgRender(img, id) {
         </div>
     );
 }
+

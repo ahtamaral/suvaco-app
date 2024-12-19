@@ -11,6 +11,9 @@ import VoceComSuvaco from './components/Home/VoceComSuvaco'
 import Footer from './components/Home/Footer'
 
 import PageSobre from './components/pasteSobre/PageSobre'
+import PageTimeline from './components/pasteTimeline/PageTimeline';
+
+import Ano2012 from './components/pasteTimeline/anos/Ano2012';
 
 import sectionsPosts from './components/json/sections.json'
 
@@ -41,8 +44,11 @@ function App() {
 
             {/* Outras páginas*/}
             <Route path="/sobre" element={<PageSobre  {... sectionsPosts.sections[1]}/>} /> 
+            <Route path="/timeline" element={<PageTimeline {... sectionsPosts.sections[3]}/>} />
             
 
+            
+            <Route path="/Ano2012" element={<Ano2012/>} />
 
             
           </Routes>
