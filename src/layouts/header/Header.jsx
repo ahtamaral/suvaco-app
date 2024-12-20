@@ -1,9 +1,12 @@
 import React from "react";
-import frameImage from './imgs/Frame 1(2).svg';
+import frameImage from '../../components/imgs/Frame 1(2).svg';
+
+import Nav from '../../components/Nav'
 
 function Header() {
     return (
         <div className="header-container">
+            <Nav/>
             <header>
                 <h1>Suvaco do Cristo</h1>
                 <img src={frameImage} alt="Frame" className="header-image" />

@@ -5,6 +5,7 @@ function Footer(){
     return(
         <footer>
             <div className="grid">
+                
                 <div className="flex">
                     <p>Suvaco do Cristo</p>
                     <p className="mid">Todos os direitos reservados.</p>
@@ -18,7 +19,7 @@ function Footer(){
 
             </div>
         </footer>
-           
+
     )
 }
 
