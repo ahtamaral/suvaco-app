@@ -1,38 +1,16 @@
 import React, { useState } from "react";
 import './Ano2012.css';
 import { Link } from "react-router-dom";
+import Player from "./componentes-anos/player";
 
 function Ano2012() {
-    const categorias = [
-        {
-            nome: "Contexto Histórico",
-            texto: ["O que estava acontecendo no mundo, no Brasil, no Rio de Janeiro?", "Como isso está relacionado ao bloco"],
-            imagens: ["img/Screenshot_1.png", "img/Screenshot_2.png", "img/Screenshot_3.png"],
-        },
-        {
-            nome: "O desfile",
-            texto: ["Texto 2"],
-            imagens: ["img/Screenshot_7.png", "img/Screenshot_8.png", "img/Screenshot_7.png"],
-        },
-        {
-            nome: "categoria3",
-            texto: ["Texto 3"],
-            imagens: ["img/Screenshot_12.png", "img/Screenshot_15.png", "img/Screenshot_1.png"],
-        },
-    ];
+    //cada item do array representa a visibilidade de uma divisória
+    const [divisoriasVisibilidade, setDivisoriasVisibilidade] = useState([false, false]);
 
-    const [divisoriasVisiveis, setDivisoriasVisiveis] = useState(
-        categorias.reduce((acc, categoria) => {
-            acc[categoria.nome] = false; 
-            return acc;
-        }, {})
-    );
-
-    const toggleDivisoriaVisibility = (nome) => {
-        setDivisoriasVisiveis((prevState) => ({
-            ...prevState,
-            [nome]: !prevState[nome],
-        }));
+    const toggleDivisoriaVisibility = (index) => {
+        setDivisoriasVisibilidade((prevState) =>
+            prevState.map((visivel, i) => (i === index ? !visivel : visivel))
+        );
     };
 
     return (
@@ -45,60 +23,136 @@ function Ano2012() {
                     </h3>
                 </div>
 
+                {/* BOX DE ACESSO RÁPIDO */}
                 <div className="acesso-rapido">
-                    <div className="texts">
-                        <span id="acesso">Acesso Rápido</span>
-                    </div>
-
+                    <span id="acesso">Acesso Rápido</span>
                     <div className="box">
                         <ul className="box-links">
-                            {categorias.map((categoria) => (
-                                <li key={categoria.nome}>{categoria.nome}</li>
-                            ))}
+                            <li>O Contexto Histórico</li>
+                            <li>O Samba</li>
+                            <li>Ancora</li>
+                            <li>Ancora</li>
+                            <li>Ancora</li>
+                            <li>Ancora</li>
+                            <li>Ancora</li>
+                            <li>Ancora</li>
+                            <li>Ancora</li>
+                            <li>Ancora</li>
+                            <li>Ancora</li>
+                            <li>Ancora</li>
+                            <li>Ancora</li>
+                            <li>Ancora</li>
+                            <li>Ancora</li>
+                            <li>Ancora</li>
                         </ul>
                     </div>
+
+                    
                 </div>
 
-                {categorias.map((categoria) => (
-                    <div className="divisoria" key={categoria.nome}>
+
+                {/* Divisória 1 */}
+                <div className="divisoria">
                         <div className="divisoria-header">
-                            <h3 className="divisoria-title">{categoria.nome}</h3>
+                            <h3>O Contexto Histórico</h3>
                             <button
-                                className="divisoria-btn"
-                                onClick={() => toggleDivisoriaVisibility(categoria.nome)}
+                                id="btn-divisoria"
+                                onClick={() => toggleDivisoriaVisibility(0)}
                             >
-                                {divisoriasVisiveis[categoria.nome]
-                                    ? "CLIQUE PARA ESCONDER"
-                                    : "CLIQUE PARA MOSTRAR MAIS"}
+                                {divisoriasVisibilidade[0]
+                                    ? "CLIQUE PARA OCULTAR"
+                                    : "CLIQUE PARA VER MAIS"}
                             </button>
                         </div>
 
-                        {divisoriasVisiveis[categoria.nome] ? (
-                            <div className="divisoria-box-aberta">
-                                {/* Box aberta */}
-                                <h2 className="divisoria-year-aberta">{categoria.nome}</h2>
-                            </div>
-                        ) : (
-                            <div className="divisoria-box-fechada">
-                                
-                                {/* Box fechada */}
-
-                                {Array.isArray(categoria.texto) ? (
-                                    categoria.texto.map((txt, index) => (
-                                        <h4 className="h4-box-fechada" key={index}>{txt}</h4>
-                                    ))
-                                ) : (
-                                    <h4 className="h4-box-fechada">{categoria.texto}</h4>
-                                )}
-                                <div className="divisoria-fechada-imgs">
-                                    {categoria.imagens.map((src, index) => (
-                                        <img src={src} alt={`${categoria.nome} imagem ${index + 1}`} key={index} />
-                                    ))}
+                        <div className="divisoria-content">
+                            {divisoriasVisibilidade[0] ? (
+                                <div className="divisoria-aberta">
+                                    <h3 className="title-divisoria-aberta">Título Aberto</h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <h3 className="title-divisoria-aberta">Título Aberto</h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <h3 className="title-divisoria-aberta">Título Aberto</h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
                                 </div>
-                            </div>
-                        )}
+                            ) : (
+                                <div className="divisoria-fechada">
+                                    <h4 className="divisoria-titulo-fechado">Título Fechado</h4>
+                                    <h4 className="divisoria-titulo-fechado">Título Fechado</h4>
+                                    
+                                    <div className="divisoria-fechada-imgs-flex">
+                                    <img src="img/Screenshot_1.png"/>
+                                    <img src="img/Screenshot_10.png"/>
+                                    <img src="img/Screenshot_15.png"/>
+                                    <img src="img/Screenshot_6.png"/>
+                                </div>
+
+
+                                </div>
+                            )}
+                        </div>
                     </div>
-                ))}
+
+                    {/* Divisória 2 */}
+                    <div className="divisoria">
+                        <div className="divisoria-header">
+                            <h3>O Samba</h3>
+                            <button
+                                id="btn-divisoria"
+                                onClick={() => toggleDivisoriaVisibility(1)}
+                            >
+                                {divisoriasVisibilidade[1]
+                                    ? "CLIQUE PARA OCULTAR"
+                                    : "CLIQUE PARA VER MAIS"}
+                            </button>
+                        </div>
+
+                        <div className="divisoria-content">
+                            {divisoriasVisibilidade[1] ? (
+                                <div className="divisoria-aberta">
+
+
+                                {/*DIVISORIA ABERTA*/}
+                                {/*DIVISORIA ABERTA*/}
+
+                                    <h3 className="title-divisoria-aberta">Título Aberto</h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
+                                    <h3></h3>
+                                    <h3 className="title-divisoria-aberta">Escute o samba</h3>
+                                    <Player audioSrc={"songs/2012 Suvaco Samba Palmas pro Suvaco.mp3"}></Player>
+                                    
+                                    
+                                </div>
+                            ) : (
+                                <div className="divisoria-fechada">
+                                
+                                {/*DIVISORIA FECHADA*/}
+                                {/*DIVISORIA FECHADA*/}
+
+                                    <h4 className="divisoria-titulo-fechado">Título Fechado</h4>
+                                    <h4 className="divisoria-titulo-fechado">Título Fechado</h4>
+                                        <div className="divisoria-fechada-imgs-flex">
+                                        <img src="img/Screenshot_1.png"/>
+                                        <img src="img/Screenshot_10.png"/>
+                                        <img src="img/Screenshot_15.png"/>
+                                        <img src="img/Screenshot_6.png"/>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </div>
             </div>
         </section>
     );

@@ -1,206 +1,133 @@
-.texts{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
+/*ACESSO RAPIDO*/
 
-span{
-    font-family: "Poppins";
-    font-size: 1.7rem;
+#acesso{ /*TEXTO DO ACESSO RAPIDO - TOPO DA PAGINA*/
+  font-family: var(--font-acesso-rapido);
+  font-size: 1.7rem;
+  color: var(--title-color);
+  margin-left: 5px;
 
 }
 
-#acesso{
-    color: #0066af;
-    margin-left: 2rem;
+.box{ /*BOX DO ACESSO RAPIDO*/
+  border: 2.5px solid var(--subtitle-color);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+
+.box-links{ /*textos dentro do acesso rapido // organizacao estrutural*/
+  column-count: 4;
+  text-align: start;
+  padding: 0.4rem 0;
+
+  li{ /*os links*/
+    margin-left: 25%;
+    padding: 2px 0 ;
+    font-size: 1.1rem;
+    font-family: var(--font-acesso-rapido);
     cursor: pointer;
-
-}
-
-#link{
-    margin-right: 3rem;
-    font-family: "Roboto";
-    font-size: 1.4rem;
-    background: linear-gradient(to right, #0066AF, #0B878F);
-    color: #f8f8f8;
-    padding: 9px 15px;
-    border-radius: 15px;
-
-
-}
-
-.box {
-    margin-top: 1rem;
-    position: relative;
-    padding: 0px;
-    background: #f8f8f8;
-    border-radius: 10px; 
-    z-index: 1; 
-    height: 150px;
-    
-  }
-  
-.box::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    opacity: 0.4;
-    background: linear-gradient(to right, #0066AF, #0B878F); 
-    border-radius: 16px; 
-    padding: 2px; 
-    -webkit-mask: 
-      linear-gradient(#f8f8f8 0 0) content-box, 
-      linear-gradient(#f8f8f8 0 0);
-    mask: 
-      linear-gradient(#f8f8f8 0 0) content-box, 
-      linear-gradient(#f8f8f8 0 0);
-    -webkit-mask-composite: xor; 
-    mask-composite: exclude; 
-  }
-
-
-.box-links{
-    list-style: circle;
-    height: 150px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    column-gap: 10em;
-    row-gap: 10px;
-    margin-left: 7rem;
-    padding-top: 10px;
-
-    li{
-
-        font-size: 1.1rem;
-        color: #0066AF;
-        text-decoration: underline;
-        cursor: pointer;
-        width: fit-content;
-}
-    
-}
-
-.divisoria-header{
-    background: linear-gradient(to right, #0066AF, #0B878F);
-    padding: 1em;
-    border-radius: 13px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-
-}
-
-.divisoria-title{
-    font-size: 1.5rem;
-    font-family: "Poppins";
-    color: #f8f8f8;
-    margin-left: 2rem;
-    font-weight: 500;
-}
-
-.divisoria-btn{
+    list-style-type: disc;
     text-decoration: underline;
-    font-family: "Roboto";
-    margin-right: 13px;
-    font-size: 1em;
-    color: #f8f8f8;
-}
-
-.divisoria-box-aberta{
-    margin-top: -20px;
-    position: relative;
-    padding: 1rem 0 0 0;
-    background: #f8f8f8;
-    border-radius: 10px; 
-    z-index: -1; 
-    height: 150px;
-
-}
-
-.divisoria-box-aberta::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -2;
-    opacity: 0.4;
-    background: linear-gradient(to right, #0066AF, #0B878F); 
-    border-radius: 16px; 
-    padding: 2px; 
-    -webkit-mask: 
-      linear-gradient(#f8f8f8 0 0) content-box, 
-      linear-gradient(#f8f8f8 0 0);
-    mask: 
-      linear-gradient(#f8f8f8 0 0) content-box, 
-      linear-gradient(#f8f8f8 0 0);
-    -webkit-mask-composite: xor; 
-    mask-composite: exclude; 
-  }
-
-
-.divisoria-box-fechada{
-    margin-top: -20px;
-    position: relative;
-    padding: 2.8rem 1rem 0rem 1rem;
-    background: #f8f8f8;
-    border-radius: 10px; 
-    z-index: -1; 
-
-}
-
-.divisoria-box-fechada::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -2;
-    opacity: 0.4;
-    background: linear-gradient(to right, #0066AF, #0B878F); 
-    border-radius: 16px; 
-    padding: 2px; 
-    -webkit-mask: 
-      linear-gradient(#f8f8f8 0 0) content-box, 
-      linear-gradient(#f8f8f8 0 0);
-    mask: 
-      linear-gradient(#f8f8f8 0 0) content-box, 
-      linear-gradient(#f8f8f8 0 0);
-    -webkit-mask-composite: xor; 
-    mask-composite: exclude; 
-}
-
-.h4-box-fechada{
+    color: var(--subtitle-color);
   
-  font-weight: 500;
-  font-family: Poppins, sans-serif;
-  letter-spacing: 5%;
-  text-align: center;
-  font-size: 1.2rem;
-
-
+  }
 }
 
-.divisoria-fechada-imgs{
-    padding: 20px 0 0 0;
+/*=================================================================*/
+
+
+/*divisorias de ancoras*/
+
+.divisoria{ /*div mais externa*/
+  margin-top: 5px;
+}
+
+.divisoria-header{ /*titulo de cada divisoria*/
+  background: var(--gradiente-azul-verde);
+  display: flex;
+  font-weight: 500;
+  justify-content: space-between;
+  padding: 13px 25px;
+  font-family: var(--font-title-divisorias-timeline);
+  z-index: 2;
+  font-size: 1.7rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.divisoria-aberta{ /*organizar a parte de dentro quando aberta*/
+  padding: 10px 25px;
+}
+
+.title-divisoria-aberta{ /*titulos dentro da divisoria*/
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--title-divisoria-aberta-color);
+  font-weight: 600;
+}
+
+
+.divisoria-titulo-fechado{ /*texto da divisoria fechada*/
+  text-align: center;
+  font: var(--font-title);
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.divisoria-fechada-imgs-flex{ /*organizar as imagens quando fechadas*/
+  padding: 20px 0 0 0;
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 3rem;
     
     >img{
       height: 300px;
-      width: 300px;
+      width: 250px;
       object-fit: cover;
       object-position: top;
     }
 }
 
-  
+#btn-divisoria{ /*ver mais / ocultar*/
+  font-size: 1.2rem;
+  font-family: var(--font-subtitle);
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.divisoria-content{
+  position: relative;
+  padding-top: 35px;
+  top: -25px;
+}
+.divisoria-content::after{
+  content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    opacity: 0.4;
+    background: linear-gradient(to right, #0066AF, #0B878F); 
+    border-radius: 16px; 
+    padding: 2px; 
+    -webkit-mask: 
+      linear-gradient(#f8f8f8 0 0) content-box, 
+      linear-gradient(#f8f8f8 0 0);
+    mask: 
+      linear-gradient(#f8f8f8 0 0) content-box, 
+      linear-gradient(#f8f8f8 0 0);
+    -webkit-mask-composite: xor; 
+    mask-composite: exclude; 
+}
+
+
+
+
+
+
+
+

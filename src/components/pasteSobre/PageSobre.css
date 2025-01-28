@@ -20,8 +20,8 @@ section{
       padding-bottom: 1.5rem;
       
       h3 {
-        font-family: "Roboto", sans-serif;
-        color: #3b9ea5;
+        font-family: var(--font-subtitle);
+        color: var(--subtitle-color);
         width: 100%;
         letter-spacing: 0.3em;
         padding-top: 12px;
@@ -37,14 +37,14 @@ section{
         bottom: 10px;
         width: 100%;
         height: 1px;
-        background: linear-gradient(to right, #0066AF, #0B878F);
+        background: var(--gradiente-azul-verde);
         opacity: 20%;
         flex-grow: 1;
       }
   
       >h2{
-        color: #0066af;
-        font-family: "Barlow","Poppins", sans-serif;
+        color: var(--title-color);
+        font-family: var(--font-title);
         width: fit-content;
         font-size: 3rem;
         font-weight: 300;
