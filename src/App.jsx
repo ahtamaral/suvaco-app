@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Nav from './components/Nav'
 import Header from './layouts/header/Header'
 import Sobre from './components/Home/Sobre'
 import Acervo from './components/Home/Acervo'
