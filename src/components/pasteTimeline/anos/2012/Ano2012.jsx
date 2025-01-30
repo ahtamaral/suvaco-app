@@ -6,7 +6,7 @@ import Carrossel from "../componentes-anos/Carrossel/Carrossel";
 
 function Ano2012() {
     //cada item do array representa a visibilidade de uma divisória
-    const [divisoriasVisibilidade, setDivisoriasVisibilidade] = useState([false, false]);
+    const [divisoriasVisibilidade, setDivisoriasVisibilidade] = useState([false, false,false]);
 
     const toggleDivisoriaVisibility = (index) => {
         setDivisoriasVisibilidade((prevState) =>
@@ -161,16 +161,16 @@ function Ano2012() {
                             <h3>As Artes do Desfile</h3>
                             <button
                                 id="btn-divisoria"
-                                onClick={() => toggleDivisoriaVisibility(1)}
+                                onClick={() => toggleDivisoriaVisibility(2)}
                             >
-                                {divisoriasVisibilidade[1]
+                                {divisoriasVisibilidade[2]
                                     ? "CLIQUE PARA OCULTAR"
                                     : "CLIQUE PARA VER MAIS"}
                             </button>
                         </div>
 
                         <div className="divisoria-content">
-                            {divisoriasVisibilidade[1] ? (
+                            {divisoriasVisibilidade[2] ? (
                                 <div className="divisoria-aberta">
 
 
