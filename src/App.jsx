@@ -9,10 +9,12 @@ import DivinasAxilas from './components/Home/DivinasAxilas'
 import VoceComSuvaco from './components/Home/VoceComSuvaco'
 import Footer from './layouts/footer/Footer'
 
+import PageAcervo from './components/pasteAcervo/PageAcervo';
 import PageSobre from './components/pasteSobre/PageSobre'
 import PageTimeline from './components/pasteTimeline/PageTimeline';
+import PageDivinas from './components/pasteDivinasAxilas/PageDivinas';
 
-import Ano2012 from './components/pasteTimeline/anos/Ano2012';
+import Ano2012 from './components/pasteTimeline/anos/2012/Ano2012';
 
 import sectionsPosts from './components/json/sections.json'
 
@@ -41,6 +43,8 @@ function App() {
             <Route path="/sobre" element={<PageSobre  {... sectionsPosts.sections[1]}/>} /> 
             <Route path="/timeline" element={<PageTimeline {... sectionsPosts.sections[3]}/>} />
             <Route path="/Ano2012" element={<Ano2012/>} />
+            <Route path="/acervo" element={<PageAcervo {... sectionsPosts.sections[2]}/>} />
+            <Route path="/divinas" element={<PageDivinas {... sectionsPosts.sections[4]}/>} />
             
           </Routes>
         

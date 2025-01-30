@@ -10,7 +10,7 @@ function Nav() {
                 <li><Link to="/sobre">Sobre o Suvaco</Link></li>
                 <li><Link to="/acervo">Acervo</Link></li>
                 <li><Link to="/timeline">Linha do Tempo</Link></li>
-                <li><Link to="/divinas-axilas">Divinas Axilas</Link></li>
+                <li><Link to="/divinas">Divinas Axilas</Link></li>
                 <li><Link to="/voce-com-o-suvaco">Você com o Suvaco</Link></li>
             </ul>
         </nav>
