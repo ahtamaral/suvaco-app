@@ -43,8 +43,13 @@ function PageTimeline(props){
                     <h3>Desfile XX - Ano 20XX</h3>
                 </Link> */}
             </div>
-        
+            <div className="footer-section">
+                                <Link id="link-txt" to="/">VOLTAR</Link>
+                                <div className="line"></div>
+                    </div>
         </div>
+                    
+     
     </section>
    
 }

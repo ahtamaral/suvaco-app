@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./PageAcervo.css";
+import { Link } from "react-router-dom";
 import { renderTitleSubtitle } from "../functions";
 import categorias from "../json/categorias.json";
 
@@ -105,7 +106,15 @@ function PageAcervo(props) {
                         </div>
                     </div>
                 )}
+
+
+            <div className="footer-section">
+                                    <Link id="link-txt" to="/">VOLTAR</Link>
+                                    <div className="line"></div>
             </div>
+            </div>
+
+            
         </section>
     );
 }
