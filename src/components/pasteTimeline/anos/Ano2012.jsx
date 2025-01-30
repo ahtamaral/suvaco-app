@@ -90,10 +90,10 @@ function Ano2012() {
                                     <h4 className="divisoria-titulo-fechado">Título Fechado</h4>
                                     
                                     <div className="divisoria-fechada-imgs-flex">
-                                    <img src="img/Screenshot_1.png"/>
-                                    <img src="img/Screenshot_10.png"/>
-                                    <img src="img/Screenshot_15.png"/>
-                                    <img src="img/Screenshot_6.png"/>
+                                    <img src="img/1.jpg"/>
+                                    <img src="img/5.jpg"/>
+                                    <img src="img/56.jpg"/>
+                                    <img src="img/100.jpg"/>
                                 </div>
 
 
@@ -124,7 +124,7 @@ function Ano2012() {
                                 {/*DIVISORIA ABERTA*/}
                                 {/*DIVISORIA ABERTA*/}
 
-                                    <h3 className="title-divisoria-aberta">Título Aberto</h3>
+                                    <h3 className="title-divisoria-aberta">Análise da Letra</h3>
                                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
                                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
                                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
@@ -132,7 +132,6 @@ function Ano2012() {
                                     <h3></h3>
                                     <h3 className="title-divisoria-aberta">Escute o samba</h3>
                                     <Player audioSrc={"songs/2012 Suvaco Samba Palmas pro Suvaco.mp3"}></Player>
-                                    
                                     
                                 </div>
                             ) : (
@@ -144,10 +143,10 @@ function Ano2012() {
                                     <h4 className="divisoria-titulo-fechado">Título Fechado</h4>
                                     <h4 className="divisoria-titulo-fechado">Título Fechado</h4>
                                         <div className="divisoria-fechada-imgs-flex">
-                                        <img src="img/Screenshot_1.png"/>
-                                        <img src="img/Screenshot_10.png"/>
-                                        <img src="img/Screenshot_15.png"/>
-                                        <img src="img/Screenshot_6.png"/>
+                                            <img src="img/14.jpg" alt="" />
+                                            <img src="img/13.jpg" alt="" />
+                                            <img src="img/76.jpg" alt="" />
+                                            <img src="img/4.jpg" alt="" />
                                     </div>
                                 </div>
                             )}

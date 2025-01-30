@@ -13,6 +13,7 @@
   border: 2.5px solid var(--subtitle-color);
   border-radius: 10px;
   margin-top: 10px;
+  margin-bottom: 35px;
 }
 
 
@@ -40,7 +41,7 @@
 /*divisorias de ancoras*/
 
 .divisoria{ /*div mais externa*/
-  margin-top: 5px;
+  margin-top: 25px;
 }
 
 .divisoria-header{ /*titulo de cada divisoria*/
@@ -48,10 +49,10 @@
   display: flex;
   font-weight: 500;
   justify-content: space-between;
-  padding: 13px 25px;
+  padding: 20px 25px;
   font-family: var(--font-title-divisorias-timeline);
   z-index: 2;
-  font-size: 1.7rem;
+  font-size: 1.45em;
   border-radius: 10px;
   color: white;
 }
@@ -59,6 +60,7 @@
 .divisoria-aberta{ /*organizar a parte de dentro quando aberta*/
   padding: 10px 25px;
 }
+
 
 .title-divisoria-aberta{ /*titulos dentro da divisoria*/
   font-size: 2rem;
@@ -90,7 +92,7 @@
 }
 
 #btn-divisoria{ /*ver mais / ocultar*/
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-family: var(--font-subtitle);
   text-decoration: underline;
   font-weight: 400;
