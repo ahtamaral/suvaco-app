@@ -11,7 +11,7 @@ function PageTimeline(props){
             <div className= "section-pages">
 
                 <Link to="/Ano2012" className="img-container container-scale">
-                    <img src="img/Screenshot_1.png" alt="Desfile 27 - Ano 2012" />
+                    <img src="img/105.jpg" alt="Desfile 27 - Ano 2012" />
                     <h3>Desfile 27 - Ano 2012</h3>
                 </Link>
                 <Link to="/ano-1986" className="img-container container-scale">

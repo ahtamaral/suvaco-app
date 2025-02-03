@@ -16,7 +16,7 @@ function Acervo(props){
                 {imgRender(props.img,props.id)}
                 
                 <div className="footer-section">
-                    <a href="#" id="link-txt">{props.link}</a>
+                    <a href="/acervo" id="link-txt">{props.link}</a>
                     <div className="line"></div>
                 </div>
             </div>
