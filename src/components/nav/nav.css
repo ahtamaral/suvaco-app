@@ -36,3 +36,70 @@ nav{
     
 
 }
+
+@media (max-width:962px) {
+  
+    nav{
+      font-size: 1.2rem;
+  
+      > ul {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+    
+        >li {
+    
+          >a::before {
+            content: "";
+            position: absolute;
+            width: 95%;
+            height: 1.2px;
+            background-color: #35766a;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out 0s;
+            top: 2vw;
+            left: 0.1vw;
+          }
+    
+          >a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+          }
+    
+        }
+    
+      }
+    }
+}
+
+@media (max-width:882px){
+    nav{
+      font-size: 1.1rem;
+    }
+}
+  
+@media (max-width:827px){
+    nav{
+      font-size: 1rem;
+      >ul{
+        gap: 1.5rem;
+      }
+    }
+}  
+
+@media (max-width: 729px){
+    nav{
+      >ul{
+        gap: 1rem;
+      }
+    }
+}
+
+@media (max-width:689px){
+    nav{
+      font-size: 0.9rem;
+    }
+}
+
+
