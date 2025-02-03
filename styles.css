@@ -11,6 +11,8 @@ html{
 
 /*Secoes da pagina principal*/
 
+/*blabla*/
+
 section{
   display: grid;
   grid-template-columns: 2.5fr 7fr 2.5fr;
