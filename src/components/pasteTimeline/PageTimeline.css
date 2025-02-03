@@ -4,8 +4,8 @@
 
     gap: 10px;
     display: flex;
-    align-items: center; /* Alinhamento horizontal */
-    justify-content: center; /* Alinhamento vertical */
+    align-items: center;
+    justify-content: center; 
     height: fit-content;
 
     .img-container{
@@ -46,7 +46,7 @@
 }
 
 
-/* .section-pages {
+.section-pages {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
     gap: 10px; 
@@ -91,4 +91,4 @@
     padding: 2rem 0;
     width: 100%;
     bottom: 0%;
-} */
+}
