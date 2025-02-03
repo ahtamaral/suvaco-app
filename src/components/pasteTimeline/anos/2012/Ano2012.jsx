@@ -19,8 +19,7 @@ function Ano2012() {
             <div className="section-container">
                 <div className="section-title-subtitle">
                     <h2>Desfile 27 - Ano 2012</h2>
-                    <h3>
-                    </h3>
+                    <h3></h3>
                 </div>
 
                 {/* BOX DE ACESSO RÁPIDO */}
