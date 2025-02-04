@@ -41,7 +41,7 @@
         }
     }
 }
-.img-container:hover {
+.container-scale:hover {
     transform: scale(1.05);
 }
 

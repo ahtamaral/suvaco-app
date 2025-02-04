@@ -1,7 +1,8 @@
 import React from "react";
 import frameImage from '../../components/imgs/Frame 1(2).svg';
 
-import Nav from '../../components/Nav'
+import Nav from '../../components/nav/Nav'
+import './header.css'
 
 function Header() {
     return (

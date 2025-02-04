@@ -1,12 +1,13 @@
 import React from "react";
 import { renderTitleSubtitle } from "../functions";
 import './PageSobre.css'
+import { Link } from "react-router-dom";
 
 function PageSobre(props){
     return(
     <section>
         <div className="section-container">
-            {renderTitleSubtitle(props.title,props.subtitle)}
+            {renderTitleSubtitle(props.title, props.subtitle)}
             <main>
             <p>
                 Tudo começou no Posto Nove, como diz o samba de 2001 “A Odisseia do Suvaco” de Chacal , Barreto e Nanico. 

@@ -10,11 +10,11 @@ function PageTimeline(props){
         
             <div className= "section-pages">
 
-                <Link to="/Ano2012" className="img-container">
-                    <img src="img/Screenshot_1.png" alt="Desfile 27 - Ano 2012" />
+                <Link to="/Ano2012" className="img-container container-scale">
+                    <img src="img/105.jpg" alt="Desfile 27 - Ano 2012" />
                     <h3>Desfile 27 - Ano 2012</h3>
                 </Link>
-                <Link to="/ano-1986" className="img-container">
+                <Link to="/ano-1986" className="img-container container-scale">
                     <img src="img/Screenshot_1.png" alt="Desfile 01 - Ano 1986" />
                     <h3>Desfile 01 - Ano 1986</h3>
                 </Link>
@@ -43,8 +43,13 @@ function PageTimeline(props){
                     <h3>Desfile XX - Ano 20XX</h3>
                 </Link> */}
             </div>
-        
+            <div className="footer-section">
+                                <Link id="link-txt" to="/">VOLTAR</Link>
+                                <div className="line"></div>
+                    </div>
         </div>
+                    
+     
     </section>
    
 }
