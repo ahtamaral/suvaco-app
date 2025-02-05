@@ -13,8 +13,11 @@ import PageAcervo from './components/pasteAcervo/PageAcervo';
 import PageSobre from './components/pasteSobre/PageSobre'
 import PageTimeline from './components/pasteTimeline/PageTimeline';
 import PageDivinas from './components/pasteDivinasAxilas/PageDivinas';
+import PageVoceSuvaco from './components/pasteVoceComSuvaco/pageVoceSuvaco';
+
 
 import Ano2012 from './components/pasteTimeline/anos/2012/Ano2012';
+import Ano1986 from './components/pasteTimeline/anos/1986/Ano1986';
 
 import sectionsPosts from './components/json/sections.json'
 
@@ -42,9 +45,16 @@ function App() {
             {/* Outras páginas*/}
             <Route path="/sobre" element={<PageSobre  {... sectionsPosts.sections[1]}/>} /> 
             <Route path="/timeline" element={<PageTimeline {... sectionsPosts.sections[3]}/>} />
-            <Route path="/Ano2012" element={<Ano2012/>} />
             <Route path="/acervo" element={<PageAcervo {... sectionsPosts.sections[2]}/>} />
             <Route path="/divinas" element={<PageDivinas {... sectionsPosts.sections[4]}/>} />
+            
+            <Route path="/voce-com-o-suvaco" element={<PageVoceSuvaco {... sectionsPosts.sections[5]}/>} />
+            
+            
+            <Route path="/Ano2012" element={<Ano2012/>} />
+            <Route path="/Ano1986" element={<Ano1986/>} />
+            
+            
             
           </Routes>
         

@@ -14,7 +14,7 @@ function PageTimeline(props){
                     <img src="img/105.jpg" alt="Desfile 27 - Ano 2012" />
                     <h3>Desfile 27 - Ano 2012</h3>
                 </Link>
-                <Link to="/ano-1986" className="img-container container-scale">
+                <Link to="/Ano1986" className="img-container container-scale">
                     <img src="img/Screenshot_1.png" alt="Desfile 01 - Ano 1986" />
                     <h3>Desfile 01 - Ano 1986</h3>
                 </Link>
