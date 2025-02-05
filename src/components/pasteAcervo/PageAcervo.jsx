@@ -11,15 +11,21 @@ function PageAcervo(props) {
     const [fullScreenActivated, setFullScreenActivated] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
 
+    const categoriaAnos = [...new Set(DATA.map(item => item.year).filter(Boolean))].sort();
+
     const imagensFiltradas = DATA.filter(item => item.online && item.type === "imagem");
 
-    const imagensExibidas = categoriasClicadas.length > 0 
-    ? imagensFiltradas.filter(item => {
+    const imagensExibidas = DATA.filter(item => {
+        if (!item.online || item.type !== "imagem") return false;
+    
         const keywordsArray = item.keywords ? item.keywords.split(",").map(k => k.trim().toLowerCase()) : [];
-        return categoriasClicadas.some(cat => keywordsArray.includes(cat.toLowerCase()));
-    })
-    : imagensFiltradas;
-
+        const anoSelecionado = categoriasClicadas.includes(item.year.toString());
+    
+        return categoriasClicadas.length === 0 || 
+               anoSelecionado || 
+               categoriasClicadas.some(cat => keywordsArray.includes(cat.toLowerCase()));
+    });
+    
     function toggleMenuOpen() {
         setMenuOpen(prev => !prev);
     }
@@ -32,6 +38,17 @@ function PageAcervo(props) {
                 : [...prevState, categoria]
         );
     }
+
+    function pushAnoClicado(e) {
+        const ano = e.target.innerText;
+        setCategoriasClicadas(prevState =>
+            prevState.includes(ano)
+                ? prevState.filter(item => item !== ano)
+                : [...prevState, ano]
+        );
+    }
+    
+    
 
     function imgFullScreen(index) {
         setFullScreenActivated(true);
@@ -61,16 +78,43 @@ function PageAcervo(props) {
                 </button>
 
                 {menuOpen && (
-                    <div className="dropdown">
-                        {categorias.map((nome, index) => (
-                            <li 
-                                onClick={pushCategoriaClicada} 
-                                className={`categoria-item ${categoriasClicadas.includes(nome) ? "selecionada" : ""}`}
-                                key={index}
-                            >
-                                {nome}
-                            </li>
-                        ))}
+                    
+                    <div className="dropdown-flex">
+                            
+                            <div className="dropdown1">
+                            <span className="filter-title">Características</span>
+                                <div className="dropdown">
+                                {categorias.map((nome, index) => (
+                                    <li 
+                                        onClick={pushCategoriaClicada} 
+                                        className={`categoria-item ${categoriasClicadas.includes(nome) ? "selecionada" : ""}`}
+                                        key={index}
+                                    >
+                                        {nome}
+                                    </li>
+                                ))}
+                                </div>
+                                </div>
+
+                                <div className="dropdown2">
+
+                            <span className="filter-title">Anos</span>
+                                <div className="dropdown">
+                                {categoriaAnos.map((ano, index) => (
+                                    <li 
+                                        onClick={pushAnoClicado} 
+                                        className={`categoria-item ${categoriasClicadas.includes(ano.toString()) ? "selecionada" : ""}`}
+                                        key={index}
+                                    >
+                                        {ano}
+                                    </li>
+                                ))}
+
+                                </div>
+                                </div>
+                    
+                    
+                        
                     </div>
                 )}
 

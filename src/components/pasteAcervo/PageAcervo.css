@@ -77,18 +77,29 @@ section{
     
 }
 
+.dropdown-flex{
+  display: flex;
+  gap: 20px;
+}
+
 .dropdown {
   width: 100%;
   max-height: 150px;
   overflow-y: auto;
   background: var(--background-page-color);
-  border: 1px solid #ccc;
   border-radius: 13px;
   margin-top: 5px;
   position: relative;
   font-family: var(--font-title);
 }
-  
+
+.dropdown2{
+  width: 50%;
+}
+.dropdown1{
+  width: 50%;
+}
+
 .categoria-item {
   padding: 10px;
   cursor: pointer;
@@ -165,6 +176,10 @@ section{
 left: 20%; 
 }
 
+.filter-title{
+  font-size: 1.5rem;
+  color: var(--subtitle-color);
+}
 
 .nav-btn.right { 
   right: 20%; 
