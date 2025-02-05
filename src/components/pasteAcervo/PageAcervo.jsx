@@ -3,23 +3,41 @@ import "./PageAcervo.css";
 import { Link } from "react-router-dom";
 import { renderTitleSubtitle } from "../functions";
 import categorias from "../json/categorias.json";
-
+import DATA from "../json/resultado_formatado.json";
 
 function PageAcervo(props) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [categoriasClicadas, setCategoriasClicadas] = useState([]);
-    
     const [fullScreenActivated, setFullScreenActivated] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
 
-    const images = Array.from({ length: 106 }, (_, i) => `img/${i + 1}.jpg`);
-    /* ira ser alterado a linha de cima, foi apenas pra testes
-    o certo aqui é criar um meio de pegar os dados da planilha e os arquivos pra depois criar um json
-    com as imagens e as categorias*/
+    const categoriaAnos = [...new Set(DATA.map(item => item.year).filter(Boolean))].sort();
 
+    const imagensExibidas = DATA.filter(item => {
+        if (!item.online || item.type !== "imagem") return false;
+    
+        const keywordsArray = item.keywords ? item.keywords.split(",").map(k => k.trim().toLowerCase()) : [];
+        const anoSelecionado = categoriasClicadas.filter(cat => !isNaN(cat)).length > 0;
+        const categoriaSelecionada = categoriasClicadas.filter(cat => isNaN(cat)).length > 0;
+    
+        const correspondeAno = categoriasClicadas.includes(item.year.toString());
+        const correspondeCategoria = categoriasClicadas.some(cat => keywordsArray.includes(cat.toLowerCase()));
+    
+        if (anoSelecionado && !categoriaSelecionada) {
+            return correspondeAno;
+        }
+        if (!anoSelecionado && categoriaSelecionada) {
+            return correspondeCategoria;
+        }
+        if (anoSelecionado && categoriaSelecionada) {
+            return correspondeAno && correspondeCategoria;
+        }
+        
+        return true;
+    });
+    
     function toggleMenuOpen() {
         setMenuOpen(prev => !prev);
-        console.log(menuOpen);
     }
 
     function pushCategoriaClicada(e) {
@@ -30,6 +48,17 @@ function PageAcervo(props) {
                 : [...prevState, categoria]
         );
     }
+
+    function pushAnoClicado(e) {
+        const ano = e.target.innerText;
+        setCategoriasClicadas(prevState =>
+            prevState.includes(ano)
+                ? prevState.filter(item => item !== ano)
+                : [...prevState, ano]
+        );
+    }
+    
+    
 
     function imgFullScreen(index) {
         setFullScreenActivated(true);
@@ -42,11 +71,11 @@ function PageAcervo(props) {
     }
 
     function prevImage() {
-        setCurrentIndex(prevIndex => (prevIndex > 0 ? prevIndex - 1 : images.length - 1));
+        setCurrentIndex(prevIndex => (prevIndex > 0 ? prevIndex - 1 : imagensExibidas.length - 1));
     }
 
     function nextImage() {
-        setCurrentIndex(prevIndex => (prevIndex < images.length - 1 ? prevIndex + 1 : 0));
+        setCurrentIndex(prevIndex => (prevIndex < imagensExibidas.length - 1 ? prevIndex + 1 : 0));
     }
 
     return (
@@ -55,29 +84,57 @@ function PageAcervo(props) {
                 {renderTitleSubtitle(props.title, props.subtitle)}
 
                 <button id="categorias-button" onClick={toggleMenuOpen}>
-                    Selecione as categorias desejadas <i className="ri-arrow-drop-down-line"></i> 
-                    <span id="warning">ainda não habilitado</span>
+                    Selecione as categorias desejadas <i className="ri-arrow-drop-down-line"></i>
                 </button>
 
-                <div className="dropdown">
-                    {categorias.map((nome, index) => (
-                        <li 
-                            onClick={pushCategoriaClicada} 
-                            className={`categoria-item ${categoriasClicadas.includes(nome) ? "selecionada" : ""}`}
-                            key={index}
-                        >
-                            {nome}
-                        </li>
-                    ))}
-                </div>
+                {menuOpen && (
+                    
+                    <div className="dropdown-flex">
+                            
+                            <div className="dropdown1">
+                            <span className="filter-title">Características</span>
+                                <div className="dropdown">
+                                {categorias.map((nome, index) => (
+                                    <li 
+                                        onClick={pushCategoriaClicada} 
+                                        className={`categoria-item ${categoriasClicadas.includes(nome) ? "selecionada" : ""}`}
+                                        key={index}
+                                    >
+                                        {nome}
+                                    </li>
+                                ))}
+                                </div>
+                                </div>
+
+                                <div className="dropdown2">
+
+                            <span className="filter-title">Anos</span>
+                                <div className="dropdown">
+                                {categoriaAnos.map((ano, index) => (
+                                    <li 
+                                        onClick={pushAnoClicado} 
+                                        className={`categoria-item ${categoriasClicadas.includes(ano.toString()) ? "selecionada" : ""}`}
+                                        key={index}
+                                    >
+                                        {ano}
+                                    </li>
+                                ))}
+
+                                </div>
+                                </div>
+                    
+                    
+                        
+                    </div>
+                )}
 
                 <div className="portfolio">
-                    {images.map((src, index) => (
+                    {imagensExibidas.map((item, index) => (
                         <img 
                             key={index} 
-                            src={src}
+                            src={`img/${item.item}`} 
                             onClick={() => imgFullScreen(index)} 
-                            alt={`Imagem ${index + 1}`} 
+                            alt={item.desc} 
                         />
                     ))}
                 </div>
@@ -85,21 +142,18 @@ function PageAcervo(props) {
                 {/* Fullscreen */}
                 {fullScreenActivated && currentIndex !== null && (
                     <div className="fullscreen-container">
-                        
-                        
-                        
                         <button className="close-btn" onClick={closeFullScreen}><i className="ri-close-large-line"></i></button>
-                        <img className="fullscreen" src={images[currentIndex]} alt={`Imagem ${currentIndex + 1}`} />
-                        <button className="nav-btn left" onClick={prevImage}>{<i class="ri-arrow-left-line"></i>}</button>
-                        <button className="nav-btn right" onClick={nextImage}>{<i class="ri-arrow-right-line"></i>}</button>
-
+                        <img className="fullscreen" src={`img/${imagensExibidas[currentIndex].item}`} alt={imagensExibidas[currentIndex].desc} />
+                        <button className="nav-btn left" onClick={prevImage}><i className="ri-arrow-left-line"></i></button>
+                        <button className="nav-btn right" onClick={nextImage}><i className="ri-arrow-right-line"></i></button>
+                        
                         <div className="thumbnails">
-                            {images.slice(Math.max(0, currentIndex - 4), currentIndex + 5).map((src, index) => (
+                            {imagensExibidas.slice(Math.max(0, currentIndex - 4), currentIndex + 5).map((item, index) => (
                                 <img 
                                     key={index} 
-                                    className={`thumb ${src === images[currentIndex] ? "active" : ""}`} 
-                                    src={src} 
-                                    onClick={() => setCurrentIndex(images.indexOf(src))}
+                                    className={`thumb ${item.item === imagensExibidas[currentIndex].item ? "active" : ""}`} 
+                                    src={`img/${item.item}`} 
+                                    onClick={() => setCurrentIndex(imagensExibidas.indexOf(item))}
                                     alt="Miniatura" 
                                 />
                             ))}
@@ -107,14 +161,11 @@ function PageAcervo(props) {
                     </div>
                 )}
 
-
-            <div className="footer-section">
-                                    <Link id="link-txt" to="/">VOLTAR</Link>
-                                    <div className="line"></div>
+                <div className="footer-section">
+                    <Link id="link-txt" to="/">VOLTAR</Link>
+                    <div className="line"></div>
+                </div>
             </div>
-            </div>
-
-            
         </section>
     );
 }

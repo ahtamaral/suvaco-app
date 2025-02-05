@@ -69,7 +69,7 @@ const AudioPlayer = ({audioSrc}) => {
             <div className="controls">
                 <button onClick={() => skipTime(-10)} className="skip-btn">-10s</button>
                 <button onClick={togglePlay} className="play-btn">
-                {isPlaying ? "Pause" : "Play"}
+                {isPlaying ? <i className="ri-pause-circle-line"></i> : <i className="ri-play-circle-line"></i>}
                 </button>
                 <button onClick={() => skipTime(10)} className="skip-btn">+10s</button>
             </div>

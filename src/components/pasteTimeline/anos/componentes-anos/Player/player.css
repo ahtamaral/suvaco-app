@@ -67,3 +67,10 @@
     width: 100%;
     justify-content: space-evenly;
 }
+
+.ri-play-circle-line{
+    font-size: 2rem;
+}
+.ri-pause-circle-line{
+    font-size: 2rem;
+}
