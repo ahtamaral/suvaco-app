@@ -13,17 +13,27 @@ function PageAcervo(props) {
 
     const categoriaAnos = [...new Set(DATA.map(item => item.year).filter(Boolean))].sort();
 
-    const imagensFiltradas = DATA.filter(item => item.online && item.type === "imagem");
-
     const imagensExibidas = DATA.filter(item => {
         if (!item.online || item.type !== "imagem") return false;
     
         const keywordsArray = item.keywords ? item.keywords.split(",").map(k => k.trim().toLowerCase()) : [];
-        const anoSelecionado = categoriasClicadas.includes(item.year.toString());
+        const anoSelecionado = categoriasClicadas.filter(cat => !isNaN(cat)).length > 0;
+        const categoriaSelecionada = categoriasClicadas.filter(cat => isNaN(cat)).length > 0;
     
-        return categoriasClicadas.length === 0 || 
-               anoSelecionado || 
-               categoriasClicadas.some(cat => keywordsArray.includes(cat.toLowerCase()));
+        const correspondeAno = categoriasClicadas.includes(item.year.toString());
+        const correspondeCategoria = categoriasClicadas.some(cat => keywordsArray.includes(cat.toLowerCase()));
+    
+        if (anoSelecionado && !categoriaSelecionada) {
+            return correspondeAno;
+        }
+        if (!anoSelecionado && categoriaSelecionada) {
+            return correspondeCategoria;
+        }
+        if (anoSelecionado && categoriaSelecionada) {
+            return correspondeAno && correspondeCategoria;
+        }
+        
+        return true;
     });
     
     function toggleMenuOpen() {
