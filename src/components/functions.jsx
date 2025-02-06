@@ -40,3 +40,22 @@ export function imgRender(img, id) {
     );
 }
 
+export function placeImageFromSheetByID(id, sheet, objClass = null, ObjID = null) {
+    const image = sheet.find(item => item.id === id);
+    
+    if (!image) {
+        console.warn(`Imagem com ID ${id} não encontrada.`);
+        return <p>Imagem não encontrada</p>;
+    }
+
+    return (
+        <img 
+            src={`img/${image.item}`} 
+            alt={image.desc || "Imagem"} 
+            title={image.desc || "Imagem"} 
+            className={objClass || undefined} 
+            id={ObjID || undefined} 
+        />
+    );
+}
+
