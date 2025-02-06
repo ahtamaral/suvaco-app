@@ -5,7 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server: {
     port: process.env.PORT || 3000,
-    host: true,  // Adicione uma vírgula aqui
+    host: true,
   },
-  plugins: [react()],  // Certifique-se de que os plugins estão fora do bloco `server`
+  preview: {
+    allowedHosts: ["www.suvacodocristo.com", "www.suvacodocristo.com.br"],
+  },
+  plugins: [react()],
 })
