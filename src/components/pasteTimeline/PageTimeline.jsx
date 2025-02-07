@@ -2,6 +2,8 @@ import React from "react";
 import { renderTitleSubtitle } from "../functions";
 import './PageTimeline.css'
 import { Link } from "react-router-dom";
+import { placeImageFromSheetByID } from "../functions";
+import DATA from "../json/resultado_formatado.json"
 
 function PageTimeline(props){
     return <section>
@@ -9,39 +11,14 @@ function PageTimeline(props){
             {renderTitleSubtitle(props.title,props.subtitle)}
         
             <div className= "section-pages">
-
                 <Link to="/Ano2012" className="img-container container-scale">
                     <img src="img/105.jpg" alt="Desfile 27 - Ano 2012" />
                     <h3>Desfile 27 - Ano 2012</h3>
                 </Link>
                 <Link to="/Ano1986" className="img-container container-scale">
-                    <img src="img/Screenshot_1.png" alt="Desfile 01 - Ano 1986" />
+                    {placeImageFromSheetByID(784, DATA)}
                     <h3>Desfile 01 - Ano 1986</h3>
                 </Link>
-                {/* <Link to="/" className="img-container">
-                    <img src="" alt="" />
-                    <h3>Desfile XX - Ano 20XX</h3>
-                </Link>
-                <Link to="/" className="img-container">
-                    <img src="" alt="" />
-                    <h3>Desfile XX - Ano 20XX</h3>
-                </Link>
-                <Link to="/" className="img-container">
-                    <img src="" alt="" />
-                    <h3>Desfile XX - Ano 20XX</h3>
-                </Link>
-                <Link to="/" className="img-container">
-                    <img src="" alt="" />
-                    <h3>Desfile XX - Ano 20XX</h3>
-                </Link>
-                <Link to="/" className="img-container">
-                    <img src="" alt="" />
-                    <h3>Desfile XX - Ano 20XX</h3>
-                </Link>
-                <Link to="/" className="img-container">
-                    <img src="" alt="" />
-                    <h3>Desfile XX - Ano 20XX</h3>
-                </Link> */}
             </div>
             <div className="footer-section">
                                 <Link id="link-txt" to="/">VOLTAR</Link>

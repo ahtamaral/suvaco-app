@@ -2,24 +2,23 @@
 width: 1000px;
 margin-bottom: 25px;
 position: relative;
-left: 2%;
 }
 
 
 .carrossel{
-    display: flex; /* Alterado de grid para flex */
+    display: flex;
     gap: 1rem;
     overflow-x: auto;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
-    white-space: nowrap; /* Garante que os itens fiquem na mesma linha */
+    white-space: nowrap;
 
 }
 
 
 .card {
-    flex: 0 0 auto; /* Garante que os itens não encolham e respeitem seu tamanho */
-    max-height: 350px;
+    flex: 0 0 auto;
+    max-height: 400px;
     max-width: 500px;
     scroll-snap-align: center;
 }

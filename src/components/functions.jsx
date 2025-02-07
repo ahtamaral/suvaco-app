@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export function rightRender(title, subtitle, right) {
     /*Se isRight == True, cria uma classe css right na qual o título fica na direita*/
     const isRight = right === "True";
@@ -40,3 +42,43 @@ export function imgRender(img, id) {
     );
 }
 
+export function placeImageFromSheetByID(id, sheet, objClass = null, ObjID = null) {
+    const image = sheet.find(item => item.id === id);
+    
+    const [fullScreenActivated, setFullScreenActivated] = useState(false);
+
+    if (!image) {
+        console.warn(`Imagem com ID ${id} não encontrada.`);
+        return <p>Imagem não encontrada</p>;
+    }
+
+    function openFullScreen() {
+        setFullScreenActivated(true);
+    }
+
+    function closeFullScreen() {
+        setFullScreenActivated(false);
+    }
+
+    return (
+        <>
+            <img 
+                src={`img/${image.item}`} 
+                alt={image.desc || "Imagem"} 
+                title={image.desc || "Imagem"} 
+                className={objClass || undefined} 
+                id={ObjID || undefined}
+                onClick={openFullScreen}
+            />
+            
+            {fullScreenActivated && (
+                <div className="fullscreen-container">
+                    <button className="close-btn" onClick={closeFullScreen}>
+                        <i className="ri-close-large-line"></i>
+                    </button>
+                    <img className="fullscreen" src={`img/${image.item}`} alt={image.desc || "Imagem"} />
+                </div>
+            )}
+        </>
+    );
+}
