@@ -19,7 +19,7 @@ left: 2%;
 
 .card {
     flex: 0 0 auto; /* Garante que os itens não encolham e respeitem seu tamanho */
-    max-height: 350px;
+    max-height: 400px;
     max-width: 500px;
     scroll-snap-align: center;
 }
