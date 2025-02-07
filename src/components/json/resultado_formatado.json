@@ -1,4 +1,19 @@
 [
+    
+    
+    
+    {
+        "id": 2,
+        "item": "1986 Camiseta Sonia Matos.jpg",
+        "type": "imagem",
+        "format": "jpg",
+        "size": "41",
+        "year": 1986,
+        "Fonte": null,
+        "desc": "Arte da camiseta de 1986",
+        "keywords": "camiseta, arte",
+        "online": true
+    },
     {
         "id": 6,
         "item": "1986 desfile.JPG",
@@ -37,7 +52,7 @@
     },
     {
         "id": 9,
-        "item": "1986 saida.jpg",
+        "item": "1986 saida.JPG",
         "type": "imagem",
         "format": "jpg",
         "size": "1,3M",
@@ -73,7 +88,7 @@
     },
     {
         "id": 12,
-        "item": "Turma da maria angelica 1986 (1)",
+        "item": "Turma da maria Angelica 1986 (1).jpg",
         "type": "imagem",
         "format": "jpg",
         "size": "122k",
@@ -97,7 +112,7 @@
     },
     {
         "id": 14,
-        "item": "1985 JB - destaque 2 - nasce o Suvaco.jpg",
+        "item": "1985 JB - destaque2 - nasce o Suvaco.jpg",
         "type": "imagem",
         "format": "jpg",
         "size": "52k",
@@ -145,7 +160,7 @@
     },
     {
         "id": 18,
-        "item": "1986 Imprensa JB ou Globo Rio mais animado Sovaco",
+        "item": "1986 Imprensa JB ou Globo Rio mais animado Sovaco.jpg",
         "type": "imagem",
         "format": "jpg",
         "size": "561K",
@@ -205,7 +220,7 @@
     },
     {
         "id": 784,
-        "item": "suvaconota86",
+        "item": "suvaconota86.jpg",
         "type": "imagem",
         "format": "jpg",
         "size": "56.9 KB",
