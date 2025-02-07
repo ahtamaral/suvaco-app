@@ -61,12 +61,29 @@
   padding: 10px 25px;
 }
 
+#ampliar{
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: Roboto;
+  margin-top: 25px;
+}
 
+#letra{
+margin-top: 25px;}
+
+.letra-side-by-side{
+  display: flex;
+  justify-content: space-around;
+}
 .title-divisoria-aberta{ /*titulos dentro da divisoria*/
   font-size: 2rem;
   margin-bottom: 25px;
   color: var(--title-divisoria-aberta-color);
   font-weight: 600;
+}
+
+.outside{
+  padding: 10px 25px;
 }
 
 
@@ -75,6 +92,12 @@
   font: var(--font-title);
   font-weight: bolder;
   font-size: 1.5rem;
+}
+
+.center{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .divisoria-fechada-imgs-flex{ /*organizar as imagens quando fechadas*/
