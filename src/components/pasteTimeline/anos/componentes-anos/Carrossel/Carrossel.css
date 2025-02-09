@@ -18,7 +18,7 @@ position: relative;
 
 .card {
     flex: 0 0 auto;
-    max-height: 400px;
+    height: 350px;
     max-width: 500px;
     scroll-snap-align: center;
 }

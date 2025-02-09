@@ -16,6 +16,9 @@ import PageDivinas from './components/pasteDivinasAxilas/PageDivinas';
 import PageVoceSuvaco from './components/pasteVoceComSuvaco/PageVoceSuvaco';
 
 
+import PageJoao from './components/pasteArtistas/Joao/PageJoao'
+
+
 import Ano2012 from './components/pasteTimeline/anos/2012/Ano2012';
 import Ano1986 from './components/pasteTimeline/anos/1986/Ano1986';
 
@@ -53,6 +56,9 @@ function App() {
 
         <Route path="/Ano2012" element={<Ano2012 />} />
         <Route path="/Ano1986" element={<Ano1986 />} />
+
+        <Route path="/Joao" element={<PageJoao/>} />
+
 
 
 
