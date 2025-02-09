@@ -149,10 +149,28 @@ margin-top: 25px;}
     mask-composite: exclude; 
 }
 
+.autor{
+  width: 200px;
+  border-radius: 13px;
+}
 
+.flex-autores{
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
+.box-autor-photo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-
+.autorName{
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
 
 
 

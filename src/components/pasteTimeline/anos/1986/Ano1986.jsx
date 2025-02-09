@@ -107,6 +107,27 @@ function Ano1986() {
                             {/*DIVISORIA ABERTA*/}
 
                                 <h3 className="title-divisoria-aberta">Autores</h3>
+
+                                <div className="flex-autores"> {/*todo refatorar depois*/}
+                                    
+                                    <div className="box-autor-photo">
+                                        <img src="img/96-modified.png" alt="" className="autor" />
+                                        <span className="autorName">João Aveleira</span>
+                                    </div>
+                                    <div className="box-autor-photo">
+                                        <img src="img/96-modified.png" alt="" className="autor" />
+                                        <span className="autorName">João Aveleira</span>
+                                    </div>
+                                    <div className="box-autor-photo">
+                                        <img src="img/96-modified.png" alt="" className="autor" />
+                                        <span className="autorName">João Aveleira</span>
+                                    </div>
+                                    <div className="box-autor-photo">
+                                        <img src="img/96-modified.png" alt="" className="autor" />
+                                        <span className="autorName">João Aveleira</span>
+                                    </div>
+
+                                </div>
                                     
                             </div>
                         
@@ -172,7 +193,29 @@ function Ano1986() {
                             {/*DIVISORIA ABERTA*/}
                             {/*DIVISORIA ABERTA*/}
 
-                                <h3 className="title-divisoria-aberta">Autores</h3>
+                            <h3 className="title-divisoria-aberta">Autores</h3>
+
+                                <div className="flex-autores"> {/*todo refatorar depois*/}
+                                    
+                                    <div className="box-autor-photo">
+                                        <img src="img/96-modified.png" alt="" className="autor" />
+                                        <span className="autorName">João Aveleira</span>
+                                    </div>
+                                    <div className="box-autor-photo">
+                                        <img src="img/96-modified.png" alt="" className="autor" />
+                                        <span className="autorName">João Aveleira</span>
+                                    </div>
+                                    <div className="box-autor-photo">
+                                        <img src="img/96-modified.png" alt="" className="autor" />
+                                        <span className="autorName">João Aveleira</span>
+                                    </div>
+                                    <div className="box-autor-photo">
+                                        <img src="img/96-modified.png" alt="" className="autor" />
+                                        <span className="autorName">João Aveleira</span>
+                                    </div>
+
+                                </div>
+
 
                             </div>
                             ) : (

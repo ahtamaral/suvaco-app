@@ -1,0 +1,24 @@
+.titulo-artista{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: Poppins;
+    color: var(--subtitle-color);
+}
+
+
+#perfil-joao {
+    float: right;  /* Faz a imagem flutuar à direita */
+    margin-left: 20px; /* Adiciona espaço entre a imagem e o texto */
+    width: 500px; /* Ajuste conforme necessário */
+    border-radius: 8px; /* Opcional: deixa as bordas arredondadas */
+}
+
+#aviso{
+    color: red;
+    font-size: 2rem;
+}
+
+.acervo{
+    column-count: 3;
+    gap: 5px;
+}
