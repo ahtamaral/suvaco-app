@@ -16,7 +16,7 @@ function PageTimeline(props){
                     <h3>Desfile 27 - Ano 2012</h3>
                 </Link>
                 <Link to="/Ano1986" className="img-container container-scale">
-                    {placeImageFromSheetByID(784, DATA)}
+                    {placeImageFromSheetByID(10, DATA)}
                     <h3>Desfile 01 - Ano 1986</h3>
                 </Link>
             </div>
@@ -26,9 +26,7 @@ function PageTimeline(props){
                     </div>
         </div>
                     
-     
     </section>
-   
 }
 
 export default PageTimeline

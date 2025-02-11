@@ -1,6 +1,5 @@
 import React from "react";
 import { placeImageFromSheetByID, renderTitleSubtitle } from "../../functions";
-import Carrossel from "../../pasteTimeline/anos/componentes-anos/Carrossel/Carrossel";
 import './PageJoao.css'
 import DATA from '../../json/resultado_formatado.json'
 import PlaceImageFromSheetByID from "../../pasteTimeline/anos/componentes-anos/imgByID/PlaceImageFromSheetByID";
@@ -11,7 +10,7 @@ function PageJoao(){
     return (
         <section>
             <div className="section-container">
-                {renderTitleSubtitle("João Aveleira", null)}
+                {renderTitleSubtitle("João Avelleira", null)}
 
                 <div className="primeiro-paragrafo">
                 <img id="perfil-joao" src="img/96.jpg" alt="" />
@@ -32,7 +31,6 @@ function PageJoao(){
                 
 
                 <span id="aviso">A ideia aqui é colocar as letras dos sambas/camisetas do artista</span>
-                <Carrossel ids={[12,6,7,8,53,10]}></Carrossel>
 
                 <h3 className="titulo-artista">Galeria do Artista</h3>
                 <span id="aviso">A ideia aqui é colocar as fotos do artista no bloco / Fotos da Pessoa</span>
