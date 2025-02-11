@@ -7,13 +7,14 @@ export default defineConfig({
     port: process.env.PORT || 3000,
     host: true,
     strictPort: true,
+    watch: {
+      usePolling: true,
+    },
     cors: {
       origin: ["https://www.suvacodocristo.com", "https://www.suvacodocristo.com.br"],
       credentials: true,
     },
-    hmr: {
-      clientPort: 443, // Para funcionar com HTTPS
-    },
+    hmr: true
   },
   plugins: [react()],
 })
