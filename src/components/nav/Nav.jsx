@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './nav.css'
+import Hamburger from "../MenuHamburguer/Hamburguer";
 
 function Nav() {
     return (
+        <div>
+            <Hamburger />
         <nav>
             <ul>
                 <li><Link to="/">Home</Link></li>
@@ -14,6 +17,7 @@ function Nav() {
                 <li><Link to="/voce-com-o-suvaco">Você com o Suvaco</Link></li>
             </ul>
         </nav>
+        </div>
     );
 }
 
