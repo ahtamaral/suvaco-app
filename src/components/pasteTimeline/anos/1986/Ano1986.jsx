@@ -125,7 +125,7 @@ function Ano1986() {
                     
                     <div className="subdiv1-2"> {/* SUBDIVISAO 2 - ESCUTE SAMBA */}
                         <h3 className="subtitle-subdiv" style={{marginBottom:"25px"}}>Escute o Samba</h3>
-                        <Player audioSrc={"songs/2012 Suvaco Samba Palmas pro Suvaco.mp3"}></Player>
+                        <Player audioSrc={"songs/1986 Divinas Axilas novo.mp3"}></Player>
 
                     </div>
 
