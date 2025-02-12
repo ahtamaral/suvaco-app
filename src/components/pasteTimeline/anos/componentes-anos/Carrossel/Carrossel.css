@@ -51,4 +51,18 @@
     }
   }
 
- 
+@media (max-width:360px) {
+    #artista-funcao{
+      font-size: 1.5rem;
+    }
+    #artista-name{
+      font-size: 1.3rem;
+    }
+    .artista-0{
+      >img{
+        width: 50%;
+      }
+
+    }
+
+  }

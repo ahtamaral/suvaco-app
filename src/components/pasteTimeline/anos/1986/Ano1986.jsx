@@ -33,7 +33,7 @@ function Ano1986() {
         <section>
             <div className="section-container">
                 <div className="section-title-subtitle">
-                    <h2>Desfile 01 - Ano 1986</h2>
+                    <h2 id="titulo-principal">Desfile 01 - Ano 1986</h2>
                 </div>
 
                 {/* BOX DE ACESSO RÁPIDO */}
@@ -43,7 +43,7 @@ function Ano1986() {
                     <ul className="box-links">
                         <li><a href="#contexto-historico">O Contexto Histórico</a></li>
                         <li><a href="#o-samba">O Samba</a></li>
-                        <li><a href="#processo-criativo">O Processo Criativo</a></li>
+                        <li><a href="#processo-criativo">Artes do Desfile</a></li>
                         <li><a href="#suvaco-midia">O Suvaco na Mídia</a></li>
                         <li><a href="#o-desfile">O Desfile</a></li>
 
@@ -54,7 +54,7 @@ function Ano1986() {
                 </div>
 
                 
-                <div id="contexto-historico" className="div0"> {/*DIVISÓRIA 0*/}
+                <div id="contexto-historico" className="div 0"> {/*DIVISÓRIA 0*/}
                     <div className="section-title-subtitle"> {/*TÍTULO*/}
                                     
                         <h2 id="titulo-ancora">Contexto Histórico</h2>
@@ -80,7 +80,7 @@ function Ano1986() {
                 </div> {/*FIM DIVISÓRIA 0*/}
 
                 
-                <div id="o-samba" className="div1"> {/*DIVISÓRIA 1*/}
+                <div id="o-samba" className="div 1"> {/*DIVISÓRIA 1*/}
                     <div className="section-title-subtitle"> {/*TÍTULO*/}
                                     
                         <h2 id="titulo-ancora">O Samba</h2>
@@ -124,31 +124,28 @@ function Ano1986() {
                     </div>
                     
                     <div className="subdiv1-2"> {/* SUBDIVISAO 2 - ESCUTE SAMBA */}
-                        <h3 className="subtitle-subdiv" style={{marginBottom:"75px"}}>Escute o Samba</h3>
-                        <Player audioSrc={"songs/2012 Suvaco Samba Palmas pro Suvaco.mp3"}></Player>
+                        <h3 className="subtitle-subdiv" style={{marginBottom:"25px"}}>Escute o Samba</h3>
+                        <Player audioSrc={"songs/1986 Divinas Axilas novo.mp3"}></Player>
 
                     </div>
 
-                    <div className="subdiv1-3" style={{marginTop:"50px"}}> {/* SUBDIVISAO 3 - POR DE TRAS LETRA */}
-                        <h3 className="subtitle-subdiv">Por trás da letra</h3>
+                        <h3 className="subtitle-subdiv" style={{marginTop:"50px"}}>Por trás da letra</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maxime, natus doloribus voluptatum accusantium veritatis non voluptas eveniet nihil minima consequuntur aliquid inventore aspernatur, perferendis, quis officiis nisi magni molestias?
                         Dolorum unde ipsam illo natus, laudantium dignissimos nulla blanditiis fugiat distinctio in. Tempora similique molestiae quisquam placeat distinctio voluptatem quas possimus ex dolores nisi beatae, ullam culpa cum debitis neque?
                         Placeat, ad quod esse alias molestias error ex eligendi saepe! Optio labore deserunt eligendi numquam debitis tempora aperiam alias ut, totam eaque nulla autem quidem minima, explicabo, dolorum recusandae officia.
                         Dolorum, temporibus. Commodi distinctio perspiciatis sit sint error, saepe sequi! Deserunt vitae suscipit tempore officiis quibusdam, voluptas nam. Quae maiores architecto temporibus, ab quos excepturi reprehenderit deleniti tempore? Corporis, ducimus.
                         Voluptates, ipsum. Illum deleniti molestias quo magnam consectetur animi modi amet nulla, praesentium et voluptatibus consequatur, quam non numquam blanditiis, quisquam sapiente excepturi debitis tenetur! Inventore perspiciatis ipsam placeat nisi?</p>
 
-                    </div>
-                    <div className="subdiv1-4"> 
+
                         <h3 className="subtitle-subdiv">Autores e Intérpretes</h3>
                         <Carrossel artistas={artistas_SAMBA} />
-                            </div>
                         </>
                         )}
 
                                     
                 </div> {/*FIM DIVISÓRIA 1*/}
                 
-                <div id="processo-criativo" className="div2"> {/*DIVISÓRIA 2*/}
+                <div id="processo-criativo" className="div 2"> {/*DIVISÓRIA 2*/}
                     <div className="section-title-subtitle"> {/*TÍTULO*/}
                                     
                         <h2 id="titulo-ancora">Artes do Desfile</h2>
@@ -159,11 +156,10 @@ function Ano1986() {
                                                                         {/*FIM TÍTULO*/}
                     </div>
                     
-                    {estadoVisibilidadeDivisorias[2] && (<><div className="subdiv3-1"> {/* SUBDIVISAO 2 - ESCUTE SAMBA */}
-                        <h3 className="subtitle-subdiv" style={{marginBottom:"75px"}}>Camiseta</h3>
-                        <PlaceImageFromSheetByID id={2} sheet={DATA} objClass={"center"}></PlaceImageFromSheetByID>
+                    {estadoVisibilidadeDivisorias[2] && (<> {/* SUBDIVISAO 2 - ESCUTE SAMBA */}
+                        <h3 className="subtitle-subdiv">Camiseta</h3>
+                        <PlaceImageFromSheetByID id={2} sheet={DATA} objClass={"center"} ObjID={"camisa86"}></PlaceImageFromSheetByID>
                         <p style={{textAlign:"center"}}>Design da camiseta de 1986</p>
-                    </div>
 
                     <div className="subdiv3-2"> 
                         <h3 className="subtitle-subdiv">Artistas</h3>
@@ -173,7 +169,7 @@ function Ano1986() {
                                     
                 </div> {/*FIM DIVISÓRIA 2*/}
 
-                <div id="suvaco-midia" className="div3" style={{marginTop: "25px"}}> {/*DIVISÓRIA 3*/}
+                <div id="suvaco-midia" className="div 3" style={{marginTop: "25px"}}> {/*DIVISÓRIA 3*/}
                     <div className="section-title-subtitle"> {/*TÍTULO*/}
                                     
                         <h2 id="titulo-ancora">O Suvaco na Mídia</h2>
@@ -204,7 +200,7 @@ function Ano1986() {
                 </div> {/*FIM DIVISÓRIA 3*/}
                 
                 
-                <div id="o-desfile" className="div4" style={{marginTop: "25px"}}> {/*DIVISÓRIA 4*/}
+                <div id="o-desfile" className="div 4" style={{marginTop: "25px"}}> {/*DIVISÓRIA 4*/}
                     <div className="section-title-subtitle"> {/*TÍTULO*/}
                                     
                         <h2 id="titulo-ancora">O Desfile</h2>
