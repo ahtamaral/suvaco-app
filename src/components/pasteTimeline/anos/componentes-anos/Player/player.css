@@ -44,7 +44,7 @@
     font-family: var(--font-time-player);
     color: var(--title-color);
     display: flex;
-    position: absolute;
+    position: relative;
     justify-content: space-evenly;
     width: 66%;
     font-size: 1.6rem;
@@ -62,6 +62,7 @@
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+ 
 }
 
 .ri-play-circle-line{
@@ -70,3 +71,10 @@
 .ri-pause-circle-line{
     font-size: 2rem;
 }
+
+@media (max-width:360) {
+    .controls{
+        margin-top: 25px;
+    }
+}
+
