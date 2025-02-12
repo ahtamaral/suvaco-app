@@ -202,3 +202,48 @@ left: 20%;
 .thumb.active {
   border-color: white;
 }
+
+
+
+@media (max-width:1024px) {
+  .fullscreen{
+    max-width: 1014px;
+    max-height: 95vh;
+
+  }
+
+  .close-btn{
+    right: 100px;
+    top: 20px;
+  }
+
+  
+}
+@media (max-width:768px) {
+  .fullscreen{
+    max-width: 750px;
+    max-height: 95vh;
+
+  }
+
+  .close-btn{
+    right: 100px;
+    top: 20px;
+  }
+
+  
+}
+@media (max-width:425px) {
+  .fullscreen{
+    max-width: 340px;
+    max-height: 95vh;
+
+  }
+
+  .close-btn{
+    right: 25px;
+    top: 20px;
+  }
+
+  
+}
