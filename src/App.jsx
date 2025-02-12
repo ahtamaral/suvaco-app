@@ -14,12 +14,12 @@ import PageSobre from './components/pasteSobre/PageSobre'
 import PageTimeline from './components/pasteTimeline/PageTimeline';
 import PageDivinas from './components/pasteDivinasAxilas/PageDivinas';
 import PageVoceSuvaco from './components/pasteVoceComSuvaco/PageVoceSuvaco';
+import PageEquipe from './components/pasteEquipe/PageEquipe';
 
 
 import PageJoao from './components/pasteArtistas/Joao/PageJoao'
 
 
-import Ano2012 from './components/pasteTimeline/anos/2012/Ano2012';
 import Ano1986 from './components/pasteTimeline/anos/1986/Ano1986';
 
 import sectionsPosts from './components/json/sections.json'
@@ -53,11 +53,10 @@ function App() {
 
         <Route path="/voce-com-o-suvaco" element={<PageVoceSuvaco {...sectionsPosts.sections[5]} />} />
 
-
-        <Route path="/Ano2012" element={<Ano2012 />} />
         <Route path="/Ano1986" element={<Ano1986 />} />
 
         <Route path="/Joao" element={<PageJoao/>} />
+        <Route path="/projeto" element={<PageEquipe/>} />
 
 
 

@@ -14,17 +14,19 @@
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 35px;
+  padding: 5px;
 }
 
 
 .box-links{ /*textos dentro do acesso rapido // organizacao estrutural*/
-  column-count: 4;
-  text-align: start;
-  padding: 0.4rem 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 5px;
 
   li{ /*os links*/
-    margin-left: 25%;
-    padding: 2px 0 ;
+    padding: 4px 10px ;
     font-size: 1.1rem;
     font-family: var(--font-acesso-rapido);
     cursor: pointer;

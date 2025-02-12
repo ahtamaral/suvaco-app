@@ -20,15 +20,21 @@ const Carrossel = ({ artistas }) => {
 
     return (
         <div className="flex-carrossel" style={{ marginTop: "35px" }}>
-            <i className="ri-arrow-left-line arrow" onClick={voltar}></i>
+            {totalArtistas > 3 && <i className="ri-arrow-left-line arrow" onClick={voltar}></i>}
+            
             {artistasVisiveis.map((artista, index) => (
-                <div className="artista" key={index}>
+                <div className={totalArtistas < 3 ? `artista-${index}` : "artista"} key={index}>
                     <span id="artista-funcao">{artista.funcao}</span>
-                    <img className="img-artista" src={artista.imagem} alt={artista.nome} />
+                    <img 
+                        className="img-artista" 
+                        src={artista.imagem} 
+                        alt={artista.nome} 
+                    />
                     <span id="artista-name">{artista.nome}</span>
                 </div>
             ))}
-            <i className="ri-arrow-right-line arrow" onClick={avancar}></i>
+
+            {totalArtistas > 3 && <i className="ri-arrow-right-line arrow" onClick={avancar}></i>}
         </div>
     );
 };

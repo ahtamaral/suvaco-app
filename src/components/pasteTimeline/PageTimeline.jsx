@@ -11,14 +11,17 @@ function PageTimeline(props){
             {renderTitleSubtitle(props.title,props.subtitle)}
         
             <div className= "section-pages">
-                <Link to="/Ano2012" className="img-container container-scale">
-                    <img src="img/105.jpg" alt="Desfile 27 - Ano 2012" />
-                    <h3>Desfile 27 - Ano 2012</h3>
-                </Link>
+                
                 <Link to="/Ano1986" className="img-container container-scale">
                     {placeImageFromSheetByID(10, DATA)}
                     <h3>Desfile 01 - Ano 1986</h3>
                 </Link>
+                
+                <Link to="#" className="img-container container-scale">
+                    <img src="img/427422_371090806252584_1535985756_n.jpg" alt="" />
+                    <h3>Desfile 27 - Ano 2012 <br/> EM BREVE</h3>
+                </Link>
+                
             </div>
             <div className="footer-section">
                                 <Link id="link-txt" to="/">VOLTAR</Link>
