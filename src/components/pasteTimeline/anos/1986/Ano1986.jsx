@@ -43,7 +43,7 @@ function Ano1986() {
                     <ul className="box-links">
                         <li><a href="#contexto-historico">O Contexto Histórico</a></li>
                         <li><a href="#o-samba">O Samba</a></li>
-                        <li><a href="#processo-criativo">O Processo Criativo</a></li>
+                        <li><a href="#processo-criativo">Artes do Desfile</a></li>
                         <li><a href="#suvaco-midia">O Suvaco na Mídia</a></li>
                         <li><a href="#o-desfile">O Desfile</a></li>
 
