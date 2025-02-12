@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   server: {
     port: process.env.PORT || 3000,
@@ -14,7 +13,10 @@ export default defineConfig({
       origin: ["https://www.suvacodocristo.com", "https://www.suvacodocristo.com.br"],
       credentials: true,
     },
-    hmr: true
+    clientPort: 443,
+  },
+  preview: {
+    allowedHosts: ["www.suvacodocristo.com", "www.suvacodocristo.com.br"]
   },
   plugins: [react()],
 })
