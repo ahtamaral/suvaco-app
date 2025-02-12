@@ -9,11 +9,12 @@ nav{
     display: flex;
     gap: 2.5em;
     justify-content: center;
+    list-style-type: none;
 
     >li {
         position: relative;
         
-        >a::before { /*cria o a linha pra usar no hover*/
+        >a::before { /*cria a linha pra usar no hover*/
             content: "";
             position: absolute;
             width: 95%;

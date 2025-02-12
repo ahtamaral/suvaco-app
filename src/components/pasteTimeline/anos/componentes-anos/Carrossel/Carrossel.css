@@ -35,3 +35,20 @@
   .arrow{
     font-size: 2rem;
   }
+
+  .artista-0{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+
+    >img{
+      width: 28% ;
+    }
+  }
+
+ 

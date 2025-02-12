@@ -26,27 +26,27 @@
             "img": {
                 "imgExists": "True",
                 "1": {
-                    "name": "Baianas",
+                    "name": "",
                     "path": "img/Screenshot_1.png"
                 },
                 "2": {
-                    "name": "Camisetas",
+                    "name": "",
                     "path": "img/Screenshot_14.png"
                 },
                 "3": {
-                    "name": "Bateria",
+                    "name": "",
                     "path": "img/Screenshot_10.png"
                 },
                 "4": {
-                    "name": "Porta-Bandeira",
+                    "name": "",
                     "path": "img/Screenshot_15.png"
                 },
                 "5": {
-                    "name": "Foliões",
+                    "name": "",
                     "path": "img/Screenshot_9.png"
                 },
                 "6":{
-                    "name":"Prêmios",
+                    "name":"",
                     "path":"img/2012 Serpentina de Ouro- Trofeu.jpg"
                 }
 
@@ -62,25 +62,22 @@
             "img": {
                 "imgExists": "True",
                 "1": {
-                    "name": "Desfile 2026",
+                    "name": "Desfile 1986",
                     "path": "img/Screenshot_1.png"
                 },
                 "2": {
-                    "name": "Desfile 2025",
+                    "name": "EM BREVE",
                     "path": "img/Screenshot_14.png"
                 },
                 "3": {
-                    "name": "Desfile 2024",
+                    "name": "EM BREVE",
                     "path": "img/Screenshot_10.png"
                 },
                 "4": {
-                    "name": "Desfile 2023",
+                    "name": "EM BREVE",
                     "path": "img/Screenshot_7.png"
-                },
-                "5": {
-                    "name": "Desfile 2022",
-                    "path": "img/Screenshot_1.png"
                 }
+
             }
         },
         "4":{
