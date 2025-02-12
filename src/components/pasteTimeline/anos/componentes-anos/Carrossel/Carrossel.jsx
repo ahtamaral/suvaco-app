@@ -1,23 +1,42 @@
-import React from "react";
-import './Carrossel.css'
-import { placeImageFromSheetByID } from "../../../../functions";
-import DATA from '../../../../json/resultado_formatado.json'
+import React, { useState } from "react";
+import './Carrossel.css';
 
-function Carrossel({ids}){
+const Carrossel = ({ artistas }) => {
+    const [indiceAtual, setIndiceAtual] = useState(0);
+    const totalArtistas = artistas.length;
+    const artistasVisiveis = artistas.slice(indiceAtual, indiceAtual + 3);
+
+    const avancar = () => {
+        if (indiceAtual + 3 < totalArtistas) {
+            setIndiceAtual(indiceAtual + 3);
+        }
+    };
+
+    const voltar = () => {
+        if (indiceAtual - 3 >= 0) {
+            setIndiceAtual(indiceAtual - 3);
+        }
+    };
 
     return (
-    <div className="carrossel-extern-div">
+        <div className="flex-carrossel" style={{ marginTop: "35px" }}>
+            {totalArtistas > 3 && <i className="ri-arrow-left-line arrow" onClick={voltar}></i>}
+            
+            {artistasVisiveis.map((artista, index) => (
+                <div className={totalArtistas < 3 ? `artista-${index}` : "artista"} key={index}>
+                    <span id="artista-funcao">{artista.funcao}</span>
+                    <img 
+                        className="img-artista" 
+                        src={artista.imagem} 
+                        alt={artista.nome} 
+                    />
+                    <span id="artista-name">{artista.nome}</span>
+                </div>
+            ))}
 
-        <div className="carrossel">
-
-        {ids.map((id) => (
-            <div key={id}>{placeImageFromSheetByID(id, DATA, "card")}</div>
-        ))}
-
+            {totalArtistas > 3 && <i className="ri-arrow-right-line arrow" onClick={avancar}></i>}
         </div>
+    );
+};
 
-    </div>)
-
-}
-
-export default Carrossel
+export default Carrossel;

@@ -2,312 +2,238 @@ import React, { useState } from "react";
 import './Ano1986.css';
 import { Link } from "react-router-dom";
 import Player from "../componentes-anos/Player/Player";
-import Carrossel from "../componentes-anos/Carrossel/Carrossel";
 import DATA from "../../../json/resultado_formatado.json"
 import PlaceImageFromSheetByID from "../componentes-anos/imgByID/PlaceImageFromSheetByID";
+import Carrossel from "../componentes-anos/Carrossel/Carrossel";
 
 function Ano1986() {
-    //cada item do array representa a visibilidade de uma divisória
-    const [divisoriasVisibilidade, setDivisoriasVisibilidade] = useState([false, false,false, false, false]);
+    
+    const artistas_SAMBA = [
+        { funcao: "AUTOR", nome: "João Avelleira", imagem: "img/96-modified.png" },
+        { funcao: "INTÉRPRETE", nome: "Sonia Matos", imagem: "img/96-modified.png" },
+        { funcao: "AUTOR", nome: "João Avelleira", imagem: "img/96-modified.png" }
+    ];
 
-    const toggleDivisoriaVisibility = (index) => {
-        setDivisoriasVisibilidade((prevState) =>
+    const artistas_ARTE = [
+
+        { funcao: "INTÉRPRETE", nome: "Sonia Matos", imagem: "img/96-modified.png" },
+    ]
+
+
+    const [estadoVisibilidadeDivisorias, setEstadoVisibilidadeDivisorias ] = useState([true,true,true,true,true]);
+
+    const toggleDivisoria = (index) => {
+        setEstadoVisibilidadeDivisorias(prevState => 
             prevState.map((visivel, i) => (i === index ? !visivel : visivel))
         );
     };
+    
 
     return (
         <section>
             <div className="section-container">
                 <div className="section-title-subtitle">
                     <h2>Desfile 01 - Ano 1986</h2>
-                    <h3>DIVINAS AXILAS</h3>
                 </div>
 
                 {/* BOX DE ACESSO RÁPIDO */}
                 <div className="acesso-rapido">
                     <span id="acesso">Acesso Rápido</span>
                     <div className="box">
-                        <ul className="box-links">
-                            <li>O Contexto Histórico</li>
-                            <li>O Samba</li>
-                            <li>O Processo Criativo</li>
-                            <li>O Suvaco na Mídia</li>
-                        </ul>
+                    <ul className="box-links">
+                        <li><a href="#contexto-historico">O Contexto Histórico</a></li>
+                        <li><a href="#o-samba">O Samba</a></li>
+                        <li><a href="#processo-criativo">O Processo Criativo</a></li>
+                        <li><a href="#suvaco-midia">O Suvaco na Mídia</a></li>
+                        <li><a href="#o-desfile">O Desfile</a></li>
+
+                    </ul>
+
+                    </div>
+
+                </div>
+
+                
+                <div id="contexto-historico" className="div0"> {/*DIVISÓRIA 0*/}
+                    <div className="section-title-subtitle"> {/*TÍTULO*/}
+                                    
+                        <h2 id="titulo-ancora">Contexto Histórico</h2>
+                        <button id="subtitle" onClick={() => toggleDivisoria(0)}>
+                            {estadoVisibilidadeDivisorias[0] ? "FECHAR" : "ABRIR"}
+                        </button>
+                        <div className="subtitle-line"></div>
+                                                                        {/*FIM TÍTULO*/}
                     </div>
 
                     
-                </div>
-
-
-                {/* Divisória 1 - CONTEXTO HISTÓRICO */}
-                <div className="divisoria">
-                        <div className="divisoria-header">
-                            <h3>O Contexto Histórico</h3>
-                            <button
-                                id="btn-divisoria"
-                                onClick={() => toggleDivisoriaVisibility(0)}
-                            >
-                                {divisoriasVisibilidade[0]
-                                    ? "CLIQUE PARA OCULTAR"
-                                    : "CLIQUE PARA VER MAIS"}
-                            </button>
-                        </div>
-
-                        <div className="divisoria-content">
-                            {divisoriasVisibilidade[0] ? (
-                                <div className="divisoria-aberta">
-                                    <h3 className="title-divisoria-aberta">Título Aberto</h3>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
-                                    <h3 className="title-divisoria-aberta">Título Aberto</h3>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
-                                    <h3 className="title-divisoria-aberta">Título Aberto</h3>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ab facere dolor. Eligendi error reprehenderit magnam eaque corrupti. Expedita nisi iusto doloribus quibusdam quisquam veritatis, enim non quos quod a!</p>
-                                
-                                </div>
-                            ) : (
-                                <div className="divisoria-fechada">
-                                    <h4 className="divisoria-titulo-fechado">Título Fechado</h4>
-                                    <h4 className="divisoria-titulo-fechado">Título Fechado</h4>
-                                </div>
-                            )}
-                        </div>
-                </div>
-
-
-
-                {/* Divisória 2 - SAMBA */}
-                <div className="divisoria">
-                    <div className="divisoria-header">
-                        <h3>O Samba</h3>
-                        <button
-                            id="btn-divisoria"
-                            onClick={() => toggleDivisoriaVisibility(1)}
-                        >
-                            {divisoriasVisibilidade[1]
-                                    ? "CLIQUE PARA VER A LETRA"
-                                    : "CLIQUE PARA CONHECER OS AUTORES"}
-                        </button>
-                    </div>
-
-                    <div className="divisoria-content">
-                        {divisoriasVisibilidade[1] ? (
-                            <div className="divisoria-aberta">
-
-
-                            {/*DIVISORIA ABERTA*/}
-                            {/*DIVISORIA ABERTA*/}
-
-                                <h3 className="title-divisoria-aberta">Autores</h3>
-
-                                <div className="flex-autores"> {/*todo refatorar depois*/}
                                     
-                                    <div className="box-autor-photo">
-                                        <img src="img/96-modified.png" alt="" className="autor" />
-                                        <span className="autorName">João Aveleira</span>
-                                    </div>
-                                    <div className="box-autor-photo">
-                                        <img src="img/96-modified.png" alt="" className="autor" />
-                                        <span className="autorName">João Aveleira</span>
-                                    </div>
-                                    <div className="box-autor-photo">
-                                        <img src="img/96-modified.png" alt="" className="autor" />
-                                        <span className="autorName">João Aveleira</span>
-                                    </div>
-                                    <div className="box-autor-photo">
-                                        <img src="img/96-modified.png" alt="" className="autor" />
-                                        <span className="autorName">João Aveleira</span>
-                                    </div>
+                    {estadoVisibilidadeDivisorias[0] && (
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, dignissimos nemo, sed distinctio, impedit recusandae qui cupiditate magnam deserunt quasi natus! Aut ducimus incidunt aperiam ea at voluptas distinctio recusandae.
+                                    Est placeat tempora voluptates deleniti, obcaecati earum illum possimus hic dignissimos vel. Eius excepturi natus beatae ex quibusdam ipsa eum, aspernatur quisquam deleniti iste accusantium minima adipisci minus sint cum.
+                                    Nulla ad iure, assumenda, praesentium molestiae vel aliquam eum neque, nesciunt accusamus deleniti autem reprehenderit qui eaque consectetur minima eveniet optio. Commodi corrupti aliquid quas laborum excepturi molestias dignissimos pariatur.
+                                    Eum, natus omnis enim reiciendis, totam maiores ab, quae officiis id repellendus fuga quisquam! Possimus dolore repellat repellendus consectetur placeat. Fugit porro quaerat, adipisci cumque tempore libero. Impedit, nisi officiis.
+                                    Sapiente cum voluptatibus nihil ex. Hic porro quibusdam aspernatur, ipsam sit autem ducimus provident dolor ipsum nihil iusto magnam numquam unde cum tenetur! Iste qui sed dolor, temporibus alias excepturi?
+                        </p>
+                    )}
 
-                                </div>
                                     
-                            </div>
-                        
-                        ) : (
-                            
-                            
-                            <div className="divisoria-fechada outside">
-                                
-                            {/*DIVISORIA FECHADA*/}
-                            {/*DIVISORIA FECHADA*/}
+                </div> {/*FIM DIVISÓRIA 0*/}
 
-                                <h3 className="title-divisoria-aberta ">Divinas Axilas</h3>
-                                <div className="letra-side-by-side">
-                                    <p id="letra">
-                                    Venham ver, <br></br>
-                                    O odor do Redentor nos inspirou,<br></br>
-                                    Sob o manto protetor<br></br>
-                                    Das divinas axilas<br></br>
-                                    Brincamos nesta festa com amor.<br></br><br></br>
-
-                                    E contrariando<br></br>
-                                    As leis do Criador<br></br>
-                                    Cristo Redentor<br></br>
-                                    Libertando-nos do mal<br></br>
-                                    Desceu do céu e vem brincar o carnaval.<br></br><br></br>
-
-                                    (BIS)<br></br>
-                                    Gávea Pequena, Rocinha, Humaitá,<br></br> 
-                                    Índios Tamoios, ilustres Tupinambás,<br></br>
-
-                                    Mas venham ver.<br></br>
-                                    </p>
-
-                                        <PlaceImageFromSheetByID id={284} sheet={DATA} objClass={"floated-right"}></PlaceImageFromSheetByID>
-                                </div>
-                                        
-                                <h3 className="title-divisoria-aberta">Escute o Samba</h3>
-                                <p>Infelizmente a gravação desse ano não está disponível, porém não deixe de escutar dos outros anos!</p>
-                            </div>
-                            )}
-                    </div>
-                </div>
                 
-                {/* Divisória 3 - ARTES */}
-                <div className="divisoria">
-                    <div className="divisoria-header">
-                        <h3>As Artes do Desfile</h3>
-                        <button
-                            id="btn-divisoria"
-                            onClick={() => toggleDivisoriaVisibility(2)}
-                        >
-                            {divisoriasVisibilidade[2]
-                                    ? "CLIQUE PARA VER AS FOTOS"
-                                    : "CLIQUE PARA VER OS ARTISTAS RESPONSÁVEIS"}
-                        </button>
-                    </div>
-
-                    <div className="divisoria-content">
-                        {divisoriasVisibilidade[2] ? (
-                            <div className="divisoria-aberta">
-
-
-                            {/*DIVISORIA ABERTA*/}
-                            {/*DIVISORIA ABERTA*/}
-
-                            <h3 className="title-divisoria-aberta">Autores</h3>
-
-                                <div className="flex-autores"> {/*todo refatorar depois*/}
+                <div id="o-samba" className="div1"> {/*DIVISÓRIA 1*/}
+                    <div className="section-title-subtitle"> {/*TÍTULO*/}
                                     
-                                    <div className="box-autor-photo">
-                                        <img src="img/96-modified.png" alt="" className="autor" />
-                                        <span className="autorName">João Aveleira</span>
-                                    </div>
-                                    <div className="box-autor-photo">
-                                        <img src="img/96-modified.png" alt="" className="autor" />
-                                        <span className="autorName">João Aveleira</span>
-                                    </div>
-                                    <div className="box-autor-photo">
-                                        <img src="img/96-modified.png" alt="" className="autor" />
-                                        <span className="autorName">João Aveleira</span>
-                                    </div>
-                                    <div className="box-autor-photo">
-                                        <img src="img/96-modified.png" alt="" className="autor" />
-                                        <span className="autorName">João Aveleira</span>
-                                    </div>
-
-                                </div>
-
-
-                            </div>
-                            ) : (
-                            <div className="divisoria-fechada outside">
-                                
-                            {/*DIVISORIA FECHADA*/}
-                            {/*DIVISORIA FECHADA*/}
-                            
-
-                                <PlaceImageFromSheetByID id={2} sheet={DATA} objClass={"center"}></PlaceImageFromSheetByID>
-                                <p style={{textAlign:"center"}}>Arte da primeira camiseta do Suvaco</p>
-                            
-
-                            </div>
-                            )}
-                    </div>
-                </div>
-
-                {/* Divisória 4 - SUVACO MÍDIA */}
-                <div className="divisoria">
-                    <div className="divisoria-header">
-                        <h3>O Suvaco na Mídia</h3>
-                        <button
-                            id="btn-divisoria"
-                            onClick={() => toggleDivisoriaVisibility(3)}
-                        >
-                            {divisoriasVisibilidade[3]
-                                    ? "CLIQUE PARA VER OS REGISTROS"
-                                    : "CLIQUE PARA VER A HISTÓRIA"}
+                        <h2 id="titulo-ancora">O Samba</h2>
+                        <button id="subtitle" onClick={() => toggleDivisoria(1)}>
+                            {estadoVisibilidadeDivisorias[1] ? "FECHAR" : "ABRIR"}
                         </button>
+                    <div className="subtitle-line"></div>
                     </div>
+                                                                        {/*FIM TÍTULO*/}
+                
+                    {estadoVisibilidadeDivisorias[1] && ( 
+                        <>
+                        <div className="subdiv1-1"> 
 
-                    <div className="divisoria-content">
-                        {divisoriasVisibilidade[3] ? (
-                            <div className="divisoria-aberta">
+                        
+                        <h3 className="subtitle-subdiv">Divinas Axilas</h3>
+                        <div className="letra-side-by-side">
+                            <p id="letra">
+                                Venham ver, <br></br>
+                                O odor do Redentor nos inspirou,<br></br>
+                                Sob o manto protetor<br></br>
+                                Das divinas axilas<br></br>
+                                Brincamos nesta festa com amor.<br></br><br></br>
 
+                                E contrariando<br></br>
+                                As leis do Criador<br></br>
+                                Cristo Redentor<br></br>
+                                Libertando-nos do mal<br></br>
+                                Desceu do céu e vem brincar o carnaval.<br></br><br></br>
 
-                            {/*DIVISORIA ABERTA*/}
-                            {/*DIVISORIA ABERTA*/}
+                                (BIS)<br></br>
+                                Gávea Pequena, Rocinha, Humaitá,<br></br> 
+                                Índios Tamoios, ilustres Tupinambás,<br></br>
 
-                                <h3 className="title-divisoria-aberta">Autor</h3>
+                                Mas venham ver.<br></br>
+                            
+                            </p>
 
-                            </div>
-                            ) : (
-                            <div className="divisoria-fechada">
-                                
-                            {/*DIVISORIA FECHADA*/}
-                            {/*DIVISORIA FECHADA*/}
-
-                                <div className="divisoria-fechada-imgs-flex">
-                                    <Carrossel ids={[18,15,16,13,14,17,19]}></Carrossel>
-
-                                </div>
-                            </div>
-                            )}
-                    </div>
-                </div>
-
-                {/* Divisória 5 - SUVACO MÍDIA */}
-                <div className="divisoria">
-                    <div className="divisoria-header">
-                        <h3>O Desfile</h3>
-                    </div>
-
-                    <div className="divisoria-content">
-                        {divisoriasVisibilidade[4] ? (
-                            // <div className="divisoria-aberta">
-                                null
-                            // </div>
-                            ) : (
-                            <div className="divisoria-fechada">
-                                
-                            {/*DIVISORIA FECHADA*/}
-                            {/*DIVISORIA FECHADA*/}
-
-                                <div className="divisoria-fechada-imgs-flex">
-                                    <Carrossel ids={[6,10,9,12,7,8]}></Carrossel>
-
-                                </div>
-                            </div>
-                            )}
-                    </div>
-                </div>
-
-
-
-                    <div className="footer-section">
-                                    <Link id="link-txt" to="/timeline">VOLTAR</Link>
-                                    <div className="line"></div>
+                            <PlaceImageFromSheetByID id={284} sheet={DATA} ObjID={"foto-letra-86"}></PlaceImageFromSheetByID>
                         </div>
-            </div>
+                    </div>
+                    
+                    <div className="subdiv1-2"> {/* SUBDIVISAO 2 - ESCUTE SAMBA */}
+                        <h3 className="subtitle-subdiv" style={{marginBottom:"75px"}}>Escute o Samba</h3>
+                        <Player audioSrc={"songs/2012 Suvaco Samba Palmas pro Suvaco.mp3"}></Player>
 
+                    </div>
+
+                    <div className="subdiv1-3" style={{marginTop:"50px"}}> {/* SUBDIVISAO 3 - POR DE TRAS LETRA */}
+                        <h3 className="subtitle-subdiv">Por trás da letra</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maxime, natus doloribus voluptatum accusantium veritatis non voluptas eveniet nihil minima consequuntur aliquid inventore aspernatur, perferendis, quis officiis nisi magni molestias?
+                        Dolorum unde ipsam illo natus, laudantium dignissimos nulla blanditiis fugiat distinctio in. Tempora similique molestiae quisquam placeat distinctio voluptatem quas possimus ex dolores nisi beatae, ullam culpa cum debitis neque?
+                        Placeat, ad quod esse alias molestias error ex eligendi saepe! Optio labore deserunt eligendi numquam debitis tempora aperiam alias ut, totam eaque nulla autem quidem minima, explicabo, dolorum recusandae officia.
+                        Dolorum, temporibus. Commodi distinctio perspiciatis sit sint error, saepe sequi! Deserunt vitae suscipit tempore officiis quibusdam, voluptas nam. Quae maiores architecto temporibus, ab quos excepturi reprehenderit deleniti tempore? Corporis, ducimus.
+                        Voluptates, ipsum. Illum deleniti molestias quo magnam consectetur animi modi amet nulla, praesentium et voluptatibus consequatur, quam non numquam blanditiis, quisquam sapiente excepturi debitis tenetur! Inventore perspiciatis ipsam placeat nisi?</p>
+
+                    </div>
+                    <div className="subdiv1-4"> 
+                        <h3 className="subtitle-subdiv">Autores e Intérpretes</h3>
+                        <Carrossel artistas={artistas_SAMBA} />
+                            </div>
+                        </>
+                        )}
+
+                                    
+                </div> {/*FIM DIVISÓRIA 1*/}
+                
+                <div id="processo-criativo" className="div2"> {/*DIVISÓRIA 2*/}
+                    <div className="section-title-subtitle"> {/*TÍTULO*/}
+                                    
+                        <h2 id="titulo-ancora">Artes do Desfile</h2>
+                        <button id="subtitle" onClick={() => toggleDivisoria(2)}>
+                            {estadoVisibilidadeDivisorias[2] ? "FECHAR" : "ABRIR"}
+                        </button>
+                        <div className="subtitle-line"></div>
+                                                                        {/*FIM TÍTULO*/}
+                    </div>
+                    
+                    {estadoVisibilidadeDivisorias[2] && (<><div className="subdiv3-1"> {/* SUBDIVISAO 2 - ESCUTE SAMBA */}
+                        <h3 className="subtitle-subdiv" style={{marginBottom:"75px"}}>Camiseta</h3>
+                        <PlaceImageFromSheetByID id={2} sheet={DATA} objClass={"center"}></PlaceImageFromSheetByID>
+                        <p style={{textAlign:"center"}}>Design da camiseta de 1986</p>
+                    </div>
+
+                    <div className="subdiv3-2"> 
+                        <h3 className="subtitle-subdiv">Artistas</h3>
+                        <Carrossel artistas={artistas_ARTE} />
+                        </div></>)}
+
+                                    
+                </div> {/*FIM DIVISÓRIA 2*/}
+
+                <div id="suvaco-midia" className="div3" style={{marginTop: "25px"}}> {/*DIVISÓRIA 3*/}
+                    <div className="section-title-subtitle"> {/*TÍTULO*/}
+                                    
+                        <h2 id="titulo-ancora">O Suvaco na Mídia</h2>
+                        <button id="subtitle" onClick={() => toggleDivisoria(3)}>
+                            {estadoVisibilidadeDivisorias[3] ? "FECHAR" : "ABRIR"}
+                        </button>
+                        <div className="subtitle-line"></div>
+                                                                        {/*FIM TÍTULO*/}
+                    </div>
+                    {estadoVisibilidadeDivisorias[3] && (
+                        <>
+                        <div className="flex-midia">
+                        <div className="sistema-colunas">
+                            <PlaceImageFromSheetByID id={18} sheet={DATA} objClass={"img-coluna"} ObjID={"nasce-suvaco"}></PlaceImageFromSheetByID>
+                            <PlaceImageFromSheetByID id={15} sheet={DATA} objClass={"img-coluna"}></PlaceImageFromSheetByID>
+                            <PlaceImageFromSheetByID id={17} sheet={DATA} objClass={"img-coluna"}></PlaceImageFromSheetByID>
+                            <PlaceImageFromSheetByID id={14} sheet={DATA} objClass={"img-coluna"}></PlaceImageFromSheetByID>
+                            <PlaceImageFromSheetByID id={16} sheet={DATA} objClass={"img-coluna"}></PlaceImageFromSheetByID>
+                            <PlaceImageFromSheetByID id={19} sheet={DATA} objClass={"img-coluna"}></PlaceImageFromSheetByID>
+                            <PlaceImageFromSheetByID id={13} sheet={DATA} objClass={"img-coluna"}></PlaceImageFromSheetByID>
+                        </div>
+                    </div>
+                        </>)}
+                    
+
+
+                                    
+                </div> {/*FIM DIVISÓRIA 3*/}
+                
+                
+                <div id="o-desfile" className="div4" style={{marginTop: "25px"}}> {/*DIVISÓRIA 4*/}
+                    <div className="section-title-subtitle"> {/*TÍTULO*/}
+                                    
+                        <h2 id="titulo-ancora">O Desfile</h2>
+                        <button id="subtitle" onClick={() => toggleDivisoria(4)}>
+                            {estadoVisibilidadeDivisorias[4] ? "FECHAR" : "ABRIR"}
+                        </button>
+                        <div className="subtitle-line"></div>
+                                                                        {/*FIM TÍTULO*/}
+                    </div>
+                    {estadoVisibilidadeDivisorias[4] && (<>
+                    <div className="flex-midia">
+                    <div className="sistema-colunas">
+                        <PlaceImageFromSheetByID id={6} sheet={DATA} objClass={"img-coluna"}></PlaceImageFromSheetByID>
+                        <PlaceImageFromSheetByID id={10} sheet={DATA} objClass={"img-coluna"}></PlaceImageFromSheetByID>
+                        <PlaceImageFromSheetByID id={9} sheet={DATA} objClass={"img-coluna"}></PlaceImageFromSheetByID>
+                        <PlaceImageFromSheetByID id={12} sheet={DATA} objClass={"img-coluna"}></PlaceImageFromSheetByID>
+                        <PlaceImageFromSheetByID id={7} sheet={DATA} objClass={"img-coluna"}></PlaceImageFromSheetByID>
+                        <PlaceImageFromSheetByID id={8} sheet={DATA} objClass={"img-coluna"}></PlaceImageFromSheetByID>
+                    </div>
+                    </div>
+                    
+
+                    </>)}
+                                    
+                </div> {/*FIM DIVISÓRIA 5*/}
+
+
+            </div>
+                
             
         </section>
     );
