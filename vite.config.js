@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    port: process.env.PORT || 3001,
+    port: process.env.PORT || 3000,
     host: true,
     strictPort: true,
     watch: {
@@ -16,6 +16,8 @@ export default defineConfig({
     },
     clientPort: 443,
   },
+  preview: {
+    allowedHosts: ["www.suvacodocristo.com", "www.suvacodocristo.com.br"]
+  },
   plugins: [react()],
 })
-
