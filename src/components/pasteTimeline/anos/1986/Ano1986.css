@@ -94,7 +94,7 @@
   content: '';
   position: absolute;
   left: 0;
-  bottom: 18px;
+  top:1.5vw;
   width: 100%;
   height: 1px;
   background: var(--gradiente-azul-verde);
@@ -119,6 +119,132 @@
   max-height: 1000px;
 }
 
+/* @media (max-width:1200px) {
+  
+  #subtitle::after{
+    display: none;
+  }
+
+}
+
+@media (max-width:760px){
+
+  .acesso-rapido{
+    width:100vw;
+  }
+
+  .box{
+    width: fit-content;
+  }
+
+  .div{
+    width: 100%;
+    >p{
+      width: 320px;
+      padding-right: 1.5%;
+      margin-left: 6%;
+      font-size: 1rem;
+    }
+  }
+
+.section-container{
+  width: 350px;
+}
+
+#titulo-principal{
+  font-size: 2.2rem}
+
+.section-title-subtitle{
+  flex-direction: column;
+
+}
+  #titulo-ancora{
+    font-size:1.8rem;
+  }
+
+  #subtitle{
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  #subtitle::after{
+    display: none;
+  }
+
+  #acesso{
+    font-size:1.2rem
+  }
+  
+  .box-links{
+    display:block;
+
+    >li{
+      font-size: 1rem;
+    }
+  }
+
+  .subtitle-subdiv{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+
+  .subtitle-line{
+    display: none;
+  }
+
+  .letra-side-by-side{
+    flex-direction: column;
+    justify-content: initial;
+    gap: 25px;
+    align-items: center;
+  }
+
+  #letra{
+    font-size: 1rem;
+  }
+  #foto-letra-86{
+    width:300px;
+
+  }
+
+  .controls{
+    margin-top: 35px;
+  }
+
+  #artista-funcao{
+    font-size: 1.3rem;
+  }
+
+  .flex-carrossel{
+    flex-direction: column;
+    gap: 45px;
+  }
+
+
+  #camisa86{
+    width:320px
+  }
+
+  .sistema-colunas{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-coluna{
+    min-width: 0px;
+    max-width: 320px;
+    min-height: 0px;
+    max-height: 500px;
+  }
+
+  #nasce-suvaco{
+    max-height: 500px;
+  }
+  
+} */
+
+
 @media (max-width:430px) {
 
   .acesso-rapido{
@@ -128,8 +254,11 @@
 
   .box{
     width: fit-content;
-    margin-left: 4.5%;
     text-align: start;
+    position: relative;
+
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .div{
@@ -197,6 +326,7 @@
 
   #letra{
     font-size: 1rem;
+    margin-bottom: 50px;
   }
   #foto-letra-86{
     width:300px;
