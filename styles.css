@@ -71,7 +71,10 @@ section{
 
     .projeto-museu{
       font-size: 1.7rem;
+      text-wrap: auto;
     }
+
+    
 
   }
   
@@ -387,6 +390,10 @@ section{
   }
   .right{
     padding: 0px;
+  }
+
+  a#link-txt.link-projeto{
+    font-size: 1rem;
   }
 
 

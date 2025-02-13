@@ -346,3 +346,11 @@ footer{
 
 } 
 }
+
+@media (max-width: 430px) {
+  .footer-section{
+    #link-txt-projeto{
+      font-size: 1.5rem;
+    }
+  }
+}
