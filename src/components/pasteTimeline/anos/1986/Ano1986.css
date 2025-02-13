@@ -119,50 +119,33 @@
   max-height: 1000px;
 }
 
-@media (max-width:768px) {
+
+
+@media (max-width:1200px) {
   .acesso-rapido{
-    width:100%;
     text-align: center;
   }
 
   .box{
-    width: 748px;
     margin-left: 1%;
     text-align: start;
   }
 
   .div{
-    width: 758px;
     >p{
-      width: 728px;
       padding-right: 1.5%;
       margin-left: 3%;
-      font-size: 1rem;
+      font-size: 1.15rem;
     }
   }
 
-.section-container{
-  width: 758px;
-}
 
-#titulo-principal{
-  font-size: 2.5rem;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 
 .section-title-subtitle{
   flex-direction: column;
 
 }
-  #titulo-ancora{
-    font-size:2.2rem;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
   #subtitle{
     font-size: 1rem;
     margin-top: 10px;
@@ -203,7 +186,7 @@
   }
 
   #letra{
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
   #foto-letra-86{
     width:300px;
@@ -273,11 +256,7 @@
 }
 
 #titulo-principal{
-  font-size: 2.2rem;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
+  font-size: 2.2rem}
 
 .section-title-subtitle{
   flex-direction: column;
@@ -285,9 +264,6 @@
 }
   #titulo-ancora{
     font-size:1.8rem;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   #subtitle{

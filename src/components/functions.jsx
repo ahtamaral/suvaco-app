@@ -13,7 +13,7 @@ export function rightRender(title, subtitle, right) {
     );
 }
 
-export function renderTitleSubtitle(title, subtitle) {
+export function renderTitleSubtitle(title, subtitle, classe = null) {
     return (
         <div className="section-title-subtitle">
             <h2 className="not-right">{title}</h2>

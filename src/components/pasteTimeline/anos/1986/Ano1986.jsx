@@ -137,7 +137,7 @@ function Ano1986() {
                         Voluptates, ipsum. Illum deleniti molestias quo magnam consectetur animi modi amet nulla, praesentium et voluptatibus consequatur, quam non numquam blanditiis, quisquam sapiente excepturi debitis tenetur! Inventore perspiciatis ipsam placeat nisi?</p>
 
 
-                        <h3 className="subtitle-subdiv">Autores e Intérpretes</h3>
+                        <h3 className="subtitle-subdiv" style={{marginTop:"30px"}}>Autores e Intérpretes</h3>
                         <Carrossel artistas={artistas_SAMBA} />
                         </>
                         )}
