@@ -11,6 +11,9 @@ html{
 
 /*Secoes da pagina principal*/
 
+
+
+
 section{
   display: grid;
   grid-template-columns: 2.5fr 7fr 2.5fr;
@@ -322,10 +325,6 @@ section{
 
 @media(max-width:1200px){
 
-  section{
-    grid-template-columns: 10vw auto 10vw;
-  }
-
   .section-container{
   
     p{
@@ -359,12 +358,49 @@ section{
 }
   }}
 
+
+  @media(max-width:500px){
+    section{
+      .section-container{
+        .imgs-section-s2 {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, auto);
+          .img-container{
+            >h3{
+              font-size: 0.9rem;
+            }
+            >img{
+              height: 300px;
+            }
+
+
+          }
+
+        
+       
+      }
+
+      .imgs-section-s3
+        {display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 1rem;}
+  }
+}
+  }
+
 @media(max-width:430px){
+
+  section{
+    grid-template-columns: 1fr 7fr 1fr;
+  }
 
   .section-container{
   
     p{
-      font-size: 1.08rem;
+      font-size: 1rem;
+      text-wrap: auto;
     }
     .section-title-subtitle{
     
@@ -392,9 +428,6 @@ section{
     padding: 0px;
   }
 
-  a#link-txt.link-projeto{
-    font-size: 1rem;
-  }
 
 
   }}

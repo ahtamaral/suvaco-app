@@ -199,7 +199,19 @@ footer{
 }
 
 @media (max-width: 811px){
-footer{
+
+.footer-section{
+  #link-txt{
+    font-size: 1.8rem;
+    white-space: normal;
+    text-align: center;
+  }
+  .line{
+    display: none;
+  }
+}
+
+  footer{
   .grid{
     .flex{
       text-align: center;

@@ -244,6 +244,183 @@
   
 } */
 
+@media (max-width:1200px) {
+
+
+
+.section-title-subtitle{
+  flex-direction: column;
+
+}
+  #titulo-ancora{
+    font-size:2.5rem;
+  }
+
+  #subtitle{
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  #subtitle::after{
+    display: none;
+  }
+
+  #acesso{
+    font-size:1.5rem
+  }
+  
+
+  .subtitle-subdiv{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+
+  .subtitle-line{
+    display: none;
+  }
+
+}
+
+@media (max-width:834px) {
+
+  section{
+    grid-template-columns: 1fr 7fr 1fr;
+  }
+
+  .acesso-rapido{
+    text-align: center;
+  }
+
+  .box{
+    width: 100%;
+    text-align: start;
+    position: relative;
+
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .div{
+    >p{
+      padding-right: 1.5%;
+      margin-left: 6%;
+      font-size: 1rem;
+    }
+  }
+
+
+
+#titulo-principal{
+  font-size: 2.2rem}
+
+.section-title-subtitle{
+  flex-direction: column;
+
+}
+  #titulo-ancora{
+    font-size:1.8rem;
+  }
+
+  #subtitle{
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  #subtitle::after{
+    display: none;
+  }
+
+  #acesso{
+    font-size:1.2rem
+  }
+  
+  .box-links{
+    display:block;
+
+    >li{
+      font-size: 1rem;
+    }
+  }
+
+  .subtitle-subdiv{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+
+  .subtitle-line{
+    display: none;
+  }
+
+  .letra-side-by-side{
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0px;
+    align-items: center;
+  }
+
+  #letra{
+    font-size: 1rem;
+    margin-bottom: 50px;
+  }
+  #foto-letra-86{
+    width:300px;
+    position: relative;
+    top: 0.2vh;
+
+  }
+
+  .controls{
+    margin-top: 35px;
+  }
+
+  #artista-funcao{
+    font-size: 1.3rem;
+  }
+
+  .flex-carrossel{
+    flex-direction: column;
+    gap: 45px;
+  }
+
+
+  #camisa86{
+    width:320px
+  }
+
+  .sistema-colunas{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-coluna{
+    min-width: 0px;
+    max-width: 320px;
+    min-height: 0px;
+    max-height: 500px;
+  }
+
+  #nasce-suvaco{
+    max-height: 500px;
+  }
+}
+
+@media(max-width:798px){
+  .letra-side-by-side{
+    flex-direction: column;
+    justify-content: initial;
+    gap: 15px;
+    align-items: center;
+  }
+
+  #letra{
+    text-align: center;
+  }
+
+}
+
 
 @media (max-width:430px) {
 
@@ -271,9 +448,7 @@
     }
   }
 
-.section-container{
-  width: 350px;
-}
+
 
 #titulo-principal{
   font-size: 2.2rem}

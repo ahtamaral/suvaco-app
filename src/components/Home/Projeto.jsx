@@ -13,7 +13,7 @@ function Projeto(){
             
             
                 <div className="footer-section">
-                    <a href="/projeto" id="link-txt-projeto">SOBRE O PROJETO E OS PARTICIPANTES</a>
+                    <a href="/projeto" id="link-txt">SOBRE O PROJETO E OS PARTICIPANTES</a>
                     <div className="line"></div>
                 </div>
             </div>
