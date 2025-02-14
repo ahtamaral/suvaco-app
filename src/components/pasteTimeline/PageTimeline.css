@@ -92,3 +92,27 @@
     width: 100%;
     bottom: 0%;
 } */
+
+
+@media (max-width: 500px) {
+
+    
+    .section-pages {
+        gap: 10px;
+        flex-direction: column !important;
+    }
+
+    .section-pages .img-container {
+        height: 240px !important;
+        width: 240px !important;
+    }
+
+    .title-linha-tempo{
+        color: red;
+    }
+
+    .section-pages .img-container img {
+        height: 240px !important;
+        width: 240px !important;
+    }
+}

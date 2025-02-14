@@ -9,7 +9,7 @@ function Sobre(props) {
                 {rightRender(props.title, props.subtitle, props.right)}
                 <div className="paragraph">
                     {props.text && props.text.map((paragraph, index) => (
-                        <p key={index}>{paragraph}</p>
+                        <><p key={index}>{paragraph}</p><br/></>
                     ))}
                 </div>
                 

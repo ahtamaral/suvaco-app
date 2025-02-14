@@ -21,7 +21,7 @@
             "title":"Acervo",
             "subtitle":"AS MEMÓRIAS DO SUVACO",
             "link": "VER TODAS AS CATEGORIAS",
-            "right": "True",
+            "right": "False",
             "text": null,
             "img": {
                 "imgExists": "True",
@@ -85,7 +85,7 @@
             "title":"Divinas Axilas",
             "subtitle":"A ONG DO SUVACO",
             "link": "DESCUBRA MAIS",
-            "right": "True",
+            "right": "False",
             "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam praesentium illo quam quaerat. Minus, corporis pariatur cupiditate error aperiam provident corrupti quas id voluptates accusamus perspiciatis magni! Nihil, veritatis error! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam praesentium illo quam quaerat. Minus, corporis pariatur cupiditate error aperiam provident corrupti quas id voluptates accusamus perspiciatis magni! Nihil, veritatis error! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam praesentium illo quam quaerat. Minus, corporis pariatur cupiditate error aperiam provident corrupti quas id voluptates accusamus perspiciatis magni! Nihil, veritatis error! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam praesentium illo quam quaerat. Minus, corporis pariatur cupiditate error aperiam provident corrupti quas id voluptates accusamus perspiciatis magni! Nihil, veritatis error!",
             
             "img": {
