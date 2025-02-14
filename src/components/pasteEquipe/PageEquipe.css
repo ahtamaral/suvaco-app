@@ -6,10 +6,25 @@ ul{
 .h3-equipe{
     font-family: "Poppins";
     font-size: 2.5rem;
-    font-weight: 200;
+    font-weight: 300;
     color: var(--subtitle-color);
     margin-bottom: 10px;
 }
+
+.paragraph-equipe{
+    margin-bottom: 1rem;
+}
+
+.section-container{
+    .section-title-subtitle{
+        .h2-equipe{
+            text-wrap: auto;
+            text-align: center;
+        }
+        
+    }
+}
+
 
 .h4-equipe{
     font-family: "Poppins";
@@ -22,4 +37,58 @@ ul{
 
 .flex-pessoas{
     display: flex;
+}
+
+
+section {
+    display: grid;
+    grid-template-columns: 2.5fr 7fr 2.5fr;
+
+}
+
+.section-container {
+    grid-column: 2/3;
+
+    p {
+        font-size: 1.1rem;
+    }
+
+}
+
+@media (max-width:1200px){
+    section{
+        grid-template-columns: 2.5fr 7fr 2.5fr;
+    }
+}
+
+@media(max-width:430px){
+
+    section{
+        grid-template-columns: 1fr 7fr 1fr;
+    }
+
+    .section-container{
+        >p{
+            font-size: 1rem;
+            text-wrap: auto;
+            width: 100%;
+            
+        }
+    }
+
+    .h3-equipe{
+        text-align: center;
+
+        font-size: 1.8rem;
+    }
+
+
+    
+
+    .h4-equipe{
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
 }

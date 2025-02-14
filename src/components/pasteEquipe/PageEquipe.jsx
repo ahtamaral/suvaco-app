@@ -7,10 +7,10 @@ function PageEquipe() {
     return (
         <section>
             <div className="section-container">
-                {renderTitleSubtitle("Projeto Museu Virtual do Carnaval de Rua do Rio: Suvaco do Cristo", "")}
+                {renderTitleSubtitle("Projeto Museu Virtual do Carnaval de Rua do Rio: Suvaco do Cristo", "","h2-equipe")}
 
 
-                <p>
+                <p className="paragraph-equipe">
                     Qual é o papel de universidades como a UFRJ e da sociedade em geral na
                     preservação e divulgação da memória do carnaval de rua do Rio de Janeiro?
                     Essa indagação foi a motivação para a criação do projeto de extensão
@@ -24,7 +24,7 @@ function PageEquipe() {
 
                 <h3 className="h3-equipe" >Objeto de pesquisa</h3>
 
-                <p>O bloco Suvaco do Cristo é reconhecido como um dos responsáveis pela
+                <p className="paragraph-equipe">O bloco Suvaco do Cristo é reconhecido como um dos responsáveis pela
                 revitalização do carnaval de rua do Rio de Janeiro, desde meados dos anos
                 1980. O nome do bloco surgiu de uma entrevista com o maestro e compositor
                 Tom Jobim, morador do bairro do Jardim Botânico, em que dizia que o bairro
@@ -33,14 +33,14 @@ function PageEquipe() {
                 reta a partir das axilas da estátua do Cristo Redentor, no morro do Corcovado.
                 E o nome pegou rápido.</p>
 
-                <p>Criado por um grupo de artistas e profissionais liberais, o Suvaco do Cristo
+                <p className="paragraph-equipe">Criado por um grupo de artistas e profissionais liberais, o Suvaco do Cristo
                 nasceu nas areias do Posto Nove, na Praia de Ipanema, e tinha como lema a
                 liberdade, a picardia e a festa. A proposta era agitar, juntar uma porção de
                 gente amiga e sair por aí se divertindo. Assim, entre pássaros, micos e as
                 ruas bucólicas do Jardim Botânico, o Suvaco se tornaria uma referência para o
                 surgimento de inúmeros outros blocos de bairro no Rio.</p>
 
-                <p>Ao longo de sua história, sambas antológicos assinados por Lenine, Nanico,
+                <p className="paragraph-equipe">Ao longo de sua história, sambas antológicos assinados por Lenine, Nanico,
                 Chacal, Janjão, Gallotti, Casuarina, Mu Chebabi entre outros, desfilaram
                 pelas ruas do bairro da Zona Sul carioca. A bateria, comandada pelos mestres
                 Felipão e Tião Belo (in memoriam) é um grande caso de amor entre o Suvaco e
@@ -53,7 +53,7 @@ function PageEquipe() {
 
                 <h3 className="h3-equipe" >O Projeto</h3>
 
-                <p>O projeto pretende atuar na preservação da memória do bloco e da
+                <p className="paragraph-equipe">O projeto pretende atuar na preservação da memória do bloco e da
                 revitalização do carnaval de rua carioca, criando e publicando um
                 repositório/museu virtual com toda a história do bloco, organizada por ano
                 de desfile. Esse formato pretende destacar o aspecto cronista do bloco. Como
@@ -63,7 +63,7 @@ function PageEquipe() {
                 projeto. A interação deve levar à expansão do acervo, com registros
                 diversos.</p>
 
-                <p>Com formato interdisciplinar, o projeto tem a participação de alunos
+                <p className="paragraph-equipe">Com formato interdisciplinar, o projeto tem a participação de alunos
                 extensionistas do curso de Ciência da Computação, em especial das disciplinas
                 de Tecnologia e Sociedade, Projeto de Carreira e Habilidades Sociais; e dos
                 cursos de História da Arte e Comunicação Social. Docentes e técnicos da UFRJ
@@ -72,7 +72,7 @@ function PageEquipe() {
 
                 <h3 className="h3-equipe" >Objetivos</h3>
 
-                <p>Preservar e divulgar a memória do bloco, um dos responsáveis pela
+                <p className="paragraph-equipe">Preservar e divulgar a memória do bloco, um dos responsáveis pela
                 revitalização do carnaval de rua carioca. Fazer conhecer essa história para
                 o público em geral e disponibilizar material de pesquisa organizado para
                 pesquisadores interessados no tema. Capacitar estudantes extensionistas para a
@@ -85,7 +85,7 @@ function PageEquipe() {
 
                 <h3 className="h3-equipe" >Metodologia</h3>
 
-                <p>Em um primeiro momento, a proposta é a capacitação dos estudantes para o
+                <p className="paragraph-equipe">Em um primeiro momento, a proposta é a capacitação dos estudantes para o
                 trabalho em equipe multidisciplinar e desenvolvimento e disponibilização de
                 um produto de qualidade (o site/museu virtual), com o foco na preservação
                 da memória de um movimento de grande importância econômica e cultural
@@ -98,7 +98,7 @@ function PageEquipe() {
 
                 <h3>Conteúdo</h3>
 
-                <p>Para cada ano será disponibilizado: contexto histórico; samba do ano;
+                <p className="paragraph-equipe">Para cada ano será disponibilizado: contexto histórico; samba do ano;
                 compositores; puxadores dos sambas e músicos participantes; camisetas, material
                 gráfico e artistas responsáveis; porta bandeira e mestre sala; baianas;
                 bateria e puxadores; ensaios, disputa do samba, festas e outros mecanismos de
@@ -106,10 +106,9 @@ function PageEquipe() {
                 do site, com publicação de fotos, vídeos e depoimentos marcados com as redes
                 sociais do bloco, da ONG e do projeto.</p>
 
-                <div className="subdiv">
                     <h3 className="h3-equipe">Equipe</h3>
 
-                    <p>Esse projeto foi desenvolvido em uma colaboração entre
+                    <p className="paragraph-equipe">Esse projeto foi desenvolvido em uma colaboração entre
                     o Instituto de Computação da UFRJ, a Escola de Belas Artes da UFRJ e parceiros do Bloco Suvaco do Cristo.</p>
                     {/* colocar os nomes sendo links para os sites dos institutos*/}
 
@@ -130,7 +129,7 @@ function PageEquipe() {
                         <li>Vanessa Dupheim Pinheiro (EBA)</li>
                     </ul>
 
-                    <h4>Parceiros do Suvaco</h4>
+                    <h4 className="h4-equipe">Parceiros do Suvaco</h4>
 
                     <ul>
                         <li>Caroline Déharbe</li>
@@ -152,7 +151,6 @@ function PageEquipe() {
                         <li>Vitor Vicente Da Motta (IC)</li>
                     </ul>
                     {/** Colocar logos aqui*/}
-                </div>
 
 
             </div>

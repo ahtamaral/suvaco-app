@@ -16,12 +16,18 @@ export function rightRender(title, subtitle, right) {
 export function renderTitleSubtitle(title, subtitle, classe = "") {
     return (
         <div className="section-title-subtitle">
-            <h2 className={`not-right ${classe}`.trim()}>{title}</h2>
-            <h3>{subtitle}</h3>
-            <div className="subtitle-line"></div>
+            <h2 className={["not-right", classe].filter(Boolean).join(" ")}>{title}</h2>
+            
+            {subtitle && (
+                <>
+                    <h3>{subtitle}</h3>
+                    <div className="subtitle-line"></div>
+                </>
+            )}
         </div>
     );
 }
+
 
 
 export function imgRender(img, id) {

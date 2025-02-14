@@ -11,21 +11,17 @@ function Footer(){
                     <p>Suvaco do Cristo</p>
                     <p className="mid">Todos os direitos reservados.</p>
                     <div className="socials">
-                        <a href="#">
+                        <a href="https://www.instagram.com/suvacodocristooficial">
                             <i className="ri-instagram-line"></i>
                                 <span>Instagram</span>
                         </a>
-                        <a href="#">
+                        <a href="https://www.youtube.com/@blocosuvacodecristorj">
                             <i className="ri-youtube-line"></i>
                                 <span>Youtube</span>
                         </a>
-                        <a href="#">
+                        <a href="https://www.facebook.com/suvaco.docristo">
                             <i className="ri-facebook-box-line"></i>
                                 <span>Facebook</span>
-                        </a>
-                        <a href="#">
-                            <i className="ri-mail-line"></i> 
-                                <span>Email</span>
                         </a>
                     </div>
                 </div>

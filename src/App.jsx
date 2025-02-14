@@ -40,7 +40,7 @@ function App() {
             <Sobre {...sectionsPosts.sections[1]} />
             <Acervo {...sectionsPosts.sections[2]} />
             <LinhaDoTempo {...sectionsPosts.sections[3]} />
-            <DivinasAxilas {...sectionsPosts.sections[4]} />
+            {/* <DivinasAxilas {...sectionsPosts.sections[4]} /> */}
             <VoceComSuvaco {...sectionsPosts.sections[5]} />
           </>
         }
