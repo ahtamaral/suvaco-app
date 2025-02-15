@@ -23,7 +23,7 @@ const Carrossel = ({ artistas }) => {
             {totalArtistas > 3 && <i className="ri-arrow-left-line arrow" onClick={voltar}></i>}
             
             {artistasVisiveis.map((artista, index) => (
-                <div className={totalArtistas < 3 ? `artista-${index}` : "artista"} key={index}>
+                <div className={totalArtistas < 2 ? `artista-${index}` : "artista"} key={index}>
                     <span id="artista-funcao">{artista.funcao}</span>
                     <img 
                         className="img-artista" 

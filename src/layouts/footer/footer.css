@@ -212,7 +212,8 @@ footer{
 }
 
   footer{
-  .grid{
+  margin-top: 10px;
+    .grid{
     .flex{
       text-align: center;
       .mid{

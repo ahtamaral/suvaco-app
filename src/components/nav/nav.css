@@ -38,10 +38,10 @@ nav{
 
 }
 
-@media (max-width:962px) {
+@media (max-width:1024px) {
   
     nav{
-      font-size: 1.2rem;
+      font-size: 1rem;
   
       > ul {
         display: flex;
@@ -74,38 +74,8 @@ nav{
     }
 }
 
-@media (max-width:882px){
-    nav{
-      font-size: 1.1rem;
-     
-    }
-}
   
-@media (max-width:827px){
-    nav{
-      font-size: 1rem;
-      >ul{
-        gap: 1.5rem;
-      }
-    }
-}  
-
-@media (max-width: 729px){
-    nav{
-      >ul{
-        gap: 1rem;
-      }
-    }
-}
-
-@media (max-width:689px){
-    nav{
-      font-size: 0.9rem;
-    }
-}
-
-  
-@media (max-width: 634px){
+@media (max-width: 854px){
     nav{
      display: none;
     }

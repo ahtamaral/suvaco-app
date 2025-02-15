@@ -29,7 +29,7 @@ function VoceComSuvaco(props) {
                 {rightRender(props.title, props.subtitle)}
 
                 <div className="comments-container">
-                    <button id="contribute"><a href="#">Contribua com suas fotos e seus depoimentos</a></button>
+                    <button id="contribute"><a href="voce-com-o-suvaco">Contribua com suas fotos e seus depoimentos</a></button>
 
                     {Object.keys(comments).map((key) => {
                         const comment = comments[key];
@@ -47,7 +47,7 @@ function VoceComSuvaco(props) {
                 </div>
 
                 <div className="footer-section">
-                    <a href="#" id="link-txt">{props.link}</a>
+                    <a href="voce-com-o-suvaco" id="link-txt">{props.link}</a>
                     <div className="line"></div>
                 </div>
             </div>

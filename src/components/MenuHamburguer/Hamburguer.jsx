@@ -14,6 +14,7 @@ function Hamburger(){
             {menu && <div className={`menu ${menu ? "open" : ""}`}>
                 <ul>
                     <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+                    <li><Link to="/projeto" onClick={closeMenu}>Projeto</Link></li>
                     <li><Link to="/sobre" onClick={closeMenu}>Sobre o Suvaco</Link></li>
                     <li><Link to="/acervo" onClick={closeMenu}>Acervo</Link></li>
                     <li><Link to="/timeline" onClick={closeMenu}>Linha do Tempo</Link></li>

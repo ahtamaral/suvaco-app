@@ -142,10 +142,10 @@ function PageAcervo(props) {
                 {/* Fullscreen */}
                 {fullScreenActivated && currentIndex !== null && (
                     <div className="fullscreen-container">
-                        <button className="close-btn" onClick={closeFullScreen}><i className="ri-close-large-line"></i></button>
                         <img className="fullscreen" src={`img/${imagensExibidas[currentIndex].item}`} alt={imagensExibidas[currentIndex].desc} />
-                        <button className="nav-btn left" onClick={prevImage}><i className="ri-arrow-left-line"></i></button>
-                        <button className="nav-btn right" onClick={nextImage}><i className="ri-arrow-right-line"></i></button>
+                        
+                       
+                       
                         
                         <div className="thumbnails">
                             {imagensExibidas.slice(Math.max(0, currentIndex - 4), currentIndex + 5).map((item, index) => (
@@ -157,6 +157,11 @@ function PageAcervo(props) {
                                     alt="Miniatura" 
                                 />
                             ))}
+                        </div>
+                        <div className="flex-acervo-botoes">
+                            <button className="nav-btn left" onClick={prevImage}><i className="ri-arrow-left-line"></i></button>
+                            <button className="close-btn" onClick={closeFullScreen}><i className="ri-close-large-line"></i></button>
+                            <button className="nav-btn right" onClick={nextImage}><i className="ri-arrow-right-line"></i></button>
                         </div>
                     </div>
                 )}
