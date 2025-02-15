@@ -10,6 +10,7 @@ function Nav() {
         <nav>
             <ul>
                 <li><Link to="/">Home</Link></li>
+                <li><Link to="/projeto">Projeto</Link></li>
                 <li><Link to="/sobre">Sobre o Suvaco</Link></li>
                 <li><Link to="/acervo">Acervo</Link></li>
                 <li><Link to="/timeline">Linha do Tempo</Link></li>

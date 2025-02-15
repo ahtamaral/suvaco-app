@@ -1,12 +1,15 @@
 .iconeMenu{
     display: none;
-    color: white;
+    color: var(--title-color);
     cursor: pointer;
     position: absolute;
     top: 0;
     left: 0;
     margin: 10px;
     z-index: 1000;
+    background:white;
+    padding: 10px;
+    border-radius: 3px;
 }
 
 .iconeClose{
@@ -60,7 +63,13 @@
     font-size: 18px;
 }
 
-@media (max-width: 634px){
+
+@media (max-width: 500px) {
+    .iconeMenu{
+        padding: 5px;}
+}
+
+@media (max-width: 854px){
     .iconeMenu{
         display: block;
     }

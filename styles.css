@@ -368,7 +368,7 @@ section{
   }}
 
 
-@media(max-width:500px){
+@media(max-width:600px){
     section{
       
 
@@ -389,6 +389,12 @@ section{
             }
             >img{
               height: 300px;
+            }
+
+            & > img:hover {
+              height: 300px;
+              width:auto;
+              object-fit: cover;
             }
 
 
