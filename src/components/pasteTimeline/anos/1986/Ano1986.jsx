@@ -9,14 +9,13 @@ import Carrossel from "../componentes-anos/Carrossel/Carrossel";
 function Ano1986() {
     
     const artistas_SAMBA = [
-        { funcao: "AUTOR", nome: "João Avelleira", imagem: "img/96-modified.png" },
-        { funcao: "INTÉRPRETE", nome: "Sonia Matos", imagem: "img/96-modified.png" },
-        { funcao: "AUTOR", nome: "João Avelleira", imagem: "img/96-modified.png" }
+        { funcao: "AUTOR", nome: "João Avelleira", imagem: "img\\WhatsApp Image 2025-02-12 at 18.26.09-modified.png" },
+        { funcao: "INTÉRPRETE", nome: "João Avelleira", imagem: "img\\WhatsApp Image 2025-02-12 at 18.26.09-modified.png" },
     ];
 
     const artistas_ARTE = [
 
-        { funcao: "INTÉRPRETE", nome: "Sonia Matos", imagem: "img/96-modified.png" },
+        { funcao: "ARTISTA", nome: "Sonia Matos", imagem: "img/Sonia Matos 1987-modified.png" },
     ]
 
 
