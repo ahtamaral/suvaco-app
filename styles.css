@@ -374,9 +374,6 @@ section{
 
       .section-container{
         .section-container{
-          .projeto-museu{
-            font-size: 1.3rem;
-          }
         }
 
         .imgs-section-s2 {
@@ -414,7 +411,7 @@ section{
 }
   }
 
-@media(max-width:430px){
+@media(max-width:500px){
 
   section{
     grid-template-columns: 1fr 7fr 1fr;
@@ -455,6 +452,7 @@ section{
 
   .projeto-museu{
     text-align: center;
+    text-wrap: wrap;
   }
 
 
