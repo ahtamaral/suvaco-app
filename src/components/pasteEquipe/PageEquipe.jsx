@@ -95,7 +95,6 @@ function PageEquipe() {
                     <li>Claudia Dos Santos Goes (EBA)</li>
                     <li>Helenise Monteiro Guimaraes (EBA)</li>
                     <li>Hugo Musso Gualandi (IC)</li>
-                    <li>Maria do Carmo Martins Vido (EBA)</li>
                     <li>Tiago Matias da Silva (IC)</li>
                     <li>Vanessa Dupheim Pinheiro (EBA)</li>
                 </ul>
@@ -103,7 +102,6 @@ function PageEquipe() {
                 <h4 className="h4-equipe">Parceiros do Suvaco</h4>
 
                 <ul>
-                    <li>Caroline Déharbe</li>
                     <li>João Carlos Regazzi Avelleira</li>
                 </ul>
 

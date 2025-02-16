@@ -10,7 +10,10 @@ function Ano1986() {
     
     const artistas_SAMBA = [
         { funcao: "AUTOR", nome: "João Avelleira", imagem: "img\\WhatsApp Image 2025-02-12 at 18.26.09-modified.png" },
-        { funcao: "INTÉRPRETE", nome: "João Avelleira", imagem: "img\\WhatsApp Image 2025-02-12 at 18.26.09-modified.png" },
+        { funcao: "AUTOR", nome: "Arnaldo Chaim", imagem: "img\\iconee.png" },
+        { funcao: "AUTOR", nome: "José Lavigne", imagem: "img\\iconee.png" },
+        { funcao: "AUTOR", nome: "Roberto (Pirulito)", imagem: "img\\iconee.png" },
+        { funcao: "INTÉRPRETE", nome: "Beto Brown", imagem: "img\\iconee.png" },
     ];
 
     const artistas_ARTE = [
@@ -67,11 +70,8 @@ function Ano1986() {
                     
                                     
                     {estadoVisibilidadeDivisorias[0] && (
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, dignissimos nemo, sed distinctio, impedit recusandae qui cupiditate magnam deserunt quasi natus! Aut ducimus incidunt aperiam ea at voluptas distinctio recusandae.
-                                    Est placeat tempora voluptates deleniti, obcaecati earum illum possimus hic dignissimos vel. Eius excepturi natus beatae ex quibusdam ipsa eum, aspernatur quisquam deleniti iste accusantium minima adipisci minus sint cum.
-                                    Nulla ad iure, assumenda, praesentium molestiae vel aliquam eum neque, nesciunt accusamus deleniti autem reprehenderit qui eaque consectetur minima eveniet optio. Commodi corrupti aliquid quas laborum excepturi molestias dignissimos pariatur.
-                                    Eum, natus omnis enim reiciendis, totam maiores ab, quae officiis id repellendus fuga quisquam! Possimus dolore repellat repellendus consectetur placeat. Fugit porro quaerat, adipisci cumque tempore libero. Impedit, nisi officiis.
-                                    Sapiente cum voluptatibus nihil ex. Hic porro quibusdam aspernatur, ipsam sit autem ducimus provident dolor ipsum nihil iusto magnam numquam unde cum tenetur! Iste qui sed dolor, temporibus alias excepturi?
+                        <p> 
+                            Esse texto está sendo desenvolvido pela nossa equipe estará disponível em breve!
                         </p>
                     )}
 
@@ -129,11 +129,9 @@ function Ano1986() {
                     </div>
 
                         <h3 className="subtitle-subdiv" style={{marginTop:"50px"}}>Por trás da letra</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maxime, natus doloribus voluptatum accusantium veritatis non voluptas eveniet nihil minima consequuntur aliquid inventore aspernatur, perferendis, quis officiis nisi magni molestias?
-                        Dolorum unde ipsam illo natus, laudantium dignissimos nulla blanditiis fugiat distinctio in. Tempora similique molestiae quisquam placeat distinctio voluptatem quas possimus ex dolores nisi beatae, ullam culpa cum debitis neque?
-                        Placeat, ad quod esse alias molestias error ex eligendi saepe! Optio labore deserunt eligendi numquam debitis tempora aperiam alias ut, totam eaque nulla autem quidem minima, explicabo, dolorum recusandae officia.
-                        Dolorum, temporibus. Commodi distinctio perspiciatis sit sint error, saepe sequi! Deserunt vitae suscipit tempore officiis quibusdam, voluptas nam. Quae maiores architecto temporibus, ab quos excepturi reprehenderit deleniti tempore? Corporis, ducimus.
-                        Voluptates, ipsum. Illum deleniti molestias quo magnam consectetur animi modi amet nulla, praesentium et voluptatibus consequatur, quam non numquam blanditiis, quisquam sapiente excepturi debitis tenetur! Inventore perspiciatis ipsam placeat nisi?</p>
+                        <p>
+                        O primeiro samba, intitulado “Divinas Axilas”, foi composto por João Avelleira, Arnaldo Chaim e José Lavigne, com sugestões do presidente do bloco Força Jovem do Horto,  Roberto de Assis (conhecido pelo apelido de Pirulito). A canção ironizava a maior parte dos sambas enredos pela obrigatoriedade de referências a temas nacionais, citando as localidades da Rocinha e Humaitá e povos indígenas Tamoios  e Tupinambás, obrigatoriedade já satirizada no "Samba do Crioulo Doido" do grande Stanislau Ponte Preta.  Embora explicações mais glamourizadas, anos mais tarde tenham surgido, era apenas mais uma brincadeira irreverente, como todo o bloco. (Ver documentário dos 20 anos do bloco, da diretora Paola Vieira, em breve aqui no nosso portal).
+                        </p>
 
 
                         <h3 className="subtitle-subdiv" style={{marginTop:"30px"}}>Autores e Intérpretes</h3>
