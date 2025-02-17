@@ -10,13 +10,13 @@ export default defineConfig({
       usePolling: true,
     },
     cors: {
-      origin: ["https://www.suvacodocristo.com", "https://www.suvacodocristo.com.br", "museu-virtual-suvaco-7db1ebfa088f.herokuapp.com"],
+      origin: ["www.suvacodocristo.com", "www.suvacodocristo.com.br", "suvacodocristo.com", "suvacodocristo.com.br"],
       credentials: true,
     },
     clientPort: 443,
   },
   preview: {
-    allowedHosts: ["www.suvacodocristo.com", "www.suvacodocristo.com.br", "museu-virtual-suvaco-7db1ebfa088f.herokuapp.com"]
+    allowedHosts: ["www.suvacodocristo.com", "www.suvacodocristo.com.br", "suvacodocristo.com", "suvacodocristo.com.br"],
   },
   plugins: [react()],
 })
