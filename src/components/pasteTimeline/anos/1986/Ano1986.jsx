@@ -225,6 +225,13 @@ function Ano1986() {
                 </div> {/*FIM DIVISÓRIA 5*/}
 
 
+            
+                        <div className="footer-section">
+                                    <Link id="link-txt" to="/timeline">VOLTAR</Link>
+                                    <div className="line"></div>       
+                        </div>
+
+
             </div>
                 
             

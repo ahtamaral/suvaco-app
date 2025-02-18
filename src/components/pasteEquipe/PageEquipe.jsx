@@ -1,5 +1,6 @@
 import React from "react";
 import { renderTitleSubtitle } from "../functions";
+import { Link } from "react-router-dom";
 import './PageEquipe.css'
 
 function PageEquipe() {
@@ -72,7 +73,7 @@ function PageEquipe() {
                 <p className="paragraph-equipe">Em um primeiro momento, a proposta é a capacitação dos estudantes para o trabalho em  equipe multidisciplinar e desenvolvimento e disponibilização de um produto de  qualidade (o site/museu virtual), com o foco na preservação da memória de um  movimento de grande importância econômica e cultural para a cidade do Rio de Janeiro:  a revitalização do carnaval de rua. Em especial, espera-se promover a conscientização  sobre a importância da cultura e do patrimônio cultural, além de estimular o senso de  pertencimento à comunidade. A sociedade, por outro lado, tem acesso a um  conhecimento qualificado e atualizado, que pode ser utilizado para o desenvolvimento  de políticas públicas, projetos sociais e iniciativas inovadoras. 
                 </p>
 
-                <h3>Conteúdo</h3>
+                <h3 className="h3-equipe">Conteúdo</h3>
 
                 <p className="paragraph-equipe">Para cada ano será disponibilizado: contexto histórico; samba do ano; compositores;  puxadores dos sambas e músicos participantes; camisetas, material gráfico e artistas  responsáveis; porta bandeira e mestre sala; baianas; bateria e puxadores; ensaios, disputa do samba, festas e outros mecanismos de financiamento; desfile; o bloco na  mídia; espaço para interação do público do site, com publicação de fotos, vídeos e  depoimentos marcados com as redes sociais do bloco, da ONG e do projeto.
                 </p>
@@ -86,42 +87,45 @@ function PageEquipe() {
 
                 <h4 className="h4-equipe">Coordenação</h4>
                 <ul>
-                    <li> Anamaria Martins Moreira (IC)</li>
+                    <li className="li-projeto"> Anamaria Martins Moreira (IC)</li>
                 </ul>
 
                 <h4 className="h4-equipe"> Membros da UFRJ </h4>
 
                 <ul>
-                    <li>Claudia Dos Santos Goes (EBA)</li>
-                    <li>Helenise Monteiro Guimaraes (EBA)</li>
-                    <li>Hugo Musso Gualandi (IC)</li>
-                    <li>Tiago Matias da Silva (IC)</li>
-                    <li>Vanessa Dupheim Pinheiro (EBA)</li>
+                    <li className="li-projeto">Claudia Dos Santos Goes (EBA)</li>
+                    <li className="li-projeto">Helenise Monteiro Guimaraes (EBA)</li>
+                    <li className="li-projeto">Hugo Musso Gualandi (IC)</li>
+                    <li className="li-projeto">Tiago Matias da Silva (IC)</li>
+                    <li className="li-projeto">Vanessa Dupheim Pinheiro (EBA)</li>
                 </ul>
 
                 <h4 className="h4-equipe">Parceiros do Suvaco</h4>
 
                 <ul>
-                    <li>João Carlos Regazzi Avelleira</li>
+                    <li className="li-projeto">João Carlos Regazzi Avelleira</li>
                 </ul>
 
                 <h4 className="h4-equipe">Alunos da UFRJ</h4>
 
                 <ul>
-                    <li>Anna Cristina Ferreira Alves (IC)</li>
-                    <li>Artur Henrique Teixeira do Amaral (IC)</li>
-                    <li>Carlos Chagas Oliveira Filho (IC)</li>
-                    <li>Guilherme Cappelli Bouzon de Amorim Cruz (IC)</li>
-                    <li>Igor de Andrade Assuncao de Almeida (IC)</li>
-                    <li>Julia Vilela da Silva Brito (IC)</li>
-                    <li>Laura Luz Santos Soares (EBA)</li>
-                    <li>Maria Luisa Lima De Omena (EBA)</li>
-                    <li>Riquelme Freitas Gomes (IC)</li>
-                    <li>Vitor Vicente Da Motta (IC)</li>
+                    <li className="li-projeto">Anna Cristina Ferreira Alves (IC)</li>
+                    <li className="li-projeto">Artur Henrique Teixeira do Amaral (IC)</li>
+                    <li className="li-projeto">Carlos Chagas Oliveira Filho (IC)</li>
+                    <li className="li-projeto">Guilherme Cappelli Bouzon de Amorim Cruz (IC)</li>
+                    <li className="li-projeto">Igor de Andrade Assuncao de Almeida (IC)</li>
+                    <li className="li-projeto">Julia Vilela da Silva Brito (IC)</li>
+                    <li className="li-projeto">Laura Luz Santos Soares (EBA)</li>
+                    <li className="li-projeto">Maria Luisa Lima De Omena (EBA)</li>
+                    <li className="li-projeto">Riquelme Freitas Gomes (IC)</li>
+                    <li className="li-projeto">Vitor Vicente Da Motta (IC)</li>
                 </ul>
                 {/** Colocar logos aqui*/}
 
-
+                <div className="footer-section">
+                        <Link id="link-txt" to="/">VOLTAR</Link>
+                        <div className="line"></div>       
+            </div>
             </div>
         </section>
     )

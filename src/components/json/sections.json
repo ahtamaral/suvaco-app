@@ -63,19 +63,24 @@
                 "imgExists": "True",
                 "1": {
                     "name": "Desfile 1986",
-                    "path": "img/Screenshot_1.png"
+                    "path": "img/Screenshot_1.png",
+                    "link": "/Ano1986"
                 },
                 "2": {
                     "name": "EM BREVE",
-                    "path": "img/Screenshot_14.png"
+                    "path": "img/Screenshot_14.png",
+                    "link": "/"
+                    
                 },
                 "3": {
                     "name": "EM BREVE",
-                    "path": "img/Screenshot_10.png"
+                    "path": "img/Screenshot_10.png",
+                    "link": "/"
                 },
                 "4": {
                     "name": "EM BREVE",
-                    "path": "img/Screenshot_7.png"
+                    "path": "img/Screenshot_7.png",
+                    "link": "/"
                 }
 
             }
