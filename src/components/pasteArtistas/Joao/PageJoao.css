@@ -14,30 +14,3 @@
   border-radius: 50%;
   object-fit: cover;
 }
-
-.footer-section{
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
-
-
-  #link-txt:hover{
-    color: var(--btn-link-section-color-hover);
-  }
-  
-  #link-txt{
-    font-family: "Barlow Condensed", "Roboto";
-    color: #0B878F;
-    opacity: 70%;
-    font-size: 2rem;
-    white-space: nowrap;
-    padding-right: 1rem;
-    position: relative;
-    transition: all 0.5s ease-in-out 0s;
-  }
-
-
-
-}
