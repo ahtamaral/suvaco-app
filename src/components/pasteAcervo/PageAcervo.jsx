@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./PageAcervo.css";
 import { Link } from "react-router-dom";
 import { renderTitleSubtitle } from "../functions";
@@ -10,6 +10,7 @@ function PageAcervo(props) {
     const [categoriasClicadas, setCategoriasClicadas] = useState([]);
     const [fullScreenActivated, setFullScreenActivated] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const categoriaAnos = [...new Set(DATA.map(item => item.year).filter(Boolean))].sort();
 
@@ -35,7 +36,24 @@ function PageAcervo(props) {
         
         return true;
     });
-    
+
+    useEffect(() => {
+        const loadImages = async () => {
+            const imagePromises = imagensExibidas.map(item => {
+                return new Promise((resolve) => {
+                    const img = new Image();
+                    img.src = `img/${item.item}`;
+                    img.onload = resolve;
+                    img.onerror = resolve;
+                });
+            });
+            await Promise.all(imagePromises);
+            setLoading(false);
+        };
+        
+        loadImages();
+    }, [categoriasClicadas]);
+
     function toggleMenuOpen() {
         setMenuOpen(prev => !prev);
     }
@@ -57,8 +75,6 @@ function PageAcervo(props) {
                 : [...prevState, ano]
         );
     }
-    
-    
 
     function imgFullScreen(index) {
         setFullScreenActivated(true);
@@ -88,12 +104,10 @@ function PageAcervo(props) {
                 </button>
 
                 {menuOpen && (
-                    
                     <div className="dropdown-flex">
-                            
-                            <div className="dropdown1">
+                        <div className="dropdown1">
                             <span className="filter-title">Características</span>
-                                <div className="dropdown">
+                            <div className="dropdown">
                                 {categorias.map((nome, index) => (
                                     <li 
                                         onClick={pushCategoriaClicada} 
@@ -103,13 +117,12 @@ function PageAcervo(props) {
                                         {nome}
                                     </li>
                                 ))}
-                                </div>
-                                </div>
+                            </div>
+                        </div>
 
-                                <div className="dropdown2">
-
+                        <div className="dropdown2">
                             <span className="filter-title">Anos</span>
-                                <div className="dropdown">
+                            <div className="dropdown">
                                 {categoriaAnos.map((ano, index) => (
                                     <li 
                                         onClick={pushAnoClicado} 
@@ -119,52 +132,51 @@ function PageAcervo(props) {
                                         {ano}
                                     </li>
                                 ))}
-
-                                </div>
-                                </div>
-                    
-                    
-                        
+                            </div>
+                        </div>
                     </div>
                 )}
 
-                <div className="portfolio">
-                    {imagensExibidas.map((item, index) => (
-                        <img 
-                            key={index} 
-                            src={`img/${item.item}`} 
-                            onClick={() => imgFullScreen(index)} 
-                            alt={item.desc} 
-                        />
-                    ))}
-                </div>
-
-                {/* Fullscreen */}
-                {fullScreenActivated && currentIndex !== null && (
-                    <div className="fullscreen-container">
-                        <img className="fullscreen" src={`img/${imagensExibidas[currentIndex].item}`} alt={imagensExibidas[currentIndex].desc} />
-                        
-                       
-                       
-                        
-                        <div className="thumbnails">
-                            {imagensExibidas.slice(Math.max(0, currentIndex - 4), currentIndex + 5).map((item, index) => (
+                    {loading ? (
+                        <div className="loading">Carregando imagens...</div>
+                    ) : (
+                        <div className="portfolio">
+                            {imagensExibidas.map((item, index) => (
                                 <img 
                                     key={index} 
-                                    className={`thumb ${item.item === imagensExibidas[currentIndex].item ? "active" : ""}`} 
                                     src={`img/${item.item}`} 
-                                    onClick={() => setCurrentIndex(imagensExibidas.indexOf(item))}
-                                    alt="Miniatura" 
+                                    onClick={() => imgFullScreen(index)} 
+                                    alt={item.desc} 
                                 />
                             ))}
                         </div>
-                        <div className="flex-acervo-botoes">
-                            <button className="nav-btn left" onClick={prevImage}><i className="ri-arrow-left-line"></i></button>
-                            <button className="close-btn" onClick={closeFullScreen}><i className="ri-close-large-line"></i></button>
-                            <button className="nav-btn right" onClick={nextImage}><i className="ri-arrow-right-line"></i></button>
+                    )}
+
+                    {/* Fullscreen */}
+                    {fullScreenActivated && currentIndex !== null && (
+                        <div className="fullscreen-container">
+                            <img className="fullscreen" src={`img/${imagensExibidas[currentIndex].item}`} alt={imagensExibidas[currentIndex].desc} />
+                            
+                            <div className="thumbnails">
+                                {imagensExibidas.slice(Math.max(0, currentIndex - 4), currentIndex + 5).map((item, index) => (
+                                    <img 
+                                        key={index} 
+                                        className={`thumb ${item.item === imagensExibidas[currentIndex].item ? "active" : ""}`} 
+                                        src={`img/${item.item}`} 
+                                        onClick={() => setCurrentIndex(imagensExibidas.indexOf(item))}
+                                        alt="Miniatura" 
+                                    />
+                                ))}
+                            </div>
+                            
+                            <div className="flex-acervo-botoes">
+                                <button className="nav-btn left" onClick={prevImage}><i className="ri-arrow-left-line"></i></button>
+                                <button className="close-btn" onClick={closeFullScreen}><i className="ri-close-large-line"></i></button>
+                                <button className="nav-btn right" onClick={nextImage}><i className="ri-arrow-right-line"></i></button>
+                            </div>
                         </div>
-                    </div>
-                )}
+                    )}
+
 
                 <div className="footer-section">
                     <Link id="link-txt" to="/">VOLTAR</Link>

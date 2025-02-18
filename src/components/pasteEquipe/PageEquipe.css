@@ -57,6 +57,10 @@ section {
 
 }
 
+.li-projeto{
+    font-size: 1.1rem;
+}
+
 @media (max-width:1200px){
     section{
         grid-template-columns: 2.5fr 7fr 2.5fr;
@@ -80,7 +84,7 @@ section {
         
                 
             }
-        }
+        
     
     
         .section-container{
@@ -88,11 +92,11 @@ section {
                 .h2-equipe{
                     text-wrap: wrap
                     ;
-                    text-align: center;
+                    text-align: left;
                 }
             }
     .h3-equipe{
-        text-align: center;
+        text-align: left;
 
         font-size: 1.8rem;
     }
@@ -101,9 +105,10 @@ section {
     
 
     .h4-equipe{
-        text-align: center;
+        text-align: left;
         margin-top: 15px;
         margin-bottom: 15px;
     }
 
+}
 }

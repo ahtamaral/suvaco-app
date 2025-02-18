@@ -116,7 +116,7 @@ section{
 
       }
       
-      >img{
+      >a{img{
         
         height: 500px;
         width: 200px;
@@ -130,6 +130,11 @@ section{
         height: 500px;
         object-fit: cover;
       }
+    
+    
+    }
+      
+      
       
       
     }
@@ -151,6 +156,18 @@ section{
       height: fit-content;
       cursor: pointer;
   
+      
+  
+      >a{
+        > img {
+        height: 250px;
+        width: 250px;
+        object-fit: cover;
+        justify-content: center;
+        transition: ease-in-out 0.3s;
+        border-radius: 10px;
+      }
+      
       > h3 {
         font-family: "Poppins", sans-serif !important;
         background-color: var(--background-titulos-imagens);
@@ -167,16 +184,8 @@ section{
         width: 100%;
         transition: ease-in-out 0.3s;
       }
-  
-      > img {
-        height: 250px;
-        width: 250px;
-        object-fit: cover;
-        justify-content: center;
-        transition: ease-in-out 0.3s;
-        border-radius: 10px;
-      }
-  
+    
+
       &:hover {
         > img {
           transform: scale(1.1);
@@ -186,6 +195,10 @@ section{
           transform: translate(-50%, -50%) scale(1.1);
         }
       }
+    
+    }
+  
+     
     }
   }
   
@@ -218,19 +231,26 @@ section{
       transition: ease-in-out 0.3s; 
     }
     
-    >img{
+    
+   >a{ >img{
       
       height: 250px;
       width: 250px;
       object-fit: cover;
       justify-content: center;
       transition: ease-in-out 0.3s;
+  
+    
     }
-
+  
     &:hover {
       >img {
         transform: scale(1.1);
       }
+  
+  }
+
+   
 
       >h3 {
         transform: translate(-50%, -50%) scale(1.1);
@@ -381,18 +401,21 @@ section{
           grid-template-columns: repeat(3, 1fr);
           grid-template-rows: repeat(2, auto);
           .img-container{
-            >h3{
+            
+            >a{
+              >h3{
               font-size: 0.9rem;
             }
-            >img{
+              >img{
               height: 300px;
             }
 
-            & > img:hover {
+              & > img:hover {
               height: 300px;
               width:auto;
               object-fit: cover;
             }
+          }
 
 
 
@@ -436,7 +459,7 @@ section{
     }
     
     >h2{
-      text-align: center;
+      text-align: left;
       font-size: 2rem;
       position: relative;
       
@@ -466,15 +489,17 @@ section{
           grid-template-columns: repeat(3, 1fr);
           grid-template-rows: repeat(2, auto);
           .img-container{
-            >h3{
+            >a{
+              >h3{
               font-size: 0.9rem;
             }
-            >img{
+              >img{
               height: 300px;
             }
-
-
           }
+
+
+        }
 
         
        
