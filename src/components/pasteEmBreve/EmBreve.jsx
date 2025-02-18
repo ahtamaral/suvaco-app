@@ -6,7 +6,6 @@ function EmBreve(){
     return <section>
         
         <div className="section-container">
-
             <p id="breve">Poxa, infelizmente a página que você solicitou ainda está sendo desenvolvida pela nossa equipe. <br /><br />Fique de olho e tente novamente no futuro!</p>
 
             <div className="footer-section">

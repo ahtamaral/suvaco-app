@@ -12,6 +12,16 @@
     border-radius: 3px;
 }
 
+.menu-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 998;
+}
+
 .iconeClose{
     display: none;
     color: var(--nav-text-color);

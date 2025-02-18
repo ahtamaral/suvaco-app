@@ -42,30 +42,12 @@ ul{
 }
 
 
-section {
-    display: grid;
-    grid-template-columns: 2.5fr 7fr 2.5fr;
 
-}
-
-.section-container {
-    grid-column: 2/3;
-
-    p {
-        font-size: 1.1rem;
-    }
-
-}
 
 .li-projeto{
     font-size: 1.1rem;
 }
 
-@media (max-width:1200px){
-    section{
-        grid-template-columns: 2.5fr 7fr 2.5fr;
-    }
-}
 
 @media(max-width:600px){
 
