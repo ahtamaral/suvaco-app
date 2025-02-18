@@ -19,29 +19,6 @@ section{
       justify-content: space-between;
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
-      
-      h3 {
-        font-family: var(--font-subtitle);
-        color: var(--subtitle-color);
-        width: 100%;
-        letter-spacing: 0.3em;
-        padding-top: 12px;
-        position: relative;
-        text-align: center;
-        font-size: 1vw;
-      }
-      
-      h3::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 10px;
-        width: 100%;
-        height: 1px;
-        background: var(--gradiente-azul-verde);
-        opacity: 20%;
-        flex-grow: 1;
-      }
   
       >h2{
         color: var(--title-color);
@@ -52,6 +29,7 @@ section{
         font-style: italic;
         white-space: nowrap;
       }
+      
       .not-right{
         padding-right: 1.5rem;
       }
@@ -74,12 +52,3 @@ section{
     object-fit: cover;
 }
 
-#aviso{
-    color: red;
-    font-size: 2rem;
-}
-
-.acervo{
-    column-count: 3;
-    gap: 5px;
-}
