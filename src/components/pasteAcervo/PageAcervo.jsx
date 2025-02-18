@@ -16,14 +16,14 @@ function PageAcervo(props) {
 
     const imagensExibidas = DATA.filter(item => {
         if (!item.online || item.type !== "imagem") return false;
-    
+
         const keywordsArray = item.keywords ? item.keywords.split(",").map(k => k.trim().toLowerCase()) : [];
         const anoSelecionado = categoriasClicadas.filter(cat => !isNaN(cat)).length > 0;
         const categoriaSelecionada = categoriasClicadas.filter(cat => isNaN(cat)).length > 0;
-    
+
         const correspondeAno = categoriasClicadas.includes(item.year.toString());
         const correspondeCategoria = categoriasClicadas.some(cat => keywordsArray.includes(cat.toLowerCase()));
-    
+
         if (anoSelecionado && !categoriaSelecionada) {
             return correspondeAno;
         }
@@ -33,7 +33,7 @@ function PageAcervo(props) {
         if (anoSelecionado && categoriaSelecionada) {
             return correspondeAno && correspondeCategoria;
         }
-        
+
         return true;
     });
 
@@ -50,7 +50,7 @@ function PageAcervo(props) {
             await Promise.all(imagePromises);
             setLoading(false);
         };
-        
+
         loadImages();
     }, [categoriasClicadas]);
 
@@ -109,8 +109,8 @@ function PageAcervo(props) {
                             <span className="filter-title">Características</span>
                             <div className="dropdown">
                                 {categorias.map((nome, index) => (
-                                    <li 
-                                        onClick={pushCategoriaClicada} 
+                                    <li
+                                        onClick={pushCategoriaClicada}
                                         className={`categoria-item ${categoriasClicadas.includes(nome) ? "selecionada" : ""}`}
                                         key={index}
                                     >
@@ -124,8 +124,8 @@ function PageAcervo(props) {
                             <span className="filter-title">Anos</span>
                             <div className="dropdown">
                                 {categoriaAnos.map((ano, index) => (
-                                    <li 
-                                        onClick={pushAnoClicado} 
+                                    <li
+                                        onClick={pushAnoClicado}
                                         className={`categoria-item ${categoriasClicadas.includes(ano.toString()) ? "selecionada" : ""}`}
                                         key={index}
                                     >
@@ -137,45 +137,54 @@ function PageAcervo(props) {
                     </div>
                 )}
 
-                    {loading ? (
-                        <div className="loading">Carregando imagens...</div>
-                    ) : (
-                        <div className="portfolio">
-                            {imagensExibidas.map((item, index) => (
-                                <img 
-                                    key={index} 
-                                    src={`img/${item.item}`} 
-                                    onClick={() => imgFullScreen(index)} 
-                                    alt={item.desc} 
+                {loading ? (
+                    <span class="loader"></span>
+                ) : (
+                    <div className="portfolio">
+                        {imagensExibidas.map((item, index) => (
+                            <img
+                                key={index}
+                                src={`img/${item.item}`}
+                                onClick={() => imgFullScreen(index)}
+                                alt={item.desc}
+                            />
+                        ))}
+                    </div>
+                )}
+
+                {/* Fullscreen */}
+                {fullScreenActivated && currentIndex !== null && (
+                    <div className="fullscreen-container" onClick={closeFullScreen}>
+                        <img className="fullscreen" src={`img/${imagensExibidas[currentIndex].item}`} alt={imagensExibidas[currentIndex].desc} onClick={(e) => e.stopPropagation()} />
+
+
+                        <div className="thumbnails">
+                            {imagensExibidas.slice(Math.max(0, currentIndex - 3), currentIndex + 4).map((item, index) => (
+                                <img
+                                    key={index}
+                                    className={`thumb ${item.item === imagensExibidas[currentIndex].item ? "active" : ""}`}
+                                    src={`img/${item.item}`}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setCurrentIndex(imagensExibidas.indexOf(item));
+                                    }}
+                                    alt="Miniatura"
                                 />
                             ))}
                         </div>
-                    )}
 
-                    {/* Fullscreen */}
-                    {fullScreenActivated && currentIndex !== null && (
-                        <div className="fullscreen-container">
-                            <img className="fullscreen" src={`img/${imagensExibidas[currentIndex].item}`} alt={imagensExibidas[currentIndex].desc} />
-                            
-                            <div className="thumbnails">
-                                {imagensExibidas.slice(Math.max(0, currentIndex - 4), currentIndex + 5).map((item, index) => (
-                                    <img 
-                                        key={index} 
-                                        className={`thumb ${item.item === imagensExibidas[currentIndex].item ? "active" : ""}`} 
-                                        src={`img/${item.item}`} 
-                                        onClick={() => setCurrentIndex(imagensExibidas.indexOf(item))}
-                                        alt="Miniatura" 
-                                    />
-                                ))}
-                            </div>
-                            
-                            <div className="flex-acervo-botoes">
-                                <button className="nav-btn left" onClick={prevImage}><i className="ri-arrow-left-line"></i></button>
-                                <button className="close-btn" onClick={closeFullScreen}><i className="ri-close-large-line"></i></button>
-                                <button className="nav-btn right" onClick={nextImage}><i className="ri-arrow-right-line"></i></button>
-                            </div>
+
+                        <div className="flex-acervo-botoes">
+                            <button className="nav-btn left" onClick={(e) => { e.stopPropagation(); prevImage(); }}>
+                                <i className="ri-arrow-left-line"></i>
+                            </button>
+                            <button className="close-btn" onClick={closeFullScreen}><i className="ri-close-large-line"></i></button>
+                            <button className="nav-btn right" onClick={(e) => { e.stopPropagation(); nextImage(); }}>
+                                <i className="ri-arrow-right-line"></i>
+                            </button>
                         </div>
-                    )}
+                    </div>
+                )}
 
 
                 <div className="footer-section">
