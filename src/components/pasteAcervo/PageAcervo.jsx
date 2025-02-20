@@ -11,6 +11,7 @@ function PageAcervo(props) {
     const [fullScreenActivated, setFullScreenActivated] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [visibleCount, setVisibleCount] = useState(20);
 
     const categoriaAnos = [...new Set(DATA.map(item => item.year).filter(Boolean))].sort();
 
@@ -39,7 +40,7 @@ function PageAcervo(props) {
 
     useEffect(() => {
         const loadImages = async () => {
-            const imagePromises = imagensExibidas.map(item => {
+            const imagePromises = imagensExibidas.slice(0, visibleCount).map(item => {
                 return new Promise((resolve) => {
                     const img = new Image();
                     img.src = `img/${item.item}`;
@@ -52,7 +53,7 @@ function PageAcervo(props) {
         };
 
         loadImages();
-    }, [categoriasClicadas]);
+    }, [categoriasClicadas, visibleCount]);
 
     function toggleMenuOpen() {
         setMenuOpen(prev => !prev);
@@ -92,6 +93,10 @@ function PageAcervo(props) {
 
     function nextImage() {
         setCurrentIndex(prevIndex => (prevIndex < imagensExibidas.length - 1 ? prevIndex + 1 : 0));
+    }
+
+    function loadMoreImages() {
+        setVisibleCount(prev => prev + 20);
     }
 
     return (
@@ -138,54 +143,24 @@ function PageAcervo(props) {
                 )}
 
                 {loading ? (
-                    <span class="loader"></span>
+                    <span className="loader"></span>
                 ) : (
-                    <div className="portfolio">
-                        {imagensExibidas.map((item, index) => (
-                            <img
-                                key={index}
-                                src={`img/${item.item}`}
-                                onClick={() => imgFullScreen(index)}
-                                alt={item.desc}
-                            />
-                        ))}
-                    </div>
-                )}
-
-                {/* Fullscreen */}
-                {fullScreenActivated && currentIndex !== null && (
-                    <div className="fullscreen-container" onClick={closeFullScreen}>
-                        <img className="fullscreen" src={`img/${imagensExibidas[currentIndex].item}`} alt={imagensExibidas[currentIndex].desc} onClick={(e) => e.stopPropagation()} />
-
-
-                        <div className="thumbnails">
-                            {imagensExibidas.slice(Math.max(0, currentIndex - 3), currentIndex + 4).map((item, index) => (
+                    <>
+                        <div className="portfolio">
+                            {imagensExibidas.slice(0, visibleCount).map((item, index) => (
                                 <img
                                     key={index}
-                                    className={`thumb ${item.item === imagensExibidas[currentIndex].item ? "active" : ""}`}
                                     src={`img/${item.item}`}
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        setCurrentIndex(imagensExibidas.indexOf(item));
-                                    }}
-                                    alt="Miniatura"
+                                    onClick={() => imgFullScreen(index)}
+                                    alt={item.desc}
                                 />
                             ))}
                         </div>
-
-
-                        <div className="flex-acervo-botoes">
-                            <button className="nav-btn left" onClick={(e) => { e.stopPropagation(); prevImage(); }}>
-                                <i className="ri-arrow-left-line"></i>
-                            </button>
-                            <button className="close-btn" onClick={closeFullScreen}><i className="ri-close-large-line"></i></button>
-                            <button className="nav-btn right" onClick={(e) => { e.stopPropagation(); nextImage(); }}>
-                                <i className="ri-arrow-right-line"></i>
-                            </button>
-                        </div>
-                    </div>
+                        {visibleCount < imagensExibidas.length && (
+                            <button className="load-more" onClick={loadMoreImages}>Carregar mais</button>
+                        )}
+                    </>
                 )}
-
 
                 <div className="footer-section">
                     <Link id="link-txt" to="/">VOLTAR</Link>
