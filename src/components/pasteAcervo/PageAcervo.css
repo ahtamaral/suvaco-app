@@ -158,6 +158,28 @@ left: 20%;
   animation: animloader 2s linear infinite;
 }
 
+.pagination{
+  
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.page-button{
+  padding: 5px;
+  color: var(--subtitle-color);
+  font-weight: 700;
+}
+
+.page-button.active{
+  background-color: var(--title-color);
+  padding: 10px;
+  border-radius: 16px;
+  color: white;
+}
+
+
 @keyframes animloader {
   0% {
     box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
