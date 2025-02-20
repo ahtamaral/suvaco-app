@@ -9,6 +9,9 @@ function PageAcervo(props) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [categoriasClicadas, setCategoriasClicadas] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
+    const [fullScreenActivated, setFullScreenActivated] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(null); // Add this line
+
     const itemsPerPage = 10;
     const categoriaAnos = [...new Set(DATA.map(item => item.year).filter(Boolean))].sort();
 
@@ -52,7 +55,6 @@ function PageAcervo(props) {
                 : [...prevState, categoria]
         );
         setCurrentPage(1);
-
     }
 
     function pushAnoClicado(e) {
@@ -62,8 +64,25 @@ function PageAcervo(props) {
                 ? prevState.filter(item => item !== ano)
                 : [...prevState, ano]
         );
+        setCurrentPage(1);
+    }
 
-            setCurrentPage(1);
+    function imgFullScreen(index) {
+        setFullScreenActivated(true);
+        setCurrentIndex(index);
+    }
+
+    function closeFullScreen() {
+        setFullScreenActivated(false);
+        setCurrentIndex(null);
+    }
+
+    function prevImage() {
+        setCurrentIndex(prevIndex => (prevIndex > 0 ? prevIndex - 1 : imagensExibidas.length - 1));
+    }
+
+    function nextImage() {
+        setCurrentIndex(prevIndex => (prevIndex < imagensExibidas.length - 1 ? prevIndex + 1 : 0));
     }
 
     function renderPagination() {
@@ -143,13 +162,45 @@ function PageAcervo(props) {
 
                 <div className="portfolio">
                     {currentItems.map((item, index) => (
-                        <img key={index} src={`img/${item.item}`} alt={item.desc} />
+                        <img key={index} src={`img/${item.item}`} alt={item.desc} onClick={() => imgFullScreen(indexOfFirstItem + index)} />
                     ))}
                 </div>
 
                 <div className="pagination">
                     {renderPagination()}
                 </div>
+
+                {/* Fullscreen */}
+                {fullScreenActivated && currentIndex !== null && (
+                    <div className="fullscreen-container" onClick={closeFullScreen}>
+                        <img className="fullscreen" src={`img/${imagensExibidas[currentIndex].item}`} alt={imagensExibidas[currentIndex].desc} onClick={(e) => e.stopPropagation()} />
+
+                        <div className="thumbnails">
+                            {imagensExibidas.slice(Math.max(0, currentIndex - 3), currentIndex + 4).map((item, index) => (
+                                <img
+                                    key={index}
+                                    className={`thumb ${item.item === imagensExibidas[currentIndex].item ? "active" : ""}`}
+                                    src={`img/${item.item}`}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setCurrentIndex(imagensExibidas.indexOf(item));
+                                    }}
+                                    alt="Miniatura"
+                                />
+                            ))}
+                        </div>
+
+                        <div className="flex-acervo-botoes">
+                            <button className="nav-btn left" onClick={(e) => { e.stopPropagation(); prevImage(); }}>
+                                <i className="ri-arrow-left-line"></i>
+                            </button>
+                            <button className="close-btn" onClick={closeFullScreen}><i className="ri-close-large-line"></i></button>
+                            <button className="nav-btn right" onClick={(e) => { e.stopPropagation(); nextImage(); }}>
+                                <i className="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                )}
 
                 <div className="footer-section">
                     <Link id="link-txt" to="/">VOLTAR</Link>
