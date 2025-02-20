@@ -21,7 +21,8 @@ import PageEquipe from './components/pasteEquipe/PageEquipe';
 
 
 import PageJoao from './components/pasteArtistas/Joao/PageJoao'
-
+import PageLavigne from './components/pasteArtistas/Lavigne/PageLavigne';
+import PagePirulito from './components/pasteArtistas/Pirulito/PagePirulito';
 
 import Ano1986 from './components/pasteTimeline/anos/1986/Ano1986';
 
@@ -59,6 +60,8 @@ function App() {
         <Route path="/Ano1986" element={<Ano1986 />} />
 
         <Route path="/Joao" element={<PageJoao/>} />
+        <Route path="/Lavigne" element={<PageLavigne/>} />
+        <Route path="/Pirulito" element={<PagePirulito/>} />
         <Route path="/projeto" element={<PageEquipe/>} />
 
 
