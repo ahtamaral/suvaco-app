@@ -8,11 +8,8 @@ import DATA from "../json/resultado_formatado.json";
 function PageAcervo(props) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [categoriasClicadas, setCategoriasClicadas] = useState([]);
-    const [fullScreenActivated, setFullScreenActivated] = useState(false);
-    const [currentIndex, setCurrentIndex] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [visibleCount, setVisibleCount] = useState(20);
-
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 10;
     const categoriaAnos = [...new Set(DATA.map(item => item.year).filter(Boolean))].sort();
 
     const imagensExibidas = DATA.filter(item => {
@@ -38,22 +35,10 @@ function PageAcervo(props) {
         return true;
     });
 
-    useEffect(() => {
-        const loadImages = async () => {
-            const imagePromises = imagensExibidas.slice(0, visibleCount).map(item => {
-                return new Promise((resolve) => {
-                    const img = new Image();
-                    img.src = `img/${item.item}`;
-                    img.onload = resolve;
-                    img.onerror = resolve;
-                });
-            });
-            await Promise.all(imagePromises);
-            setLoading(false);
-        };
-
-        loadImages();
-    }, [categoriasClicadas, visibleCount]);
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = imagensExibidas.slice(indexOfFirstItem, indexOfLastItem);
+    const totalPages = Math.ceil(imagensExibidas.length / itemsPerPage);
 
     function toggleMenuOpen() {
         setMenuOpen(prev => !prev);
@@ -66,6 +51,8 @@ function PageAcervo(props) {
                 ? prevState.filter(item => item !== categoria)
                 : [...prevState, categoria]
         );
+        setCurrentPage(1);
+
     }
 
     function pushAnoClicado(e) {
@@ -75,28 +62,40 @@ function PageAcervo(props) {
                 ? prevState.filter(item => item !== ano)
                 : [...prevState, ano]
         );
+
+            setCurrentPage(1);
     }
 
-    function imgFullScreen(index) {
-        setFullScreenActivated(true);
-        setCurrentIndex(index);
-    }
+    function renderPagination() {
+        const pages = [];
+        const maxPagesToShow = 5;
 
-    function closeFullScreen() {
-        setFullScreenActivated(false);
-        setCurrentIndex(null);
-    }
+        if (totalPages <= maxPagesToShow) {
+            pages.push(...Array.from({ length: totalPages }, (_, index) => index + 1));
+        } else {
+            pages.push(1);
+            if (currentPage > 3) pages.push("...");
 
-    function prevImage() {
-        setCurrentIndex(prevIndex => (prevIndex > 0 ? prevIndex - 1 : imagensExibidas.length - 1));
-    }
+            const startPage = Math.max(2, currentPage - 1);
+            const endPage = Math.min(totalPages - 1, currentPage + 1);
+            for (let i = startPage; i <= endPage; i++) {
+                pages.push(i);
+            }
 
-    function nextImage() {
-        setCurrentIndex(prevIndex => (prevIndex < imagensExibidas.length - 1 ? prevIndex + 1 : 0));
-    }
+            if (currentPage < totalPages - 2) pages.push("...");
+            pages.push(totalPages);
+        }
 
-    function loadMoreImages() {
-        setVisibleCount(prev => prev + 20);
+        return pages.map((number, index) => (
+            <button
+                key={index}
+                className={`page-button ${currentPage === number ? "active" : ""}`}
+                onClick={() => typeof number === "number" && setCurrentPage(number)}
+                disabled={number === "..."}
+            >
+                {number}
+            </button>
+        ));
     }
 
     return (
@@ -142,25 +141,15 @@ function PageAcervo(props) {
                     </div>
                 )}
 
-                {loading ? (
-                    <span className="loader"></span>
-                ) : (
-                    <>
-                        <div className="portfolio">
-                            {imagensExibidas.slice(0, visibleCount).map((item, index) => (
-                                <img
-                                    key={index}
-                                    src={`img/${item.item}`}
-                                    onClick={() => imgFullScreen(index)}
-                                    alt={item.desc}
-                                />
-                            ))}
-                        </div>
-                        {visibleCount < imagensExibidas.length && (
-                            <button className="load-more" onClick={loadMoreImages}>Carregar mais</button>
-                        )}
-                    </>
-                )}
+                <div className="portfolio">
+                    {currentItems.map((item, index) => (
+                        <img key={index} src={`img/${item.item}`} alt={item.desc} />
+                    ))}
+                </div>
+
+                <div className="pagination">
+                    {renderPagination()}
+                </div>
 
                 <div className="footer-section">
                     <Link id="link-txt" to="/">VOLTAR</Link>
