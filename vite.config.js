@@ -1,11 +1,22 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   server: {
     port: process.env.PORT || 3000,
-    host: true,  // Adicione uma vírgula aqui
+    host: true,
+    strictPort: true,
+    watch: {
+      usePolling: true,
+    },
+    cors: {
+      origin: ["www.suvacodocristo.com", "www.suvacodocristo.com.br", "suvacodocristo.com", "suvacodocristo.com.br"],
+      credentials: true,
+    },
+    clientPort: 443,
   },
-  plugins: [react()],  // Certifique-se de que os plugins estão fora do bloco `server`
+  preview: {
+    allowedHosts: ["www.suvacodocristo.com", "www.suvacodocristo.com.br", "suvacodocristo.com", "suvacodocristo.com.br"],
+  },
+  plugins: [react()],
 })

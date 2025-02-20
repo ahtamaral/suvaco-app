@@ -11,16 +11,25 @@ html{
 
 /*Secoes da pagina principal*/
 
+
+
+
 section{
   display: grid;
   grid-template-columns: 2.5fr 7fr 2.5fr;
+  margin-top: 2rem;
 
 }
+
 
 .section-container{
   grid-column: 2/3;
   
-  p{font-size: 1.1rem;}
+  p{
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  
+  }
 
   .section-title-subtitle {
     display: flex;
@@ -32,11 +41,11 @@ section{
       font-family: var(--font-subtitle);
       color: var(--subtitle-color);
       width: 100%;
-      letter-spacing: 0.3em;
+      letter-spacing: 0.2rem;
       padding-top: 12px;
       position: relative;
       text-align: center;
-      font-size: 1vw;
+      font-size: 0.95vw;
     }
     
     h3::after {
@@ -50,23 +59,35 @@ section{
       opacity: 20%;
       flex-grow: 1;
     }
+    
+    
 
     >h2{
       color: var(--title-color);
       font-family: var(--font-title);
       width: fit-content;
       font-size: 3rem;
-      font-weight: 500;
+      font-weight: 400;
       white-space: nowrap;
+      font-style: initial;
     }
     .not-right{
       padding-right: 1.5rem;
     }
-    .right {
+    /* .right {
       padding-left: 1.5rem;
+    } */
+
+    .projeto-museu{
+      font-size: 3rem;
+      text-align: left;
+      text-wrap: auto;
     }
 
+    
+
   }
+  
 
   
   .imgs-section-s2{
@@ -95,7 +116,7 @@ section{
 
       }
       
-      >img{
+      >a{img{
         
         height: 500px;
         width: 200px;
@@ -109,6 +130,11 @@ section{
         height: 500px;
         object-fit: cover;
       }
+    
+    
+    }
+      
+      
       
       
     }
@@ -130,6 +156,18 @@ section{
       height: fit-content;
       cursor: pointer;
   
+      
+  
+      >a{
+        > img {
+        height: 250px;
+        width: 250px;
+        object-fit: cover;
+        justify-content: center;
+        transition: ease-in-out 0.3s;
+        border-radius: 10px;
+      }
+      
       > h3 {
         font-family: "Poppins", sans-serif !important;
         background-color: var(--background-titulos-imagens);
@@ -146,16 +184,8 @@ section{
         width: 100%;
         transition: ease-in-out 0.3s;
       }
-  
-      > img {
-        height: 250px;
-        width: 250px;
-        object-fit: cover;
-        justify-content: center;
-        transition: ease-in-out 0.3s;
-        border-radius: 10px;
-      }
-  
+    
+
       &:hover {
         > img {
           transform: scale(1.1);
@@ -165,6 +195,10 @@ section{
           transform: translate(-50%, -50%) scale(1.1);
         }
       }
+    
+    }
+  
+     
     }
   }
   
@@ -197,19 +231,26 @@ section{
       transition: ease-in-out 0.3s; 
     }
     
-    >img{
+    
+   >a{ >img{
       
       height: 250px;
       width: 250px;
       object-fit: cover;
       justify-content: center;
       transition: ease-in-out 0.3s;
+  
+    
     }
-
+  
     &:hover {
       >img {
         transform: scale(1.1);
       }
+  
+  }
+
+   
 
       >h3 {
         transform: translate(-50%, -50%) scale(1.1);
@@ -224,265 +265,271 @@ section{
 }
 
 
-@media (max-width: 1370px) {
-  footer{font-size: 1rem;}
-  
-}
 
-@media (max-width:1545px) {
-  section{
+.comments-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 1rem;
 
-    .section-container{
-      >.section-title-subtitle{
-        justify-content: center;
-        >h3{
-          font-size: 0.8rem;
-        }
-        >h2{
-          font-size: 2.3rem;
-        }
-      }   
+  .comment{
+
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 1rem;
+    align-items: center;
+    
+
+
+
+    .NAME-DATE{
+      font-family: "Roboto",sans-serif;
+      text-transform: uppercase;
+      color: #0066AF;
+      font-weight: 500;
+      font-size: 1.2rem;
+      
     }
+    p{
+      grid-column: 2;
+      word-wrap: break-word;
+      word-break: break-word; 
+      white-space: normal; 
+      line-height: 1rem;
+      font-size: 1.1rem;
+    }
+
+    i{
+      grid-column: 1;
+      width: fit-content;
+      border: 4.3px solid #35766a;
+      opacity: 33%;
+      border-radius: 50%;
+      font-size: 2.8rem;
+      color: #35766a;
+      margin-bottom: 2rem;
+
+    }
+    .dashed-line {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      width: 50%;
+      height: 0;
+      border-top: 2px dotted #0066AF;
+      transform: translateX(50%);
+      opacity: 30%;
+    }
+
+
+
   }
 }
 
+#contribute{
+  margin: 2rem 0 3rem 0;
+  border: 1.5px solid #a7c8df;
+  width: fit-content;
+  align-self: center;
+  border-radius: 25px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  color: var(--title-color);
+  font-size: 1.5rem;
+  font-family: "Poppins";
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
 
-@media (max-width:1250px) {
-  section{
+#contribute:hover{
+  background-color: var(--subtitle-color);
+  border: var(--subtitle-color) 1px solid;
+  color: white;
+  box-shadow: 0px 4px 0.2px rgba(0, 0, 0, 0.1);
+}
 
-    .section-container{
 
-      >.section-title-subtitle{
-        justify-content: center;
-        >h3{
-          font-size: 0.8rem;
+
+
+@media(max-width:1200px){
+
+  .section-container{
+  
+    p{
+      font-size: 1.08rem;
+    }
+    .section-title-subtitle{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >h3{
+      display: none;
+    }
+    
+    >h2{
+      text-align: center;
+      font-size: 2.5rem;
+      position: relative;
+      
+    }
+
+    
+  .not-right{
+    padding: 0px;
+  }
+  .right{
+    padding: 0px;
+  }
+
+  .projeto-museu{
+    font-size: 2rem;
+  }
+}
+  }}
+
+
+@media(max-width:600px){
+    section{
+      
+
+      .section-container{
+        .section-container{
         }
-        >h2{
-          font-size: 1.9rem;
-          padding-bottom: 0.5rem;
-        }
-      }  
 
-      .imgs-section-s2{
-        
-        .img-container{
-          
-          >h3{
-            font-size: 1rem;
-          }
+        .imgs-section-s2 {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, auto);
+          .img-container{
+            
+            >a{
+              >h3{
+              font-size: 0.9rem;
+            }
+              >img{
+              height: 300px;
+            }
 
-          >img{
-            height: 400px;
-          }
-
-          >img:hover{
-            width: 300px;
-            height: 400px;
-            object-fit: cover;
-          }
-        }
-      }
-
-      #contribute{
-        font-size: 1.2rem;
-      }
-      .comments-container{
-        .comment{
-          
-          .NAME-DATE{
-            font-size: 1.1rem;
-          }
-          .comment-content{
-
-            >p{
-              font-size: 1rem;
+              & > img:hover {
+              height: 300px;
+              width:auto;
+              object-fit: cover;
             }
           }
-        }
-      }
-      
-  }
-}
-}
 
 
-@media (max-width:1160px) {
-  section{
 
-    .section-container{
+          }
 
-      >.section-title-subtitle{
-        justify-content: center;
-        >h3{
-          font-size: 0.8rem;
-        }
-        >h2{
-          font-size: 1.8rem;
-          padding-bottom: 0.8rem;
-          transform: translateY(25%);
-        }
-      }  
-
-      .imgs-section-s2{
         
-        .img-container{
-          
-          >h3{
-            font-size: 1rem;
-          }
-
-          >img{
-            height: 400px;
-          }
-
-          >img:hover{
-            width: 300px;
-            height: 400px;
-            object-fit: cover;
-          }
-        }
+       
       }
 
-      #contribute{
-        font-size: 1.2rem;
-      }
-      .comments-container{
-        .comment{
-          
-          .NAME-DATE{
-            font-size: 1rem;
-          }
-        }
-      }
-      
+      .imgs-section-s3
+        {display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 1rem;}
   }
 }
-}
+  }
 
+@media(max-width:500px){
 
-@media (max-width:950px) {
-  
-  nav{
-    font-size: 1rem;
+  section{
+    grid-template-columns: 1fr 7fr 1fr;
+  }
 
-    > ul {
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
+  .section-container{
   
-      >li {
-  
-        >a::before {
-          content: "";
-          position: absolute;
-          width: 95%;
-          height: 1.2px;
-          background-color: #35766a;
-          visibility: hidden;
-          transform: scaleX(0);
-          transition: all 0.3s ease-in-out 0s;
-          top: 2vw;
-          left: 0.1vw;
-        }
-  
-        >a:hover::before {
-          visibility: visible;
-          transform: scaleX(1);
-        }
-  
-      }
-  
+    p{
+      font-size: 1rem;
+      text-wrap: auto;
+      line-height: 1.5rem;
     }
+    .section-title-subtitle{
+    
+   
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >h3{
+      display: none;
+    }
+    
+    >h2{
+      text-align: left;
+      font-size: 2rem;
+      position: relative;
+      
+    }
+
+    
+  .not-right{
+    padding: 0px;
+  }
+  .right{
+    padding: 0px;
   }
 
-  section{
+  .projeto-museu{
+    text-align: center;
+    text-wrap: wrap;
+  }
 
-    .section-container{
 
-      .section-title-subtitle{
-        
-        >h2{
-          font-size: 2.5rem;
-        }
-        >h3{
-          display: none;
-        }
-      }
 
-      .imgs-section-s2{
-        
-        .img-container{
-          
-          >h3{
-            font-size: 0.9rem;
-          }
+  }}
 
-          >img{
-            height: 300px;
-          }
-
-          >img:hover{
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-          }
-        }
-      }
-
-      #contribute{
-        font-size: 1rem;
-        margin: 0px;
-        margin-bottom: 28px;
-      }
-      .comments-container{
-        .comment{
-          i{
-            font-size: 2.5;
-            border: 3px solid #35766a;;
-          }
-          .NAME-DATE{
-            font-size: 1.1rem;
-          }
-          .comment-content{
-
-            >p{
-              font-size: 1rem;
+    section{
+      .section-container{
+        .imgs-section-s2 {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, auto);
+          .img-container{
+            >a{
+              >h3{
+              font-size: 0.9rem;
+            }
+              >img{
+              height: 300px;
             }
           }
+
+
         }
+
+        
+       
       }
-      
-      .paragraph{
-        >p{font-size: 1rem;}
-      }
+
+      .imgs-section-s3
+        {display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 1rem;}
   }
-}
 
-  footer{
-    .grid{
-      .flex{
-        text-align: center;
-        .mid{
-          margin: 0px 2rem 0px 2rem;
-        }
-        >p{
-          font-size: .9rem;
-        }
-
-        .socials{
-          width: 25%;
-        }
-      }
+    #contribute{
+      font-size: 1rem;
     }
-  }
+
+
+
 }
 
 
 
 
+#contribute{
+  font-size: 1.3rem;
+  margin: 2rem 0 1rem 0 ;
+}
 
+.NAME-DATE{
+  margin-bottom: 10px;
+}
 
-
-
-
-
+}

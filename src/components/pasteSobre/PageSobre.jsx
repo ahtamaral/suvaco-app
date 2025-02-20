@@ -38,6 +38,10 @@ function PageSobre(props){
             </p>
         </main>
 
+        <div className="footer-section">
+                        <Link id="link-txt" to="/">VOLTAR</Link>
+                        <div className="line"></div>       
+            </div>
         </div>
 
         

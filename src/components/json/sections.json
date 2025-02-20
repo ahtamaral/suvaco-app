@@ -20,33 +20,33 @@
             "id":"s2",
             "title":"Acervo",
             "subtitle":"AS MEMÓRIAS DO SUVACO",
-            "link": "VER TODAS AS CATEGORIAS",
-            "right": "True",
+            "link": "VEJA AS NOSSAS FOTOS",
+            "right": "False",
             "text": null,
             "img": {
                 "imgExists": "True",
                 "1": {
-                    "name": "Baianas",
+                    "name": "",
                     "path": "img/Screenshot_1.png"
                 },
                 "2": {
-                    "name": "Camisetas",
+                    "name": "",
                     "path": "img/Screenshot_14.png"
                 },
                 "3": {
-                    "name": "Bateria",
+                    "name": "",
                     "path": "img/Screenshot_10.png"
                 },
                 "4": {
-                    "name": "Porta-Bandeira",
+                    "name": "",
                     "path": "img/Screenshot_15.png"
                 },
                 "5": {
-                    "name": "Foliões",
+                    "name": "",
                     "path": "img/Screenshot_9.png"
                 },
                 "6":{
-                    "name":"Prêmios",
+                    "name":"",
                     "path":"img/2012 Serpentina de Ouro- Trofeu.jpg"
                 }
 
@@ -62,25 +62,27 @@
             "img": {
                 "imgExists": "True",
                 "1": {
-                    "name": "Desfile 2026",
-                    "path": "img/Screenshot_1.png"
+                    "name": "Desfile 1986",
+                    "path": "img/Screenshot_1.png",
+                    "link": "/Ano1986"
                 },
                 "2": {
-                    "name": "Desfile 2025",
-                    "path": "img/Screenshot_14.png"
+                    "name": "EM BREVE",
+                    "path": "img/Screenshot_14.png",
+                    "link": "/"
+                    
                 },
                 "3": {
-                    "name": "Desfile 2024",
-                    "path": "img/Screenshot_10.png"
+                    "name": "EM BREVE",
+                    "path": "img/Screenshot_10.png",
+                    "link": "/"
                 },
                 "4": {
-                    "name": "Desfile 2023",
-                    "path": "img/Screenshot_7.png"
-                },
-                "5": {
-                    "name": "Desfile 2022",
-                    "path": "img/Screenshot_1.png"
+                    "name": "EM BREVE",
+                    "path": "img/Screenshot_7.png",
+                    "link": "/"
                 }
+
             }
         },
         "4":{
@@ -88,8 +90,8 @@
             "title":"Divinas Axilas",
             "subtitle":"A ONG DO SUVACO",
             "link": "DESCUBRA MAIS",
-            "right": "True",
-            "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam praesentium illo quam quaerat. Minus, corporis pariatur cupiditate error aperiam provident corrupti quas id voluptates accusamus perspiciatis magni! Nihil, veritatis error! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam praesentium illo quam quaerat. Minus, corporis pariatur cupiditate error aperiam provident corrupti quas id voluptates accusamus perspiciatis magni! Nihil, veritatis error! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam praesentium illo quam quaerat. Minus, corporis pariatur cupiditate error aperiam provident corrupti quas id voluptates accusamus perspiciatis magni! Nihil, veritatis error! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam praesentium illo quam quaerat. Minus, corporis pariatur cupiditate error aperiam provident corrupti quas id voluptates accusamus perspiciatis magni! Nihil, veritatis error!",
+            "right": "False",
+            "text": "",
             
             "img": {
                 "imgExists" : "True",

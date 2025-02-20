@@ -9,9 +9,7 @@ function Acervo(props){
         <section>
             <div className="section-container">
                 {rightRender(props.title,props.subtitle,props.right)}
-                <div className="paragraph">
                     <p>{props.text}</p>
-                </div>
 
                 {imgRender(props.img,props.id)}
                 

@@ -3,18 +3,28 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './layouts/header/Header'
 import Sobre from './components/Home/Sobre'
+import Projeto from './components/Home/Projeto';
 import Acervo from './components/Home/Acervo'
 import LinhaDoTempo from './components/Home/LinhaDoTempo'
 import DivinasAxilas from './components/Home/DivinasAxilas'
 import VoceComSuvaco from './components/Home/VoceComSuvaco'
 import Footer from './layouts/footer/Footer'
 
+import EmBreve from './components/pasteEmBreve/EmBreve';
+
 import PageAcervo from './components/pasteAcervo/PageAcervo';
 import PageSobre from './components/pasteSobre/PageSobre'
 import PageTimeline from './components/pasteTimeline/PageTimeline';
 import PageDivinas from './components/pasteDivinasAxilas/PageDivinas';
+import PageVoceSuvaco from './components/pasteVoceComSuvaco/PageVoceSuvaco';
+import PageEquipe from './components/pasteEquipe/PageEquipe';
 
-import Ano2012 from './components/pasteTimeline/anos/2012/Ano2012';
+
+import PageJoao from './components/pasteArtistas/Joao/PageJoao'
+import PageLavigne from './components/pasteArtistas/Lavigne/PageLavigne'
+
+
+import Ano1986 from './components/pasteTimeline/anos/1986/Ano1986';
 
 import sectionsPosts from './components/json/sections.json'
 
@@ -22,33 +32,44 @@ function App() {
 
   return (
     <div>
-          <Header/>
-          <Routes>
+      <Header />
+      <Routes>
 
-            {/* Página principal */}
-            <Route path="/" element={
-              <>
-              {/* Criação de cada section post baseado no arquivo json*/}
-              <Sobre {...sectionsPosts.sections[1]}/>
-              <Acervo {...sectionsPosts.sections[2]}/>
-              <LinhaDoTempo {...sectionsPosts.sections[3]}/>
-              <DivinasAxilas {... sectionsPosts.sections[4]}/>
-              <VoceComSuvaco {... sectionsPosts.sections[5]}/>
-          
-              </>
-            }
-            />
+        {/* Página principal */}
+        <Route path="/" element={
+          <>
+            {/* Criação de cada section post baseado no arquivo json*/}
+            <Projeto/>
+            <Sobre {...sectionsPosts.sections[1]} />
+            <Acervo {...sectionsPosts.sections[2]} />
+            <LinhaDoTempo {...sectionsPosts.sections[3]} />
+            <DivinasAxilas {...sectionsPosts.sections[4]} />
+            <VoceComSuvaco {...sectionsPosts.sections[5]} />
+          </>
+        }
+        />
 
-            {/* Outras páginas*/}
-            <Route path="/sobre" element={<PageSobre  {... sectionsPosts.sections[1]}/>} /> 
-            <Route path="/timeline" element={<PageTimeline {... sectionsPosts.sections[3]}/>} />
-            <Route path="/Ano2012" element={<Ano2012/>} />
-            <Route path="/acervo" element={<PageAcervo {... sectionsPosts.sections[2]}/>} />
-            <Route path="/divinas" element={<PageDivinas {... sectionsPosts.sections[4]}/>} />
-            
-          </Routes>
+        {/* Outras páginas*/}
+        <Route path="/sobre" element={<PageSobre  {...sectionsPosts.sections[1]} />} />
+        <Route path="/timeline" element={<PageTimeline {...sectionsPosts.sections[3]} />} />
+        <Route path="/acervo" element={<PageAcervo {...sectionsPosts.sections[2]} />} />
+        <Route path="/divinas" element={<EmBreve></EmBreve>} />
+
+        <Route path="/voce-com-o-suvaco" element={<EmBreve></EmBreve>} />
+
+        <Route path="/Ano1986" element={<Ano1986 />} />
+
+        <Route path="/Joao" element={<PageJoao/>} />
+        <Route path="/Lavigne" element={<PageLavigne/>} />
         
-        <Footer/>
+        <Route path="/projeto" element={<PageEquipe/>} />
+
+
+
+
+      </Routes>
+
+      <Footer />
     </div>
   )
 }

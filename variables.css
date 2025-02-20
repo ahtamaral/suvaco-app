@@ -2,7 +2,7 @@
   
   /*Fontes*/
 
-  --font-title: "Barlow";
+  --font-title: "Poppins";
   --font-subtitle: "Roboto";
   --font-nav:"Roboto";
   --font-header:"Poppins";
@@ -12,6 +12,11 @@
   --font-acesso-rapido: "Poppins";
   --font-title-divisorias-timeline:"Poppins";
   --font-time-player: "Poppins";
+  --font-timeline-artista: "Barlow Condensed";
+
+  --font-ancora-tile-years:"Poppins";
+  --font-title-subdiv-years:"Poppins";
+
 
   /*Cores*/
 
@@ -27,7 +32,9 @@
   --background-titulos-imagens:  rgba(0, 0, 0, 0.55);
   --texto-titulos-imagens: white;
   --footer-color: #0066AF;
-
+  --timeline-artista-color: #0B878F;
+  --timeline-artista--name-color: black;
+  --timeline-title-subdiv-years-color: #0B878F;
   --gradiente-azul-verde: linear-gradient(to right, #0066AF, #0B878F);
 
 /*A PARTE DA SECAO DE COMENTARIOS AINDA PRECISA SER ALTERADA DENTRO DO ARQUIVO STYLES.CSS*/

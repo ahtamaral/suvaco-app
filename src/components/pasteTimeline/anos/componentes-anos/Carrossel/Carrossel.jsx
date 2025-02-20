@@ -1,34 +1,53 @@
-import React from "react";
-import './Carrossel.css'
+import React, { useState } from "react";
+import './Carrossel.css';
 
-function Carrossel(){
+const Carrossel = ({ artistas }) => {
+    const [indiceAtual, setIndiceAtual] = useState(0);
+    const totalArtistas = artistas.length;
+    const artistasVisiveis = artistas.slice(indiceAtual, indiceAtual + 3);
+
+    const avancar = () => {
+        if (indiceAtual + 3 < totalArtistas) {
+            setIndiceAtual(indiceAtual + 3);
+        }
+    };
+
+    const voltar = () => {
+        if (indiceAtual - 3 >= 0) {
+            setIndiceAtual(indiceAtual - 3);
+        }
+    };
 
     return (
-    <div className="carrossel-extern-div">
-            <div id="warning">desenvolvimento</div>
-        <div className="carrossel">
+        <>
+        <div className="flex-carrossel" style={{ marginTop: "35px" }}>
+            {totalArtistas > 3 && <i className="ri-arrow-left-line arrow display-desktop" onClick={voltar}></i>}
+            
+            {artistasVisiveis.map((artista, index) => (
+                <div className={totalArtistas < 2 ? `artista-${index}` : "artista"} key={index}>
+                    <span id="artista-funcao">{artista.funcao}</span>
+                    <img 
+                        className="img-artista" 
+                        src={artista.imagem} 
+                        alt={artista.nome} 
+                        />
+                    <span id="artista-name">{artista.nome}</span>
+                </div>
+            ))}
+            {totalArtistas > 3 && <i className="ri-arrow-right-line arrow display-desktop" onClick={avancar}></i>}
 
-                <img className="card"src="img/1.jpg" alt="" />
-                <img className="card"src="img/2.jpg" alt="" />
-                <img className="card"src="img/3.jpg" alt="" />
-                <img className="card"src="img/4.jpg" alt="" />
-                <img className="card"src="img/5.jpg" alt="" />
-                <img className="card"src="img/6.jpg" alt="" />
-                <img className="card"src="img/7.jpg" alt="" />
-                <img className="card"src="img/8.jpg" alt="" />
-                <img className="card"src="img/9.jpg" alt="" />
-                <img className="card"src="img/10.jpg" alt="" />
-                <img className="card"src="img/11.jpg" alt="" />
-                <img className="card"src="img/12.jpg" alt="" />
-                <img className="card"src="img/13.jpg" alt="" />
-                <img className="card"src="img/14.jpg" alt="" />
-                <img className="card"src="img/15.jpg" alt="" />
+            
 
+        </div>
 
-            </div>
+        {totalArtistas > 3 && (
+                <div className="arrow-container">
+                    <i className="ri-arrow-left-line arrow display-celular" onClick={voltar}></i>
+                    <i className="ri-arrow-right-line arrow display-celular" onClick={avancar}></i>
+                </div>
+            )}
+            </>
+    );
+};
 
-    </div>)
-
-}
-
-export default Carrossel
+export default Carrossel;
