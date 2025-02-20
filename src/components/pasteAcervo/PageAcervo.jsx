@@ -11,11 +11,31 @@ function PageAcervo(props) {
     const [currentPage, setCurrentPage] = useState(1);
     const [fullScreenActivated, setFullScreenActivated] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
+    const [loading, setLoading] = useState(true); // Added loading state
 
     const itemsPerPage = 10;
     const categoriaAnos = [...new Set(DATA.map(item => item.year).filter(Boolean))].sort();
 
-    // Sync page with current index changes
+    // Image loading effect
+    useEffect(() => {
+        const loadImages = async () => {
+            setLoading(true);
+            const imagePromises = imagensExibidas.map(item => {
+                return new Promise((resolve) => {
+                    const img = new Image();
+                    img.src = `img/${item.item}`;
+                    img.onload = resolve;
+                    img.onerror = resolve;
+                });
+            });
+            await Promise.all(imagePromises);
+            setLoading(false);
+        };
+
+        loadImages();
+    }, [categoriasClicadas]); // Reload when filters change
+
+    // Page synchronization effect
     useEffect(() => {
         if (currentIndex !== null) {
             const newPage = Math.floor(currentIndex / itemsPerPage) + 1;
@@ -155,16 +175,20 @@ function PageAcervo(props) {
                     </div>
                 )}
 
-                <div className="portfolio">
-                    {currentItems.map((item, i) => (
-                        <img
-                            key={i}
-                            src={`img/${item.item}`}
-                            alt={item.desc}
-                            onClick={() => imgFullScreen(indexOfFirstItem + i)}
-                        />
-                    ))}
-                </div>
+            {loading ? (
+                    <span className="loader"></span>
+                ) : (
+                    <div className="portfolio">
+                        {currentItems.map((item, i) => (
+                            <img
+                                key={i}
+                                src={`img/${item.item}`}
+                                alt={item.desc}
+                                onClick={() => imgFullScreen(indexOfFirstItem + i)}
+                            />
+                        ))}
+                    </div>
+                )}
 
                 <div className="pagination">{renderPagination()}</div>
 
