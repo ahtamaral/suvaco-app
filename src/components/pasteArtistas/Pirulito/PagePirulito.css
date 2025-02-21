@@ -16,6 +16,14 @@
 
 }
 
+.section-container{
+  .section-title-subtitle{
+    .h2-nome-artista{
+        text-wrap: auto;
+    }
+  }
+}
+
 
 @media (max-width: 1200px){
   .primeiro-paragrafo{
