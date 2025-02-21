@@ -283,7 +283,7 @@
 
 }
 
-@media (max-width:834px) {
+@media (max-width:836px) {
 
   section{
     grid-template-columns: 1fr 7fr 1fr;
@@ -423,7 +423,7 @@
 }
 
 
-@media (max-width:430px) {
+@media (max-width:500px) {
 
   .acesso-rapido{
     width:360px;

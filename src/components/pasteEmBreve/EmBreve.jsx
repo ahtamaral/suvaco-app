@@ -9,7 +9,8 @@ function EmBreve(){
             <p id="breve">Poxa, infelizmente a página que você solicitou ainda está sendo desenvolvida pela nossa equipe. <br /><br />Fique de olho e tente novamente no futuro!</p>
 
             <div className="footer-section">
-                        <Link id="link-txt" to="/">VOLTAR</Link>
+                <Link id="link-txt" to="/" onClick={() => window.scrollTo(0, 0)}>VOLTAR</Link>
+
                         <div className="line"></div>       
             </div>
         </div>
