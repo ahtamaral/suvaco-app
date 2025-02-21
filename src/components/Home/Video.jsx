@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import content from "../json/sections.json";
 
 
-function Video(props){
-  const [text, setText] = useState("");
+function Video(){
   return (
     <div className="video-section">
       <div className="gradient-side left"></div>
