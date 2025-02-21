@@ -536,9 +536,9 @@ section{
 
 .video-section {
   position: relative;
-  width: 80%;
+  width: 100%;
   max-width: 900px;
-  padding: 0;
+  padding-top: 0.5em;
   margin: 0 auto;
   overflow: hidden; 
   display: flex;

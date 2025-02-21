@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './layouts/header/Header'
 import Sobre from './components/Home/Sobre'
 import Projeto from './components/Home/Projeto';
-import Video from "./components/Home/Video";
 import Acervo from './components/Home/Acervo'
 import LinhaDoTempo from './components/Home/LinhaDoTempo'
 import DivinasAxilas from './components/Home/DivinasAxilas'
@@ -42,7 +41,6 @@ function App() {
             {/* Criação de cada section post baseado no arquivo json*/}
             
             <Projeto/>
-            <Video />
             <Sobre {...sectionsPosts.sections[1]} />
             <Acervo {...sectionsPosts.sections[2]} />
             <LinhaDoTempo {...sectionsPosts.sections[3]} />
