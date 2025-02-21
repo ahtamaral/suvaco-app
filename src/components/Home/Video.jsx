@@ -1,0 +1,18 @@
+import React, { useEffect, useState } from "react";
+import content from "../json/sections.json";
+
+
+function Video(props){
+  const [text, setText] = useState("");
+  return (
+    <div className="video-section">
+      <div className="gradient-side left"></div>
+        <video autoPlay loop muted className="background-video">
+            <source src="/video/videoHome.mp4" type="video/mp4" />
+            Seu navegador não suporta a reprodução de vídeos.
+        </video>
+    </div>
+  )
+}  
+
+export default Video;
