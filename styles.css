@@ -533,3 +533,22 @@ section{
 }
 
 }
+
+.video-section {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  padding-top: 0.5em;
+  margin: 0 auto;
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-video {
+  width: 100%;  
+  height: auto; 
+  max-height: 100%; 
+  object-fit: contain; 
+}

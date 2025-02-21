@@ -39,6 +39,7 @@ function App() {
         <Route path="/" element={
           <>
             {/* Criação de cada section post baseado no arquivo json*/}
+            
             <Projeto/>
             <Sobre {...sectionsPosts.sections[1]} />
             <Acervo {...sectionsPosts.sections[2]} />
