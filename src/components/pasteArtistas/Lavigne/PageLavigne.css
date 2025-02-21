@@ -32,16 +32,21 @@ object-fit: cover;
   }
 }
 
+
 @media (max-width: 500px){
-  #perfil-artista{
-    width: 250px;
-    height: 250px;
+  .section-container{
+    #perfil-artista{
+      width: 250px;
+      height: 250px;
+    }
   }
 }
 
 @media (max-width: 414px){
-  #perfil-artista{
-    width: 200px;
-    height: 200px;
+  .section-container{
+    #perfil-artista{
+      width: 200px;
+      height: 200px;
+    }
   }
 }
