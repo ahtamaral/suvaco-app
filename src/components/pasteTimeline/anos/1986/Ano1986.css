@@ -60,6 +60,12 @@
   height: 450px;
 }
 
+.legenda-86{
+  width: 350px ;
+  position:relative;
+  bottom: 25px;
+}
+
 .letra-side-by-side{
   display: flex;
   justify-content: space-around;
@@ -283,7 +289,7 @@
 
 }
 
-@media (max-width:834px) {
+@media (max-width:836px) {
 
   section{
     grid-template-columns: 1fr 7fr 1fr;
@@ -420,10 +426,27 @@
     text-align: center;
   }
 
+  .foto-86{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .legenda-86{
+    width: 300px ;
+    position: inherit;
+    bottom: 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+
+  
+
 }
 
 
-@media (max-width:430px) {
+@media (max-width:500px) {
 
   .acesso-rapido{
     width:360px;
@@ -508,6 +531,8 @@
     width:300px;
 
   }
+
+
 
   .controls{
     margin-top: 35px;

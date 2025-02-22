@@ -93,7 +93,7 @@ function PageEquipe() {
                 <h4 className="h4-equipe"> Membros da UFRJ </h4>
 
                 <ul>
-                    <li className="li-projeto">Claudia Dos Santos Goes (EBA)</li>
+                    <li className="li-projeto">Claudia Dos Santos Goes (Casa da Ciência/UFRJ)</li>
                     <li className="li-projeto">Helenise Monteiro Guimaraes (EBA)</li>
                     <li className="li-projeto">Hugo Musso Gualandi (IC)</li>
                     <li className="li-projeto">Tiago Matias da Silva (IC)</li>
@@ -123,7 +123,8 @@ function PageEquipe() {
                 {/** Colocar logos aqui*/}
 
                 <div className="footer-section">
-                        <Link id="link-txt" to="/">VOLTAR</Link>
+                    <Link id="link-txt" to="/" onClick={() => window.scrollTo(0, 0)}>VOLTAR</Link>
+
                         <div className="line"></div>       
             </div>
             </div>

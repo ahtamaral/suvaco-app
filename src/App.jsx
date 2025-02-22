@@ -18,6 +18,7 @@ import PageTimeline from './components/pasteTimeline/PageTimeline';
 import PageDivinas from './components/pasteDivinasAxilas/PageDivinas';
 import PageVoceSuvaco from './components/pasteVoceComSuvaco/PageVoceSuvaco';
 import PageEquipe from './components/pasteEquipe/PageEquipe';
+import DisclaimerModal from './components/Home/DisclaimerModal';
 
 
 import PageJoao from './components/pasteArtistas/Joao/PageJoao'
@@ -40,7 +41,7 @@ function App() {
         <Route path="/" element={
           <>
             {/* Criação de cada section post baseado no arquivo json*/}
-            
+            <DisclaimerModal></DisclaimerModal>
             <Projeto/>
             <Sobre {...sectionsPosts.sections[1]} />
             <Acervo {...sectionsPosts.sections[2]} />
@@ -66,6 +67,10 @@ function App() {
         <Route path="/Pirulito" element={<PagePirulito/>} />
         
         <Route path="/projeto" element={<PageEquipe/>} />
+        
+        <Route path="/breve" element={<EmBreve/>} />
+
+        
 
 
 

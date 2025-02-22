@@ -9,16 +9,16 @@ import Carrossel from "../componentes-anos/Carrossel/Carrossel";
 function Ano1986() {
     
     const artistas_SAMBA = [
-        { funcao: "AUTOR", nome: "João Avelleira", imagem: "img\\WhatsApp Image 2025-02-12 at 18.26.09-modified.png" },
-        { funcao: "AUTOR", nome: "Arnaldo Chaim", imagem: "img\\iconee.png" },
-        { funcao: "AUTOR", nome: "José Lavigne", imagem: "img\\iconee.png" },
-        { funcao: "AUTOR", nome: "Roberto (Pirulito)", imagem: "img\\iconee.png" },
-        { funcao: "INTÉRPRETE", nome: "Beto Brown", imagem: "img\\iconee.png" },
+        { funcao: "AUTOR", nome: "João Avelleira", imagem: "img\\WhatsApp Image 2025-02-12 at 18.26.09-modified.png", link: "/joao" },
+        { funcao: "AUTOR", nome: "Arnaldo Chaim", imagem: "img\\chaim86-circle.png", link: "/breve" },
+        { funcao: "AUTOR", nome: "José Lavigne", imagem: "img\\joseLavigne-doc-modified(1).png", link: "/lavigne" },
+        { funcao: "AUTOR", nome: "Roberto (Pirulito)", imagem: "img\\Pirulito-doc-modified.png", link: "/pirulito" },
+        { funcao: "INTÉRPRETE", nome: "Beto Brown", imagem: "img\\iconee.png", link: "/breve" },
     ];
 
     const artistas_ARTE = [
 
-        { funcao: "ARTISTA", nome: "Sonia Matos", imagem: "img/Sonia Matos 1987-modified.png" },
+        { funcao: "ARTISTA", nome: "Sonia Matos", imagem: "img/Sonia Matos 1987-modified.png", link: "/breve" },
     ]
 
 
@@ -69,10 +69,31 @@ function Ano1986() {
 
                     
                                     
-                    {estadoVisibilidadeDivisorias[0] && (
+                    {estadoVisibilidadeDivisorias[0] && (<>
                         <p> 
-                            Esse texto está sendo desenvolvido pela nossa equipe estará disponível em breve!
+                            O Rio de Janeiro passou por um esvaziamento do carnaval de rua nas décadas de 1960 e 1970. 
+                            Com algumas poucas exceções, como a Banda de Ipanema e o Charme da Simpatia, apenas pequenos 
+                            grupos isolados se reuniam, principalmente na zona norte da cidade. 
                         </p>
+                        <br />
+                        
+                        <p>
+                            O contexto político também não  estimulava a ocupação das ruas e o carnaval se encontrava 
+                            bastante limitado às escolas de samba e blocos oficiais, desfilando no centro da cidade. 
+                            Com a redemocratização e o movimento das Diretas Já, em 1984, esse contexto começa a mudar. 
+                        </p>
+                        <br />
+                            
+                        <p>
+                            Em 1985, saem pela primeira vez o bloco Simpatia é Quase Amor, em Ipanema, e o bloco Barbas, em Botafogo. 
+                            Em 1986, é a vez do Suvaco do Cristo. A proposta desses blocos é libertária. 
+                            Como diria João Bosco: “Não põe corda no meu bloco". 
+                            Muito dessa história pode ser encontrada na dissertação da jornalista 
+                            Maria Rita Dias de Almeida Fernandes, Meu bloco na rua: Barbas, 
+                            Simpatia e Suvaco na retomada do carnaval de rua da zona sul do Rio de Janeiro.
+                        </p>
+                    </>
+                        
                     )}
 
                                     
@@ -118,7 +139,10 @@ function Ano1986() {
                             
                             </p>
 
+                            <div className="foto-86">
                             <PlaceImageFromSheetByID id={284} sheet={DATA} ObjID={"foto-letra-86"}></PlaceImageFromSheetByID>
+                            <p style={{fontSize:"0.95rem"}}className="legenda-86">Filipeta com a letra do Samba distribuída no desfile de 1986. Patrocínio das Casas da Banha(que também ofereceram a kombi de som).</p> 
+                                </div>
                         </div>
                     </div>
                     
@@ -208,6 +232,8 @@ function Ano1986() {
                                                                         {/*FIM TÍTULO*/}
                     </div>
                     {estadoVisibilidadeDivisorias[4] && (<>
+                    <p> Nessa época não andávamos por aí com nossas câmeras fotográficas… Então são muito poucos registros.</p>
+                        <p style={{marginBottom:'15px'}}>Se você tiver algo do desfile nesse ano, por favor não deixe de entrar em contato conosco!</p>
                     <div className="flex-midia">
                     <div className="sistema-colunas">
                         <PlaceImageFromSheetByID id={6} sheet={DATA} objClass={"img-coluna"}></PlaceImageFromSheetByID>
@@ -227,7 +253,8 @@ function Ano1986() {
 
             
                         <div className="footer-section">
-                                    <Link id="link-txt" to="/timeline">VOLTAR</Link>
+                        <Link id="link-txt" to="/" onClick={() => window.scrollTo(0, 0)}>VOLTAR</Link>
+
                                     <div className="line"></div>       
                         </div>
 

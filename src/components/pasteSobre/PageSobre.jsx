@@ -39,7 +39,8 @@ function PageSobre(props){
         </main>
 
         <div className="footer-section">
-                        <Link id="link-txt" to="/">VOLTAR</Link>
+            <Link id="link-txt" to="/" onClick={() => window.scrollTo(0, 0)}>VOLTAR</Link>
+
                         <div className="line"></div>       
             </div>
         </div>
