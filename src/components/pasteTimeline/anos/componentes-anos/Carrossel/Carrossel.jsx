@@ -26,11 +26,15 @@ const Carrossel = ({ artistas }) => {
             {artistasVisiveis.map((artista, index) => (
                 <div className={totalArtistas < 2 ? `artista-${index}` : "artista"} key={index}>
                     <span id="artista-funcao">{artista.funcao}</span>
-                    <img 
+                    
+                    <a href={artista.link}>
+                        <img 
                         className="img-artista" 
                         src={artista.imagem} 
                         alt={artista.nome} 
                         />
+                    </a>
+                    
                     <span id="artista-name">{artista.nome}</span>
                 </div>
             ))}

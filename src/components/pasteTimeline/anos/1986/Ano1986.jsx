@@ -9,16 +9,16 @@ import Carrossel from "../componentes-anos/Carrossel/Carrossel";
 function Ano1986() {
     
     const artistas_SAMBA = [
-        { funcao: "AUTOR", nome: "João Avelleira", imagem: "img\\WhatsApp Image 2025-02-12 at 18.26.09-modified.png" },
-        { funcao: "AUTOR", nome: "Arnaldo Chaim", imagem: "img\\chaim86-circle.png" },
-        { funcao: "AUTOR", nome: "José Lavigne", imagem: "img\\iconee.png" },
-        { funcao: "AUTOR", nome: "Roberto (Pirulito)", imagem: "img\\iconee.png" },
-        { funcao: "INTÉRPRETE", nome: "Beto Brown", imagem: "img\\iconee.png" },
+        { funcao: "AUTOR", nome: "João Avelleira", imagem: "img\\WhatsApp Image 2025-02-12 at 18.26.09-modified.png", link: "/joao" },
+        { funcao: "AUTOR", nome: "Arnaldo Chaim", imagem: "img\\chaim86-circle.png", link: "/breve" },
+        { funcao: "AUTOR", nome: "José Lavigne", imagem: "img\\joseLavigne-doc-modified(1).png", link: "/lavigne" },
+        { funcao: "AUTOR", nome: "Roberto (Pirulito)", imagem: "img\\Pirulito-doc-modified.png", link: "/pirulito" },
+        { funcao: "INTÉRPRETE", nome: "Beto Brown", imagem: "img\\iconee.png", link: "/breve" },
     ];
 
     const artistas_ARTE = [
 
-        { funcao: "ARTISTA", nome: "Sonia Matos", imagem: "img/Sonia Matos 1987-modified.png" },
+        { funcao: "ARTISTA", nome: "Sonia Matos", imagem: "img/Sonia Matos 1987-modified.png", link: "/breve" },
     ]
 
 
@@ -139,7 +139,10 @@ function Ano1986() {
                             
                             </p>
 
+                            <div className="foto-86">
                             <PlaceImageFromSheetByID id={284} sheet={DATA} ObjID={"foto-letra-86"}></PlaceImageFromSheetByID>
+                            <p style={{fontSize:"0.95rem"}}className="legenda-86">Filipeta com a letra do Samba distribuída no desfile de 1986. Patrocínio das Casas da Banha(que também ofereceram a kombi de som).</p> 
+                                </div>
                         </div>
                     </div>
                     
@@ -229,6 +232,8 @@ function Ano1986() {
                                                                         {/*FIM TÍTULO*/}
                     </div>
                     {estadoVisibilidadeDivisorias[4] && (<>
+                    <p> Nessa época não andávamos por aí com nossas câmeras fotográficas… Então são muito poucos registros.</p>
+                        <p style={{marginBottom:'15px'}}>Se você tiver algo do desfile nesse ano, por favor não deixe de entrar em contato conosco!</p>
                     <div className="flex-midia">
                     <div className="sistema-colunas">
                         <PlaceImageFromSheetByID id={6} sheet={DATA} objClass={"img-coluna"}></PlaceImageFromSheetByID>

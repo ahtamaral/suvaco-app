@@ -60,6 +60,12 @@
   height: 450px;
 }
 
+.legenda-86{
+  width: 350px ;
+  position:relative;
+  bottom: 25px;
+}
+
 .letra-side-by-side{
   display: flex;
   justify-content: space-around;
@@ -420,6 +426,23 @@
     text-align: center;
   }
 
+  .foto-86{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .legenda-86{
+    width: 300px ;
+    position: inherit;
+    bottom: 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+
+  
+
 }
 
 
@@ -508,6 +531,8 @@
     width:300px;
 
   }
+
+
 
   .controls{
     margin-top: 35px;
