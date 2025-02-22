@@ -50,3 +50,11 @@
     background: #0056b3;
   }
   
+
+  @media (max-width:600px) {
+    .modal-content p {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      line-height: 1rem;
+    }
+  }
