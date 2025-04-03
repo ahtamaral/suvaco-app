@@ -1,3 +1,5 @@
-node_modules
-package-lock.json
 public/video/video.mp4
+dist/
+node_modules/
+*.log
+.env
