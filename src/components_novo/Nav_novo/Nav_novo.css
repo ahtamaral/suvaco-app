@@ -11,6 +11,12 @@ nav{
     justify-content: center;
     list-style-type: none;
 
+    #Logo{
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+    }
 
     >li {
         position: relative;

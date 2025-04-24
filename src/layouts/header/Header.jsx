@@ -1,7 +1,7 @@
 import React from "react";
 import frameImage from '../../components/imgs/Header-BG(3).svg';
-
-import Nav from '../../components/nav/Nav'
+import { Link } from "react-router-dom";
+import Nav from "../../components_novo/Nav_novo/Nav.novo";
 import './header.css'
 
 function Header() {

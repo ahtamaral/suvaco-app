@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './layouts/header/Header'
 import Sobre from './components/Home/Sobre'
-import Projeto from './components/Home/Projeto';
+import Projeto_novo from './components_novo/Home_novo/Projeto_novo';
 import Acervo from './components/Home/Acervo'
 import LinhaDoTempo from './components/Home/LinhaDoTempo'
 import DivinasAxilas from './components/Home/DivinasAxilas'
@@ -33,7 +33,7 @@ import sectionsPosts from './components/json/sections.json'
 function App() {
 
   return (
-    <div>
+    <div>   
       <Header />
       <Routes>
 
@@ -42,7 +42,7 @@ function App() {
           <>
             {/* Criação de cada section post baseado no arquivo json*/}
             <DisclaimerModal></DisclaimerModal>
-            <Projeto/>
+            <Projeto_novo {...sectionsPosts.sections[6]}/>
             <Sobre {...sectionsPosts.sections[1]} />
             <Acervo {...sectionsPosts.sections[2]} />
             <LinhaDoTempo {...sectionsPosts.sections[3]} />
